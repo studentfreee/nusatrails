@@ -2,13 +2,15 @@
 interface Props {
   /** Size for the SVG icon */
   iconSize?: number;
+  size?: number;
   /** Show the live text wordmark next to the emblem. */
   wordmark?: boolean;
 }
-const { iconSize = 20, wordmark = true } = Astro.props;
+const { iconSize, size, wordmark = true } = Astro.props;
+const finalSize = iconSize ?? size ?? 20;
 ---
 <a href="/" class="logo" aria-label="NusaTrails, home">
-  <svg class="logo-icon" width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <svg class="logo-icon" width={finalSize} height={finalSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
     <circle cx="12" cy="12" r="9"></circle>
     <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path>
   </svg>
