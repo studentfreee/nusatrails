@@ -630,10 +630,22 @@
    "attribution": "NusaTrails",
    "note": "Reference background photo for home page contact section",
    "used_on_site": true
+  },
+  {
+   "key": "home_hero_bg",
+   "file": "src/assets/photos/02_own/Bromo_hero_home.jpg",
+   "width": 1920,
+   "height": 1147,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "license": "Client own photography (extracted from 01-home.html design reference)",
+   "attribution": "NusaTrails",
+   "note": "Reference landscape hero photo with Mount Batok and Semeru for home 3D ridge effect",
+   "used_on_site": true
   }
  ],
  "slots": {
-  "home.hero_background": "bromo_mist",
+  "home.hero_background": "home_hero_bg",
   "home.contact_background": "contact_bg",
   "home.hero_cards": [
    "IMG_0619",

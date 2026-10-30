@@ -1,36 +1,49 @@
 ---
-import { Image } from 'astro:assets';
-import logoMark from '../assets/brand/logo-mark.png';
-
 interface Props {
-  /** Height of the cream tile in px. */
-  size?: number;
+  /** Size for the SVG icon */
+  iconSize?: number;
   /** Show the live text wordmark next to the emblem. */
   wordmark?: boolean;
 }
-const { size = 44, wordmark = true } = Astro.props;
+const { iconSize = 20, wordmark = true } = Astro.props;
 ---
 <a href="/" class="logo" aria-label="NusaTrails, home">
-  <!-- logo.jpeg is dark green on cream: it sits in a cream tile so it never touches the dark background. -->
-  <span class="tile" style={`--s:${size}px`}>
-    <Image src={logoMark} alt="NusaTrails" width={size * 2} height={size * 2} loading="eager" densities={[1, 2]} />
-  </span>
+  <svg class="logo-icon" width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+    <circle cx="12" cy="12" r="9"></circle>
+    <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path>
+  </svg>
   {wordmark && (
     <span class="word">NUSA<span>TRAILS</span></span>
   )}
 </a>
 
 <style>
-  .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-ink); }
-  .tile {
-    width: var(--s); height: var(--s); flex: none;
-    display: grid; place-items: center;
-    background: var(--color-cream); border-radius: 14px; overflow: hidden;
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: opacity .2s;
   }
-  .tile :global(img) { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .logo:hover {
+    opacity: 0.88;
+  }
+  .logo-icon {
+    flex: none;
+    color: #fff;
+  }
   .word {
-    font-family: var(--font-display); font-weight: 500; font-size: 18px;
-    letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap;
+    font-family: var(--font-display, Oswald, sans-serif);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff;
   }
-  .word span { color: var(--color-accent); }
+  .word span {
+    color: var(--color-accent, #b9d44a);
+  }
 </style>
