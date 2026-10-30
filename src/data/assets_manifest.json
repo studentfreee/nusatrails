@@ -618,11 +618,23 @@
    "note": "Lake huts, tiny (236x340), not Sukamade. Do not use.",
    "original_name": "eco lodge1.jpeg",
    "used_on_site": false
+  },
+  {
+   "key": "contact_bg",
+   "file": "src/assets/photos/02_own/TumpakSewu_contact_bg.jpg",
+   "width": 1600,
+   "height": 911,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "license": "Client own photography (extracted from 01-home.html design reference)",
+   "attribution": "NusaTrails",
+   "note": "Reference background photo for home page contact section",
+   "used_on_site": true
   }
  ],
  "slots": {
   "home.hero_background": "bromo_mist",
-  "home.contact_background": "IMG_2414",
+  "home.contact_background": "contact_bg",
   "home.hero_cards": [
    "IMG_0619",
    "IMG_2509",

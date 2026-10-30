@@ -234,10 +234,18 @@ const jsonLd = {
   .hero-overlay {
     position: absolute;
     inset: 0;
+    pointer-events: none;
     background: linear-gradient(
-      to bottom,
-      rgba(11, 10, 10, 0.4) 0%,
-      rgba(11, 10, 10, 0.75) 60%,
+      90deg,
+      rgba(11, 10, 10, 0.62) 0%,
+      rgba(11, 10, 10, 0.28) 55%,
+      rgba(11, 10, 10, 0.12) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(11, 10, 10, 0.28) 0%,
+      rgba(11, 10, 10, 0) 35%,
+      rgba(11, 10, 10, 0.55) 80%,
       var(--color-bg) 100%
     );
   }

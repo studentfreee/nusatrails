@@ -4,7 +4,7 @@ import Photo from '../../components/Photo.astro';
 import TripCard from '../../components/TripCard.astro';
 import { trips } from '../../lib/data';
 
-const heroAssetKey = 'IMG_3523';
+const heroAssetKey = 'IMG_2507';
 ---
 
 <Base
@@ -17,11 +17,14 @@ const heroAssetKey = 'IMG_3523';
       <Photo
         assetKey={heroAssetKey}
         alt="NusaTrails Trips"
-        class="w-full h-full object-cover opacity-35"
+        class="w-full h-full object-cover object-center"
         loading="eager"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0b0a0a] via-[#0b0a0a]/60 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0b0a0a] via-transparent to-transparent"></div>
+      <!-- Gradient overlay matching design reference (02-trips.html) -->
+      <div
+        class="absolute inset-0 pointer-events-none"
+        style="background: linear-gradient(90deg, rgba(11,10,10,.62) 0%, rgba(11,10,10,.28) 55%, rgba(11,10,10,.12) 100%), linear-gradient(180deg, rgba(11,10,10,.28) 0%, rgba(11,10,10,0) 35%, rgba(11,10,10,.55) 80%, #0b0a0a 100%);"
+      ></div>
     </div>
 
     <div class="container-nt relative z-10">

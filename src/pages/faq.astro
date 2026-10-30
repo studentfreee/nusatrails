@@ -35,12 +35,10 @@ const faqSchema = {
         priority={true}
         class="w-full h-full object-cover object-center"
       />
-      <!-- Dark gradients matching design reference -->
+      <!-- Gradient overlay matching design reference (05-faq.html) -->
       <div
-        class="absolute inset-0 bg-gradient-to-r from-[#0b0a0a]/90 via-[#0b0a0a]/70 to-[#0b0a0a]/40"
-      ></div>
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-[#0b0a0a]/40 via-transparent to-[#0b0a0a]"
+        class="absolute inset-0 pointer-events-none"
+        style="background: linear-gradient(90deg, rgba(11,10,10,.62) 0%, rgba(11,10,10,.28) 55%, rgba(11,10,10,.12) 100%), linear-gradient(180deg, rgba(11,10,10,.28) 0%, rgba(11,10,10,0) 35%, rgba(11,10,10,.55) 80%, #0b0a0a 100%);"
       ></div>
     </div>
 
