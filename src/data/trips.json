@@ -1,0 +1,3330 @@
+{
+ "version": "2026-10-28",
+ "note": "Extracted from the operator Word documents, with typo fixes and copy-paste errors removed. See open_questions per trip. The Ijen-Tumpak Sewu-Bromo (Bali start) mockup page uses a hand-condensed itinerary; this file holds the full source text.",
+ "trips": [
+  {
+   "id": "Trip01",
+   "slug": "ijen-blue-fire-1-day",
+   "name": "Ijen Blue Fire",
+   "region": "East Java",
+   "duration": {
+    "days": 1,
+    "nights": 0,
+    "label": "1 day"
+   },
+   "start": "Banyuwangi",
+   "end": "Banyuwangi",
+   "route_label": "Banyuwangi round trip",
+   "destinations": [
+    "Ijen"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 1,
+    "max": 10
+   },
+   "summary": "A midnight climb of about 3.4 km at Ijen. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "price"
+    ],
+    "rows": [
+     {
+      "pax": 1,
+      "price": 1449000
+     },
+     {
+      "pax": 2,
+      "price": 887000
+     },
+     {
+      "pax": 3,
+      "price": 699000
+     },
+     {
+      "pax": 4,
+      "price": 606000
+     },
+     {
+      "pax": 5,
+      "price": 594000
+     },
+     {
+      "pax": 6,
+      "price": 549000
+     },
+     {
+      "pax": 7,
+      "price": 571000
+     },
+     {
+      "pax": 8,
+      "price": 596000
+     },
+     {
+      "pax": 9,
+      "price": 566000
+     },
+     {
+      "pax": 10,
+      "price": 542000
+     }
+    ],
+    "from_price_4_pax": 606000,
+    "notes": [
+     "Rates are per person for a private group."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Ijen Crater Blue Fire & Sunrise Adventure",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your adventure begins with an early-morning pick-up by our Ijen tour team from your preferred location in Banyuwangi, including your hotel, homestay, bus terminal, train station, or ferry port. From there, we will travel to Paltuding Post, the main starting point for the Mount Ijen hike, which is approximately one hour away from Banyuwangi City."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once we arrive at Paltuding, you will have time to enjoy a warm cup of coffee or tea while preparing for the hike. Before setting off, our local guide will provide a safety briefing and explain the route, trail conditions, and important guidelines to ensure a safe and enjoyable trekking experience."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 02:00 AM, we will begin the ascent toward the Ijen Crater summit. The hiking trail covers around 3.4 km one way and generally takes 1.5–2 hours, depending on your walking pace and physical condition. Along the route, you will pass several checkpoints, with small local stalls available at various points where you can pause briefly and catch your breath."
+      },
+      {
+       "type": "paragraph",
+       "text": "After reaching the upper crater area, we will continue toward the Blue Fire viewing area. This section involves a steep descent over rocky and potentially slippery terrain, taking approximately 30 minutes or longer depending on trail conditions. With the guidance of our experienced local guide, you will have the opportunity to witness the extraordinary blue flames produced by the combustion of sulfuric gases, a rare natural spectacle that makes Ijen one of Indonesia's most remarkable destinations. Access to the crater floor depends on official regulations, weather, volcanic activity, and safety conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once you have enjoyed this unique natural phenomenon, we will make our way back toward the crater rim and proceed to a suitable sunrise viewpoint. As the first light of day appears, take in the breathtaking scenery of Ijen's striking turquoise crater lake, surrounded by dramatic volcanic landscapes. This is also the perfect opportunity to capture memorable photographs of one of East Java's most iconic natural wonders."
+      },
+      {
+       "type": "paragraph",
+       "text": "After spending time enjoying the panoramic views and morning atmosphere, we will descend along the same hiking trail to Paltuding Post, usually arriving around 06:00–07:00 AM, depending on the pace of the group and trail conditions. You can take a short break before our team transfers you back to your accommodation or the agreed drop-off point in Banyuwangi."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Private land transportation with the driver and fuel during the trip",
+    "Private English speaking guide",
+    "Doctor's health certificate for Ijen trekking (for a private trip)",
+    "Gas mask & headlamp for Ijen blue fire tour",
+    "Entrance tickets in Ijen crater",
+    "Mineral water & coffee break"
+   ],
+   "excluded": [
+    "Accommodation",
+    "Meals",
+    "Trolley in Ijen",
+    "Trekking pole",
+    "Tip (gratuity) for driver & guide (recommended)",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "A good pair of walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen hike)",
+     "Warm clothing (long trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes (you can buy when stopping at petrol stops or convenience stores)",
+     "Warm cloth hat",
+     "A small backpack to carry your belongings up the mountain; personal identity card (or a copy of it)",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility. Alcoholic beverages are strictly prohibited during the trip"
+    ]
+   },
+   "stays": [],
+   "photos": {
+    "hero": "IMG_3523",
+    "card": "IMG_0683"
+   },
+   "open_questions": [
+    "A shared (open-trip) rate of IDR 385.000 exists in the source but is intentionally not shown (private trips only). Trail length is 3.4 km here vs 3 km in other docs."
+   ],
+   "source_doc": "IJEN TOUR FROM BANYUWANGI PRIVATE AND SHARING TOUR.docx"
+  },
+  {
+   "id": "Trip02",
+   "slug": "ijen-midnight-hike-2d1n-from-bali",
+   "name": "Ijen Midnight Hike",
+   "region": "East Java",
+   "duration": {
+    "days": 2,
+    "nights": 1,
+    "label": "2 days · 1 night"
+   },
+   "start": "Bali",
+   "end": "Bali",
+   "route_label": "Bali round trip",
+   "destinations": [
+    "Ijen"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "A midnight climb of about 3 km at Ijen. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 3201000,
+      "homestay": 2901000
+     },
+     {
+      "pax": 3,
+      "hotel": 2402000,
+      "homestay": 2144000
+     },
+     {
+      "pax": 4,
+      "hotel": 2028000,
+      "homestay": 1853000
+     }
+    ],
+    "from_price_4_pax": 1853000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Bali to Banyuwangi – Overnight Stay in Banyuwangi",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your Ijen adventure begins at 09:00 AM Bali time. Our driver will pick you up directly from your hotel in Bali before heading to Gilimanuk Harbour. The journey takes approximately 4–5 hours, depending on your hotel's location and traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Gilimanuk Harbour, you will board a ferry to Ketapang Harbour in East Java. The crossing takes around one hour. After arriving in Banyuwangi, we will stop at a local restaurant for lunch (at your own expense) before continuing to your accommodation."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once you arrive at the hotel, check in and take some time to unwind. You can enjoy the available facilities and relax for the rest of the day before the midnight hiking excursion to Ijen Crater."
+      },
+      {
+       "type": "paragraph",
+       "text": "Note: The estimated travel time to Gilimanuk Harbour is approximately 4–5 hours from Ubud, Sanur, Kuta, Legian, and Denpasar; around 30 minutes from Pemuteran; and approximately 2 hours from Lovina."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Ijen Crater Midnight Hike – Return to Bali",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Our Ijen Crater excursion starts at approximately 00:00 AM. We will leave the hotel and drive to Paltuding Base Camp, the starting point for the Mount Ijen hike, situated at an elevation of around 1,800 metres. The journey takes approximately one hour, passing through traditional villages, rice fields, and forested areas with towering trees."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival at Paltuding, enjoy a cup of coffee or tea while our team explains the hiking route and provides important safety instructions. At approximately 02:00 AM, we will begin the ascent towards Mount Ijen's summit area."
+      },
+      {
+       "type": "paragraph",
+       "text": "The hiking trail covers approximately 3 kilometres and usually takes 1.5–2 hours, depending on your physical condition and walking pace. There are six checkpoints along the route, with small stalls and toilet facilities available at most stops."
+      },
+      {
+       "type": "paragraph",
+       "text": "After reaching the upper section of Mount Ijen, at approximately 2,386 metres above sea level, we will continue towards the crater rim. For those who wish to see the famous Blue Fire, the route involves descending approximately 800 metres along steep, rocky, and slippery terrain. This descent generally takes around 30–45 minutes."
+      },
+      {
+       "type": "paragraph",
+       "text": "The Blue Fire is a rare natural spectacle created by ignited sulphuric gases. If weather conditions and official access restrictions permit, you will have the opportunity to witness this remarkable phenomenon and take photographs of the experience."
+      },
+      {
+       "type": "paragraph",
+       "text": "Important note: If you feel unable to descend to the Blue Fire area due to physical limitations, you can skip this section and proceed directly to the sunrise viewpoint."
+      },
+      {
+       "type": "paragraph",
+       "text": "After exploring the Blue Fire area, we will climb back up the same trail and continue towards the sunrise point. The walk usually takes between 30 minutes and one hour, depending on your pace. From the viewpoint, enjoy the panoramic scenery of Ijen Crater and capture memorable photos of the surrounding volcanic landscape."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 07:00 AM, we will descend to Paltuding Base Camp before returning to the accommodation for breakfast and a shower."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 11:00 AM, we will check out and travel to Ketapang Harbour, where you will board a ferry across the Bali Strait to Gilimanuk Harbour. The ferry crossing takes around one hour."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arriving at Gilimanuk Harbour, our driver will take you to your hotel in Bali. The transfer time depends on your destination and traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Estimated travel time from Gilimanuk Harbour to your accommodation: Approximately 4–5 hours to Ubud, Sanur, Kuta, Legian, and Denpasar; around 30 minutes to Pemuteran; and approximately 2 hours to Lovina."
+      },
+      {
+       "type": "paragraph",
+       "text": "Your Ijen adventure concludes upon arrival at your hotel in Bali."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Bali and transfer out to Bali",
+    "1 night accommodation in the Ijen crater (Banyuwangi city) area with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway/parking during the trip",
+    "Private English speaking guide in Ijen crater",
+    "Gas mask and headlamp for Ijen blue fire tour",
+    "Health certificate for Ijen trip",
+    "Mineral water during the trip",
+    "Entrance fee (Ijen crater)",
+    "Ferry tickets from Bali to Java & Java to Bali"
+   ],
+   "excluded": [
+    "Trolley in Ijen",
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen & Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Ijen Area (Banyuwangi City)",
+     "options": [
+      "Homestay: Didus Homestay, Berliant Homestay, Pesona Java Ijen Homestay",
+      "Hotel: Ketapang Indah Hotel, El-Hotel, Grand Harvest"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "IMG_0607",
+    "card": "Untitled"
+   },
+   "open_questions": [],
+   "source_doc": "START BALI 2D1N DROP BALI.docx"
+  },
+  {
+   "id": "Trip03",
+   "slug": "ijen-bromo-3d2n-from-surabaya",
+   "name": "Ijen & Bromo",
+   "region": "East Java",
+   "duration": {
+    "days": 3,
+    "nights": 2,
+    "label": "3 days · 2 nights"
+   },
+   "start": "Surabaya",
+   "end": "Surabaya",
+   "route_label": "Surabaya round trip",
+   "destinations": [
+    "Ijen",
+    "Bromo"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "A midnight climb of about 3 km at Ijen and an early 4WD jeep ride to the Bromo viewpoints. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 5411000,
+      "homestay": 4536000
+     },
+     {
+      "pax": 3,
+      "hotel": 4127000,
+      "homestay": 3386000
+     },
+     {
+      "pax": 4,
+      "hotel": 3511000,
+      "homestay": 3036000
+     }
+    ],
+    "from_price_4_pax": 3036000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Surabaya to Banyuwangi – Overnight Stay in the Ijen Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your adventure exploring Bromo and Ijen begins at 09:00 AM. Our driver will pick you up from Juanda International Airport or your hotel in Surabaya before departing for Banyuwangi, where your accommodation near Ijen Crater is located."
+      },
+      {
+       "type": "paragraph",
+       "text": "The journey takes approximately 6–7 hours, depending on traffic and road conditions. Along the way, you will travel through urban areas, follow the main highway, pass traditional villages, and enjoy views of the expansive Baluran Forest."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Banyuwangi, check in to your accommodation and take some time to unwind after the long drive. Enjoy the hotel facilities and get sufficient rest before the midnight hiking excursion to Mount Ijen."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Ijen Crater Midnight Adventure – Transfer to the Bromo Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Our Ijen Crater excursion begins at approximately 00:00 AM. We will leave the hotel and drive to Paltuding Base Camp, the main starting point for the Mount Ijen trek, situated at an elevation of around 1,800 metres. The drive takes approximately one hour, passing through local villages, rice fields, and forested landscapes filled with towering trees."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival at Paltuding, you can enjoy a warm drink while our guide provides an overview of the hiking route and essential safety instructions. At around 02:00 AM, we will begin the ascent towards the summit area of Mount Ijen."
+      },
+      {
+       "type": "paragraph",
+       "text": "The uphill trail covers approximately 3 kilometres and generally takes 1.5–2 hours, depending on your fitness level and walking pace. Along the route, there are six checkpoints, with small stalls and toilet facilities available at most stops."
+      },
+      {
+       "type": "paragraph",
+       "text": "After reaching the upper section of the mountain, at approximately 2,386 metres above sea level, we will continue towards the crater rim. If you wish to witness the famous Blue Fire, the route requires an additional descent of approximately 800 metres along steep, rocky, and slippery terrain. Reaching the crater floor takes around 30–45 minutes."
+      },
+      {
+       "type": "paragraph",
+       "text": "The Blue Fire is a fascinating natural phenomenon created by ignited sulphuric gases. If weather conditions and official access restrictions permit, you will have the opportunity to observe this extraordinary sight and capture some memorable photographs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Important note: If you feel unable to descend to the Blue Fire area due to physical limitations, you can skip this section and head directly towards the sunrise viewpoint."
+      },
+      {
+       "type": "paragraph",
+       "text": "After exploring the Blue Fire area, we will climb back up the same trail and continue towards the sunrise point. The walk usually takes approximately 30 minutes to one hour, depending on your pace. From the viewpoint, enjoy the magnificent panorama of Ijen Crater and take photographs of the surrounding volcanic landscape."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 07:00 AM, we will descend to Paltuding Base Camp before returning to the accommodation for breakfast and time to freshen up."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 12:00 PM, we will check out and continue our journey to Sukapura, Probolinggo, where your accommodation in the Mount Bromo area is located. The drive takes around 5–6 hours, depending on road and traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, check in and enjoy the refreshing mountain atmosphere. The remainder of the day is yours to relax and recharge before the early-morning Mount Bromo sunrise excursion."
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Mount Bromo Sunrise Tour – Transfer to Surabaya",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The final day begins at approximately 03:30 AM, when our 4WD jeep picks you up from your accommodation for the Mount Bromo sunrise experience."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will travel to the area's famous viewpoints, including Penanjakan and Kingkong Hill, located along the edge of the Tengger Caldera at an elevation of approximately 2,700 metres. These viewpoints offer impressive panoramic scenery, where you can watch the sunrise above Mount Bromo, Mount Batok, and Mount Semeru."
+      },
+      {
+       "type": "paragraph",
+       "text": "After sunrise, we will continue the adventure across the vast Sea of Sand surrounding Mount Bromo. From the jeep parking area, you can choose to walk or take an optional horse ride towards the staircase leading to the crater rim."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 08:30 AM, we will return to the hotel for breakfast, a shower, packing, and check-out. Once everything is ready, we will depart for Surabaya."
+      },
+      {
+       "type": "paragraph",
+       "text": "The drive to Surabaya takes approximately 3–4 hours, depending on traffic conditions. Upon arrival, your three-day journey through Ijen Crater and Mount Bromo comes to an end."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Surabaya and transfer out to Surabaya",
+    "1 night accommodation in the Mount Bromo area with breakfast",
+    "1 night accommodation in the Ijen crater area (Banyuwangi city) with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway & parking during the trip",
+    "Private English speaking guide",
+    "The jeep for Mount Bromo tour",
+    "Gas mask and headlamp for Ijen blue fire tour",
+    "Health certificate for Ijen trip",
+    "Mineral water during the trip",
+    "Entrance fee (Mount Bromo, Ijen crater)"
+   ],
+   "excluded": [
+    "Trolley in Ijen",
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen & Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Bromo Area",
+     "options": [
+      "Homestay: Kopikuin Homestay, Gubug Ndeso Homestay",
+      "Hotel: Lava View Lodge Hotel, Joglo Kecombran Bromo"
+     ]
+    },
+    {
+     "area": "Ijen Area (Banyuwangi City)",
+     "options": [
+      "Homestay: Borobudur Homestay, Berliant Homestay",
+      "Hotel: Ketapang Indah Hotel, El-Hotel, Grand Harvest"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "IMG_2507",
+    "card": "IMG_3523"
+   },
+   "open_questions": [],
+   "source_doc": "START SURABAYA IJEN - BROMO TOUR - DROP SURABAYA.docx"
+  },
+  {
+   "id": "Trip04",
+   "slug": "bromo-ijen-3d2n-surabaya-to-bali",
+   "name": "Bromo & Ijen",
+   "region": "East Java",
+   "duration": {
+    "days": 3,
+    "nights": 2,
+    "label": "3 days · 2 nights"
+   },
+   "start": "Surabaya",
+   "end": "Bali",
+   "route_label": "Surabaya to Bali",
+   "destinations": [
+    "Ijen",
+    "Bromo"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "A midnight climb of about 3 km at Ijen and an early 4WD jeep ride to the Bromo viewpoints. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 4881000,
+      "homestay": 4106000
+     },
+     {
+      "pax": 3,
+      "hotel": 3877000,
+      "homestay": 3202000
+     },
+     {
+      "pax": 4,
+      "hotel": 3376000,
+      "homestay": 2901000
+     }
+    ],
+    "from_price_4_pax": 2901000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Surabaya to Mount Bromo – Overnight Stay in the Bromo Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your Bromo and Ijen adventure begins at 09:00 AM. Our driver will meet you at the airport or your hotel in Surabaya before taking you to Sukapura, Probolinggo, where your accommodation in the Bromo area is located."
+      },
+      {
+       "type": "paragraph",
+       "text": "The journey takes approximately 3–4 hours, depending on traffic conditions. Along the way, you will pass through urban areas and travel along the main highway towards the mountainous region of East Java."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival at your accommodation, check in and enjoy the cool, refreshing atmosphere of the Bromo highlands. You will have time to relax and settle in before the early-morning Mount Bromo sunrise excursion the following day."
+      },
+      {
+       "type": "paragraph",
+       "text": "Optional stop: If you would like to explore another natural attraction, you can visit Madakaripura Waterfall before heading to your hotel. The waterfall is located near the Bromo area, and an additional fee applies."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Mount Bromo Sunrise Tour – Transfer to Banyuwangi",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The day starts at approximately 03:30 AM, when our 4WD jeep picks you up from your hotel for the Mount Bromo sunrise adventure."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will head to the famous viewpoints of Penanjakan and Kingkong Hill, situated along the edge of the Tengger Caldera at an elevation of approximately 2,700 metres. From these viewpoints, you can enjoy the sunrise and sweeping views of Mount Bromo, Mount Batok, and Mount Semeru."
+      },
+      {
+       "type": "paragraph",
+       "text": "After sunrise, we will continue across the iconic Sea of Sand surrounding Mount Bromo. From the jeep parking area, you can choose to walk or take an optional horse ride to reach the staircase leading to the crater rim."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 08:30 AM, we will return to the hotel for breakfast, a shower, packing, and check-out."
+      },
+      {
+       "type": "paragraph",
+       "text": "After completing the morning activities, we will depart for Banyuwangi, where your accommodation near Ijen Crater is located. The drive takes approximately five hours, depending on traffic conditions. During the journey, you will pass through local towns and enjoy views of terraced rice fields and the surrounding countryside."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, check in to your accommodation and take some time to unwind after the journey. An early rest is recommended, as the Ijen Crater excursion begins around midnight."
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Ijen Crater Midnight Hike – Return to Bali",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Our Ijen adventure begins at approximately 00:00 AM. We will leave the hotel and drive to Paltuding Base Camp, the starting point of the Mount Ijen hike, located at around 1,800 metres above sea level. The drive takes approximately one hour, passing through traditional villages, rice fields, and forested areas with towering trees."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Paltuding, enjoy a cup of coffee or tea while our guide explains the hiking route and provides important safety instructions. At approximately 02:00 AM, we will begin the ascent towards Ijen Crater."
+      },
+      {
+       "type": "paragraph",
+       "text": "The uphill trail covers around 3 kilometres and generally takes 1.5–2 hours, depending on your fitness level and walking pace. There are six checkpoints along the route, with small stalls and toilet facilities available at most stops."
+      },
+      {
+       "type": "paragraph",
+       "text": "After reaching the upper section of Mount Ijen, at approximately 2,386 metres above sea level, we will continue towards the crater rim. For those wishing to see the famous Blue Fire, the route involves descending approximately 800 metres along steep, rocky, and slippery terrain. This section takes around 30–45 minutes to complete."
+      },
+      {
+       "type": "paragraph",
+       "text": "The Blue Fire is a remarkable natural phenomenon created by ignited sulphuric gases. If access is permitted and conditions are suitable, you will have the opportunity to witness this extraordinary sight and take photographs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Important note: If you are unable to make the descent to the Blue Fire area due to physical limitations, you can skip this section and proceed directly to the sunrise viewpoint."
+      },
+      {
+       "type": "paragraph",
+       "text": "After visiting the Blue Fire area, we will climb back up the same trail and continue towards the sunrise point. The walk usually takes around 30 minutes to one hour, depending on your pace. From the viewpoint, enjoy the panoramic scenery of Ijen Crater and capture memorable photos of the surrounding volcanic landscape."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 07:00 AM, we will descend to Paltuding Base Camp before returning to your accommodation for breakfast and time to freshen up."
+      },
+      {
+       "type": "paragraph",
+       "text": "Later in the day, we will transfer you to Ketapang Harbour in Banyuwangi, where you will board a ferry across the Bali Strait to Gilimanuk Harbour."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival in Bali, our driver will take you to your hotel in your selected area, bringing your three-day adventure to an end."
+      },
+      {
+       "type": "paragraph",
+       "text": "Estimated transfer time from Gilimanuk Harbour: Approximately 4–5 hours to Ubud, Sanur, Kuta, Legian, and Denpasar; around 30 minutes to Pemuteran; and approximately 2 hours to Lovina."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Surabaya and transfer out to Bali",
+    "1 night accommodation in the Mount Bromo area with breakfast",
+    "1 night accommodation in the Ijen crater area (Banyuwangi city) with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway & parking during the trip",
+    "Private English speaking guide",
+    "The jeep for Mount Bromo tour",
+    "Gas mask and headlamp for Ijen blue fire tour",
+    "Health certificate for Ijen trip",
+    "Mineral water during the trip",
+    "Entrance fee (Mount Bromo, Ijen crater)",
+    "Ferry tickets from Java to Bali"
+   ],
+   "excluded": [
+    "Trolley in Ijen",
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen & Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Bromo Area",
+     "options": [
+      "Homestay: Kopikuin Homestay, Gubug Ndeso Homestay",
+      "Hotel: Lava View Lodge Hotel, Joglo Kecombran Bromo"
+     ]
+    },
+    {
+     "area": "Ijen Area (Banyuwangi City)",
+     "options": [
+      "Homestay: Didus Homestay, Berliant Homestay, Pesona Java Ijen Homestay",
+      "Hotel: Ketapang Indah Hotel, El-Hotel, Grand Harvest"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "tim22",
+    "card": "IMG_2509"
+   },
+   "open_questions": [],
+   "source_doc": "START SURABAYA BROMO IJEN TOUR 3D2N DROP BALI.docx"
+  },
+  {
+   "id": "Trip05",
+   "slug": "ijen-bromo-3d2n-bali-to-surabaya",
+   "name": "Ijen & Bromo",
+   "region": "East Java",
+   "duration": {
+    "days": 3,
+    "nights": 2,
+    "label": "3 days · 2 nights"
+   },
+   "start": "Bali",
+   "end": "Surabaya",
+   "route_label": "Bali to Surabaya",
+   "destinations": [
+    "Ijen",
+    "Bromo"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "A midnight climb of about 3 km at Ijen and an early 4WD jeep ride to the Bromo viewpoints. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 4856000,
+      "homestay": 4081000
+     },
+     {
+      "pax": 3,
+      "hotel": 3761000,
+      "homestay": 3086000
+     },
+     {
+      "pax": 4,
+      "hotel": 3238000,
+      "homestay": 2763000
+     }
+    ],
+    "from_price_4_pax": 2763000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Bali to Banyuwangi – Overnight Stay in Banyuwangi",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your Ijen and Bromo journey starts at 09:00 AM Bali time. Our driver will pick you up from your hotel in Bali and take you to Gilimanuk Harbour. The drive generally takes around 4–5 hours, depending on your hotel's location and traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once you arrive at Gilimanuk Harbour, you will board a ferry to Ketapang Harbour in East Java. The crossing takes approximately one hour. After arriving in Banyuwangi, we will stop at a local restaurant for lunch (at your own expense) before heading to your accommodation."
+      },
+      {
+       "type": "paragraph",
+       "text": "After checking in, you can relax and enjoy the hotel facilities. Take the opportunity to rest and prepare yourself for the midnight trekking adventure to Ijen Crater."
+      },
+      {
+       "type": "paragraph",
+       "text": "Note: The estimated journey to Gilimanuk Harbour is around 4–5 hours from Ubud, Sanur, Kuta, Legian, and Denpasar; approximately 30 minutes from Pemuteran; and around 2 hours from Lovina."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Ijen Crater Midnight Adventure – Transfer to the Bromo Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Our Ijen excursion begins at approximately 00:00 AM, when we depart from the hotel and head to Paltuding Base Camp, the starting point for the Mount Ijen hike, located at around 1,800 metres above sea level. The drive takes approximately one hour, passing through local villages, rice fields, and forested areas filled with towering trees."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Paltuding, you can enjoy a warm cup of coffee or tea while our guide explains the hiking route and provides essential instructions before the climb. At around 02:00 AM, we will start trekking towards the summit of Mount Ijen."
+      },
+      {
+       "type": "paragraph",
+       "text": "The trail stretches for approximately 3 kilometres and usually takes 1.5–2 hours to complete, depending on your fitness level and walking speed. There are six checkpoints along the route, with small food stalls and toilet facilities available at most stops."
+      },
+      {
+       "type": "paragraph",
+       "text": "After reaching the upper part of Mount Ijen, at an elevation of approximately 2,386 metres, we will continue towards the crater rim. For those wishing to witness the famous Blue Fire, the adventure involves descending approximately 800 metres along a steep, rocky, and slippery trail. The descent to the crater floor takes around 30–45 minutes."
+      },
+      {
+       "type": "paragraph",
+       "text": "The Blue Fire is a fascinating natural phenomenon caused by ignited sulphuric gases. If access is permitted and conditions are suitable, you will have the opportunity to observe this rare spectacle and capture some memorable photographs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Important note: If you feel unable to descend to the Blue Fire area due to physical limitations, you may skip this section and proceed directly to the sunrise viewpoint."
+      },
+      {
+       "type": "paragraph",
+       "text": "After exploring the Blue Fire area, we will climb back up the same trail and continue towards the sunrise point. The walk usually takes between 30 minutes and one hour, depending on your pace. From the viewpoint, enjoy the breathtaking scenery of Ijen Crater and take photographs of its impressive volcanic landscape."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 07:00 AM, we will descend to Paltuding Base Camp. After completing the hike, we will have breakfast before continuing our journey to Sukapura, Probolinggo, where your accommodation in the Bromo area is located."
+      },
+      {
+       "type": "paragraph",
+       "text": "The drive takes approximately 5–6 hours, depending on road and traffic conditions. Along the way, you will pass through rural villages, forested landscapes, open savannah areas, and urban settlements."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival at your accommodation, check in and enjoy the refreshing mountain atmosphere around Mount Bromo. Spend the rest of the day relaxing and getting enough rest before the early-morning sunrise excursion."
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Mount Bromo Sunrise Tour – Transfer to Surabaya",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The final day of your adventure begins at approximately 03:30 AM, when our 4WD jeep picks you up from your hotel for the Mount Bromo sunrise experience."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will travel to some of the most well-known viewpoints along the Tengger Caldera, including Penanjakan and Kingkong Hill, situated at an elevation of approximately 2,700 metres. From these locations, you can witness the sunrise while enjoying panoramic views of Mount Bromo, Mount Batok, and Mount Semeru."
+      },
+      {
+       "type": "paragraph",
+       "text": "After sunrise, we will continue the adventure across the vast Sea of Sand surrounding Mount Bromo. From the jeep parking area, you can choose to walk or take an optional horse ride towards the staircase leading to the crater rim."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 08:30 AM, we will return to the hotel for breakfast, a shower, packing, and check-out. Once everything is ready, we will depart for Surabaya, with an estimated driving time of 3–4 hours depending on traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival in Surabaya, your Ijen and Bromo adventure comes to an end."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Bali and transfer out to Surabaya",
+    "1 night accommodation in the Mount Bromo area with breakfast",
+    "1 night accommodation in the Ijen crater (Banyuwangi city) area with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway & parking during the trip",
+    "Private English speaking guide",
+    "The jeep for Mount Bromo tour",
+    "Gas mask and headlamp for Ijen blue fire tour",
+    "Health certificate for Ijen trip",
+    "Mineral water during the trip",
+    "Entrance fee (Mount Bromo, Ijen crater)",
+    "Ferry tickets from Bali to Java"
+   ],
+   "excluded": [
+    "Trolley in Ijen",
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen & Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Bromo Area",
+     "options": [
+      "Homestay: Kopikuin Homestay, Gubug Ndeso Homestay",
+      "Hotel: Lava View Lodge Hotel, Joglo Kecombran Bromo"
+     ]
+    },
+    {
+     "area": "Ijen Area (Banyuwangi City)",
+     "options": [
+      "Homestay: Didus Homestay, Berliant Homestay, Pesona Java Ijen Homestay",
+      "Hotel: Ketapang Indah Hotel, El-Hotel, Grand Harvest"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "IMG_0863",
+    "card": "IMG_0863"
+   },
+   "open_questions": [],
+   "source_doc": "START BALI IJEN BROMO TOUR 3D2N DROP SURABAYA.docx"
+  },
+  {
+   "id": "Trip06",
+   "slug": "bromo-ijen-3d2n-from-bali",
+   "name": "Bromo & Ijen",
+   "region": "East Java",
+   "duration": {
+    "days": 3,
+    "nights": 2,
+    "label": "3 days · 2 nights"
+   },
+   "start": "Bali",
+   "end": "Bali",
+   "route_label": "Bali round trip",
+   "destinations": [
+    "Ijen",
+    "Bromo"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "A midnight climb of about 3 km at Ijen and an early 4WD jeep ride to the Bromo viewpoints. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 5176000,
+      "homestay": 4401000
+     },
+     {
+      "pax": 3,
+      "hotel": 3977000,
+      "homestay": 3302000
+     },
+     {
+      "pax": 4,
+      "hotel": 3403000,
+      "homestay": 2928000
+     }
+    ],
+    "from_price_4_pax": 2928000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Bali to Mount Bromo – Overnight Stay in the Bromo Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your Bromo and Ijen adventure begins at 09:00 AM Bali time. Our driver will pick you up from your hotel in Bali and take you to Gilimanuk Harbour. The drive usually takes around 4–5 hours, depending on your pickup location."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Gilimanuk Harbour, you will board a ferry to Ketapang Harbour in East Java. The crossing takes approximately one hour. After arriving in Banyuwangi, we will continue by car to the Bromo area, with accommodation arranged in Sukapura or Cemoro Lawang. This overland journey takes approximately 6–7 hours."
+      },
+      {
+       "type": "paragraph",
+       "text": "During the trip, we may stop at a local restaurant for lunch or dinner, depending on the schedule (meals are at your own expense). Once we arrive at your accommodation, check in and enjoy the refreshing mountain air. Spend the evening relaxing and getting enough rest before the Mount Bromo sunrise excursion the following morning."
+      },
+      {
+       "type": "paragraph",
+       "text": "Travel time to Gilimanuk Harbour: Approximately 4–5 hours from Ubud, Sanur, Kuta, Legian, and Denpasar; around 30 minutes from Pemuteran; and approximately 2 hours from Lovina."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Mount Bromo Sunrise Experience – Transfer to Banyuwangi",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The Mount Bromo excursion starts at approximately 03:00 AM, when our 4WD jeep collects you from your accommodation. We will head towards one of the area's famous sunrise viewpoints, either Penanjakan or Kingkong Hill, located along the rim of the Tengger Caldera at an elevation of around 2,700 metres."
+      },
+      {
+       "type": "paragraph",
+       "text": "From the viewpoint, you can watch the sunrise while enjoying panoramic views of Mount Bromo, Mount Batok, and Mount Semeru. After sunrise, we will continue the adventure across the vast Sea of Sand surrounding Mount Bromo."
+      },
+      {
+       "type": "paragraph",
+       "text": "From the jeep parking area, you can choose to walk or take an optional horse ride towards the staircase leading to the crater rim."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 08:30 AM, we will return to the hotel for breakfast, a shower, packing, and check-out. After completing the morning activities, we will depart for Banyuwangi. The drive takes approximately 5–6 hours, depending on traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Along the way, you will pass through traditional villages, forested landscapes, rice fields, and the beautiful countryside of East Java. Upon arrival in Banyuwangi, check in to your accommodation and take some time to relax. An early rest is recommended to prepare for the midnight hike to Ijen Crater."
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Ijen Crater Midnight Adventure – Return to Bali",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Our final excursion begins at approximately 00:00 AM, when we leave the hotel and travel to Paltuding Base Camp, the starting point of the Mount Ijen hike, situated at around 1,800 metres above sea level. The drive takes approximately one hour."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival at Paltuding, enjoy a cup of coffee or tea while our team provides a briefing about the hiking route and safety precautions. At approximately 02:00 AM, we will begin the ascent towards Ijen Crater."
+      },
+      {
+       "type": "paragraph",
+       "text": "The uphill trek covers approximately 3 kilometres and generally takes 1.5–2 hours, depending on your physical condition and walking pace. Once we reach the crater rim, those who wish to see the famous Blue Fire can continue down towards the crater floor. This descent takes around 30–45 minutes and involves steep, rocky, and potentially slippery terrain."
+      },
+      {
+       "type": "paragraph",
+       "text": "If access and weather conditions permit, you will have the opportunity to witness Ijen's remarkable Blue Fire phenomenon, a rare natural spectacle found in very few places worldwide. After exploring the area, we will make our way back up to the crater rim to enjoy the sunrise and the surrounding volcanic scenery."
+      },
+      {
+       "type": "paragraph",
+       "text": "Important note: The descent to the Blue Fire area requires additional physical effort and is subject to official access and safety conditions. If you are unable to make the descent, you can remain on the upper trail and proceed towards the sunrise viewpoint."
+      },
+      {
+       "type": "paragraph",
+       "text": "After sunrise, we will descend to Paltuding Base Camp and return to the hotel for breakfast, a shower, and check-out."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will then transfer you to Ketapang Harbour, where you will board a ferry across the Bali Strait to Gilimanuk Harbour. Once you arrive in Bali, our driver will take you back to your hotel in your selected area. The transfer time from Gilimanuk to your accommodation depends on your destination and traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Estimated travel time from Gilimanuk Harbour to your hotel: Approximately 4–5 hours for Ubud, Sanur, Kuta, Legian, and Denpasar; around 30 minutes for Pemuteran; and approximately 2 hours for Lovina."
+      },
+      {
+       "type": "paragraph",
+       "text": "Your Bromo and Ijen tour officially concludes upon arrival at your hotel in Bali."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Bali and transfer out to Bali",
+    "1 night accommodation in the Mount Bromo area with breakfast",
+    "1 night accommodation in the Ijen crater (Banyuwangi city) area with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway & parking during the trip",
+    "Private English speaking guide",
+    "The jeep for Mount Bromo tour",
+    "Gas mask and headlamp for Ijen blue fire tour",
+    "Health certificate for Ijen trip",
+    "Mineral water during the trip",
+    "Entrance fee (Mount Bromo, Ijen crater)",
+    "Ferry tickets from Bali to Java& from Java to Bali"
+   ],
+   "excluded": [
+    "Trolley in Ijen",
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen & Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Bromo Area",
+     "options": [
+      "Homestay: Kopikuin Homestay, Gubug Ndeso Homestay",
+      "Hotel: Lava View Lodge Hotel, Joglo Kecombran Bromo"
+     ]
+    },
+    {
+     "area": "Ijen Area (Banyuwangi City)",
+     "options": [
+      "Homestay: Didus Homestay, Berliant Homestay, Pesona Java Ijen Homestay",
+      "Hotel: Ketapang Indah Hotel, El-Hotel, Grand Harvest"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "IMG_2998",
+    "card": "IMG_2998"
+   },
+   "open_questions": [],
+   "source_doc": "START BALI BROMO IJEN TOUR DROP BALI 3D2N.docx"
+  },
+  {
+   "id": "Trip07",
+   "slug": "tumpak-sewu-bromo-3d2n-from-surabaya",
+   "name": "Tumpak Sewu & Bromo",
+   "region": "East Java",
+   "duration": {
+    "days": 3,
+    "nights": 2,
+    "label": "3 days · 2 nights"
+   },
+   "start": "Surabaya",
+   "end": "Surabaya",
+   "route_label": "Surabaya round trip",
+   "destinations": [
+    "Tumpak Sewu",
+    "Bromo"
+   ],
+   "difficulty": "Moderate",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "About 1 hour on foot down to the waterfall at Tumpak Sewu and an early 4WD jeep ride to the Bromo viewpoints.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 4391000,
+      "homestay": 3791000
+     },
+     {
+      "pax": 3,
+      "hotel": 3482000,
+      "homestay": 2982000
+     },
+     {
+      "pax": 4,
+      "hotel": 3028000,
+      "homestay": 2728000
+     }
+    ],
+    "from_price_4_pax": 2728000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Surabaya to Tumpak Sewu – Overnight Stay in Pronojiwo",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your Bromo and Tumpak Sewu Waterfall adventure begins at 09:00 AM. Our driver will pick you up from Juanda International Airport or your hotel in Surabaya before heading towards Pronojiwo, Lumajang, where your accommodation near Tumpak Sewu Waterfall is located."
+      },
+      {
+       "type": "paragraph",
+       "text": "The drive takes approximately 5–6 hours, depending on road and traffic conditions. During the journey, you will travel along toll roads and pass through rural villages, terraced rice fields, forested areas, and scenic cliffs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival at your accommodation, check in and take some time to relax after the journey. Enjoy the peaceful surroundings and get enough rest before the Tumpak Sewu trekking adventure the following morning."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Tumpak Sewu Waterfall Exploration – Overnight Stay in the Bromo Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "After breakfast, we will begin the Tumpak Sewu excursion at approximately 07:00 AM. Our first stop will be the panoramic viewpoint, where you can admire the impressive waterfall cascading down the surrounding cliffs. Take this opportunity to capture stunning photographs of the landscape from above."
+      },
+      {
+       "type": "paragraph",
+       "text": "From the viewpoint, we will continue the trek towards the base of the waterfall. The walk takes approximately one hour and involves descending hillside paths before following the river through the surrounding terrain. Along the way, you will encounter several scenic spots, including Tetes Cave and Blue Lake, where you can stop to enjoy the natural beauty and take memorable pictures."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once we reach Tumpak Sewu Waterfall, you will have time to appreciate its magnificent cascades and dramatic surroundings. Enjoy the scenery and capture photos of this remarkable natural attraction before we make our way back to the accommodation."
+      },
+      {
+       "type": "paragraph",
+       "text": "After the trek, we will return to the hotel, where you can freshen up and have lunch (at your own expense)."
+      },
+      {
+       "type": "paragraph",
+       "text": "Later, we will depart for Sukapura, Probolinggo, where your accommodation in the Mount Bromo area is located. The journey takes approximately 3–4 hours, depending on traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, check in and enjoy the cool mountain atmosphere. Spend the rest of the day relaxing and preparing for the early-morning Mount Bromo sunrise tour."
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Mount Bromo Sunrise Adventure – Transfer to Surabaya",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The final day begins at approximately 03:30 AM, when our 4WD jeep picks you up from your accommodation for the Mount Bromo sunrise excursion."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will head to renowned viewpoints along the Tengger Caldera, including Penanjakan and Kingkong Hill, situated at an elevation of approximately 2,700 metres. From these locations, you can enjoy a beautiful sunrise accompanied by panoramic views of Mount Bromo, Mount Batok, and Mount Semeru."
+      },
+      {
+       "type": "paragraph",
+       "text": "After sunrise, we will continue across the expansive Sea of Sand surrounding Mount Bromo. From the jeep parking area, you can choose to walk or take an optional horse ride to reach the staircase leading to the crater rim."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 08:30 AM, we will return to the hotel for breakfast, a shower, packing, and check-out. Once everything is ready, we will begin the drive to Surabaya, which takes approximately 3–4 hours, depending on traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival in Surabaya, your three-day adventure exploring Tumpak Sewu Waterfall and Mount Bromo comes to an end."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Surabaya and transfer out to Surabaya",
+    "1 night accommodation in the Mount Bromo area with breakfast",
+    "1 night accommodation in the Tumpak Sewu area with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway & parking during the trip",
+    "Private English speaking guide",
+    "The jeep for Mount Bromo tour",
+    "Mineral water during the trip",
+    "Entrance fee (Bromo, Tumpak Sewu)"
+   ],
+   "excluded": [
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Tumpak Sewu climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Bromo Area",
+     "options": [
+      "Homestay: Kopikuin Homestay, Gubug Ndeso Homestay",
+      "Hotel: Lava View Lodge Hotel, Joglo Kecombran Bromo"
+     ]
+    },
+    {
+     "area": "Tumpak Sewu Area",
+     "options": [
+      "Homestay: Tumpak Sewu Cottaga, Artha Cottage, Kaliningrad Cottage"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "IMG_2866",
+    "card": "IMG_2866"
+   },
+   "open_questions": [],
+   "source_doc": "START SURABAYA TUMPAK SEWU - BROMO TOUR 3D2N - DROP SURABAYA.docx"
+  },
+  {
+   "id": "Trip08",
+   "slug": "ijen-tumpak-sewu-bromo-4d3n-bali-to-surabaya",
+   "name": "Ijen · Tumpak Sewu · Bromo",
+   "region": "East Java",
+   "duration": {
+    "days": 4,
+    "nights": 3,
+    "label": "4 days · 3 nights"
+   },
+   "start": "Bali",
+   "end": "Surabaya",
+   "route_label": "Bali to Surabaya",
+   "destinations": [
+    "Ijen",
+    "Tumpak Sewu",
+    "Bromo"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "A midnight climb of about 3 km at Ijen, about 1 hour on foot down to the waterfall at Tumpak Sewu and an early 4WD jeep ride to the Bromo viewpoints. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 5581000,
+      "homestay": 5056000
+     },
+     {
+      "pax": 3,
+      "hotel": 4377000,
+      "homestay": 3869000
+     },
+     {
+      "pax": 4,
+      "hotel": 3801000,
+      "homestay": 3326000
+     }
+    ],
+    "from_price_4_pax": 3326000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Bali to Banyuwangi – Hotel Check-in",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your adventure to explore Ijen Crater and Mount Bromo begins at 09:00 AM Bali time. Our driver will pick you up directly from your hotel in Bali before heading towards Gilimanuk Harbour. The drive usually takes around 4–5 hours, depending on your pickup location and traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once you arrive at the harbour, you will board a ferry to Ketapang Harbour in East Java. The crossing takes approximately one hour. After reaching Banyuwangi, we will stop at a local restaurant for lunch (personal expenses) before continuing to your hotel in the Banyuwangi area."
+      },
+      {
+       "type": "paragraph",
+       "text": "The rest of the day is free for you to relax and prepare for the midnight hike to Ijen Crater."
+      },
+      {
+       "type": "paragraph",
+       "text": "Travel time to Gilimanuk Harbour: Ubud, Sanur, Kuta, Legian, and Denpasar approximately 4–5 hours; Pemuteran around 30 minutes; and Lovina approximately 2 hours."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Ijen Crater Exploration – Transfer to Tumpak Sewu",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The journey to Ijen Crater begins at approximately 00:00 AM, when we leave the hotel and drive to Paltuding Base Camp, located at an elevation of around 1,800 metres. The drive takes about one hour, passing through traditional villages, plantations, rice fields, and forested mountain roads."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival at Paltuding, you can enjoy a warm drink while our guide explains the hiking route and safety guidelines. At approximately 02:00 AM, we will start the ascent towards Ijen Crater. The uphill trek covers roughly 3 kilometres and generally takes 1.5–2 hours, depending on your pace and fitness level. Several rest points are available along the trail, with small stalls and toilet facilities at various locations."
+      },
+      {
+       "type": "paragraph",
+       "text": "After reaching the upper section of Mount Ijen, at approximately 2,386 metres above sea level, we will continue towards the crater area. For those who wish to see the famous blue fire, the route involves a descent of approximately 800 metres over steep, uneven, and potentially slippery terrain. Reaching the blue fire area requires an additional 30–45 minutes of descent, depending on trail conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "The blue flames are a rare natural phenomenon caused by ignited sulphuric gases. If conditions permit and access is open, you will have the opportunity to witness this remarkable sight and take photographs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Please note: Visiting the blue fire requires additional physical effort and depends on weather, safety conditions, and official access restrictions. If the descent is unsuitable for you, you can remain on the upper trail and proceed towards the sunrise viewpoint instead."
+      },
+      {
+       "type": "paragraph",
+       "text": "After exploring the crater area, we will make our way back uphill and continue towards the sunrise viewpoint. Depending on your location and walking pace, this section may take approximately 30 minutes to one hour. Enjoy the morning scenery and take in the impressive views of Ijen's turquoise crater lake and surrounding volcanic landscape."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 07:00 AM, we will descend to Paltuding Base Camp and return to the hotel for breakfast, a shower, and some well-deserved rest."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will check out at approximately 11:00 AM and begin the overland journey to Pronojiwo, Lumajang, where your next accommodation is located near Tumpak Sewu Waterfall. The drive takes around 6–7 hours, with scenic views of countryside settlements, green hills, and natural rock formations along the way."
+      },
+      {
+       "type": "paragraph",
+       "text": "After arriving at your accommodation, check in and relax for the evening in preparation for the waterfall exploration the following morning."
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Tumpak Sewu Waterfall Adventure – Transfer to Bromo",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "After breakfast, we will start the Tumpak Sewu excursion at approximately 07:00 AM. Our first stop is the panoramic viewpoint, where you can admire the waterfall cascading down the surrounding cliffs from above. This is an ideal location to take photos of one of East Java's most spectacular natural attractions."
+      },
+      {
+       "type": "paragraph",
+       "text": "From the viewpoint, we will continue on foot towards the waterfall's lower area. The trek takes approximately one hour and includes descending hillside paths and walking alongside the river. During the journey, we will also pass several scenic locations, including Tetes Cave and Blue Lake, where you can stop to enjoy the surroundings and capture memorable photographs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once we reach the main waterfall, take some time to appreciate the dramatic landscape and towering streams of water flowing down the cliffs. After the exploration, we will return to the accommodation to freshen up and have lunch (personal expenses)."
+      },
+      {
+       "type": "paragraph",
+       "text": "In the afternoon, we will continue the journey to the Bromo area, with accommodation arranged around Sukapura, Probolinggo. The transfer usually takes 3–4 hours, depending on road and traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, check in and enjoy a relaxing evening in the cool mountain atmosphere. An early night is recommended, as the Mount Bromo sunrise excursion will begin before dawn."
+      }
+     ]
+    },
+    {
+     "label": "Day 4",
+     "title": "Mount Bromo Sunrise Experience – Transfer to Surabaya",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The final day begins at approximately 03:30 AM, when our 4WD jeep picks you up from your hotel for the Mount Bromo sunrise excursion."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will travel to selected viewpoints along the edge of the Tengger Caldera, including Penanjakan and Kingkong Hill, both famous for their sweeping views across the volcanic landscape. At an elevation of around 2,700 metres, these viewpoints offer an opportunity to witness the sunrise over Mount Bromo, Mount Batok, and Mount Semeru, weather permitting."
+      },
+      {
+       "type": "paragraph",
+       "text": "After sunrise, the adventure continues with a jeep ride across the vast Sea of Sand. From the designated parking area, you can walk towards Mount Bromo's crater staircase or choose to hire a horse as an optional activity, subject to local availability and additional charges."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once you have finished exploring the Bromo area, we will return to the hotel at approximately 08:30 AM. Enjoy breakfast, take a shower, pack your belongings, and complete the check-out process."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will then depart for Surabaya, with an estimated transfer time of 3–4 hours depending on traffic conditions. Upon arrival in Surabaya, your Ijen, Tumpak Sewu, and Bromo adventure comes to an end."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Bali and transfer out to Surabaya",
+    "1 night accommodation in the Mount Bromo area with breakfast",
+    "1 night accommodation in the Ijen crater (Banyuwangi city) area with breakfast",
+    "1 night accommodation in the Tumpak Sewu area with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway & parking during the trip",
+    "Private English speaking guide",
+    "The jeep for Mount Bromo tour",
+    "Gas mask and headlamp for Ijen blue fire tour",
+    "Health certificate for Ijen trip",
+    "Mineral water during the trip",
+    "Entrance fee (Mount Bromo, Tumpak Sewu waterfall, Ijen crater)",
+    "Ferry tickets from Bali to Java"
+   ],
+   "excluded": [
+    "Trolley in Ijen",
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen & Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen & Tumpak Sewu climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Bromo Area",
+     "options": [
+      "Homestay: Kopikuin Homestay, Gubug Ndeso Homestay",
+      "Hotel: Lava View Lodge Hotel, Joglo Kecombran Bromo"
+     ]
+    },
+    {
+     "area": "Ijen Area (Banyuwangi City)",
+     "options": [
+      "Homestay: Didus Homestay, Berliant Homestay, Pesona Java Ijen Homestay",
+      "Hotel: Ketapang Indah Hotel, El-Hotel, Grand Harvest"
+     ]
+    },
+    {
+     "area": "Tumpak Sewu Area",
+     "options": [
+      "Homestay: Tumpak Sewu Cottaga, Artha Cottage, Kaliningrad Cottage"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "IMG_2414",
+    "card": "IMG_2414"
+   },
+   "open_questions": [],
+   "source_doc": "START BALI IJEN - TUMPAK SEWU - BROMO - DROP SURABAYA 4D3N.docx"
+  },
+  {
+   "id": "Trip09",
+   "slug": "bromo-tumpak-sewu-ijen-4d3n-surabaya-to-bali",
+   "name": "Bromo · Tumpak Sewu · Ijen",
+   "region": "East Java",
+   "duration": {
+    "days": 4,
+    "nights": 3,
+    "label": "4 days · 3 nights"
+   },
+   "start": "Surabaya",
+   "end": "Bali",
+   "route_label": "Surabaya to Bali",
+   "destinations": [
+    "Ijen",
+    "Tumpak Sewu",
+    "Bromo"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "A midnight climb of about 3 km at Ijen, about 1 hour on foot down to the waterfall at Tumpak Sewu and an early 4WD jeep ride to the Bromo viewpoints. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 5906000,
+      "homestay": 5031000
+     },
+     {
+      "pax": 3,
+      "hotel": 4694000,
+      "homestay": 3952000
+     },
+     {
+      "pax": 4,
+      "hotel": 4088000,
+      "homestay": 3613000
+     }
+    ],
+    "from_price_4_pax": 3613000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Surabaya to Mount Bromo – Overnight Stay in the Bromo Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your Bromo, Tumpak Sewu Waterfall, and Ijen adventure begins at 09:00 AM. Our team will meet you at Juanda International Airport or your hotel in Surabaya before departing for Sukapura, Probolinggo, where your accommodation in the Bromo area is located."
+      },
+      {
+       "type": "paragraph",
+       "text": "The drive takes approximately 3–4 hours, depending on traffic. Along the way, you will pass through urban areas and enjoy views of the surrounding landscapes as we make our way towards the mountains."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, check in to your accommodation and enjoy the peaceful atmosphere and refreshing mountain air. You will have the rest of the day to relax and prepare for the early-morning Mount Bromo sunrise excursion."
+      },
+      {
+       "type": "paragraph",
+       "text": "Optional activity: You may also visit Madakaripura Waterfall before checking in to your accommodation. The waterfall is located near the Bromo area, making it a convenient additional stop. Additional charges apply."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Mount Bromo Sunrise Adventure – Transfer to Tumpak Sewu Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The day begins at approximately 03:30 AM, when our 4WD jeep picks you up from your accommodation for the Mount Bromo sunrise experience."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will drive to some of the most famous viewpoints around the Tengger Caldera, including Penanjakan and Kingkong Hill, located at approximately 2,700 metres above sea level. From these elevated spots, you can watch the sunrise while enjoying spectacular views of Mount Bromo, Mount Batok, and Mount Semeru."
+      },
+      {
+       "type": "paragraph",
+       "text": "After sunrise, we will continue across the vast Sea of Sand surrounding Mount Bromo. From the jeep parking area, you can either walk or choose an optional horse ride to reach the staircase leading to the crater rim."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 08:30 AM, we will return to the hotel for breakfast, a shower, packing, and check-out. Afterwards, we will continue the journey to your accommodation near Tumpak Sewu Waterfall, which takes approximately 4–5 hours, depending on traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "During the transfer, you will pass through towns, green forested areas, and striking natural cliffs. Once you arrive at your accommodation, check in and take some time to rest before the Tumpak Sewu trekking adventure the next morning."
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Tumpak Sewu Waterfall Trekking – Transfer to Banyuwangi",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "After breakfast, we will begin exploring Tumpak Sewu Waterfall at approximately 07:00 AM. Our first stop will be the panoramic viewpoint, where you can admire the magnificent waterfall from above and take photographs of its impressive surroundings."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will then continue the trek towards the waterfall's base, following the river and descending along the hillside trail. The walk takes approximately one hour. Along the way, you will encounter several beautiful spots, including Tetes Cave and Blue Lake, which offer additional opportunities to enjoy the scenery and capture memorable pictures."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Tumpak Sewu Waterfall, spend some time appreciating the dramatic cascades and towering cliffs that make this destination one of East Java's most remarkable natural attractions."
+      },
+      {
+       "type": "paragraph",
+       "text": "After the exploration, we will return to the accommodation, where you can freshen up and have lunch (at your own expense)."
+      },
+      {
+       "type": "paragraph",
+       "text": "Following lunch, we will depart for Banyuwangi, where your next overnight accommodation is located. The journey will take you through different landscapes as we travel towards East Java's eastern region."
+      },
+      {
+       "type": "paragraph",
+       "text": "After checking in, take the opportunity to relax and get some rest, as the journey to Ijen Crater will begin around midnight."
+      }
+     ]
+    },
+    {
+     "label": "Day 4",
+     "title": "Ijen Crater Midnight Hike – Transfer to Bali",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Our final excursion begins at approximately 00:00 AM, when we leave the hotel and head towards Paltuding Base Camp, the starting point for the Mount Ijen hike. Located at around 1,800 metres above sea level, Paltuding can be reached in approximately one hour from your accommodation."
+      },
+      {
+       "type": "paragraph",
+       "text": "Along the way, you will pass through traditional villages, rice fields, and forested mountain scenery. Upon arrival at the base camp, enjoy a warm cup of coffee or tea while our guide explains the hiking route and provides essential safety instructions."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 02:00 AM, we will begin the ascent towards Ijen Crater. The trail covers around 3 kilometres and generally takes 1.5–2 hours, depending on your physical condition and walking speed. There are six checkpoints along the route, with small stalls and toilet facilities available at most stops."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once we reach the upper section of Mount Ijen, at approximately 2,386 metres above sea level, we will continue towards the crater rim. For those wishing to witness the famous blue fire, the route involves descending approximately 800 metres over steep, rocky, and slippery terrain. This descent takes around 30–45 minutes."
+      },
+      {
+       "type": "paragraph",
+       "text": "The blue fire is an extraordinary natural phenomenon caused by burning sulphuric gases and is one of Ijen's most distinctive attractions. If weather and safety conditions permit access, you will have the opportunity to see this rare spectacle and take photographs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Important note: If you feel unable to make the descent to the blue fire area, you can skip this section and proceed directly towards the sunrise viewpoint."
+      },
+      {
+       "type": "paragraph",
+       "text": "After exploring the blue fire area, we will climb back up the same trail and continue to the sunrise point. The journey usually takes around 30 minutes to one hour, depending on your pace. At the viewpoint, enjoy the panoramic scenery of Ijen Crater and take photos of the surrounding volcanic landscape."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 07:00 AM, we will descend to Paltuding Base Camp and return to your accommodation for breakfast and time to freshen up."
+      },
+      {
+       "type": "paragraph",
+       "text": "Later in the day, we will transfer you to Ketapang Harbour in Banyuwangi, where you will board the ferry across the Bali Strait to Gilimanuk Harbour."
+      },
+      {
+       "type": "paragraph",
+       "text": "After arriving in Bali, our team will take you to your accommodation in your selected area, marking the end of your four-day adventure."
+      },
+      {
+       "type": "paragraph",
+       "text": "Note: Estimated travel times from Gilimanuk Harbour to your accommodation in Bali are approximately 4–5 hours for Ubud, Sanur, Kuta, Legian, and Denpasar; around 30 minutes for Pemuteran; and approximately 2 hours for Lovina."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Surabaya and transfer out to Bali",
+    "1 night accommodation in the Mount Bromo area with breakfast",
+    "1 night accommodation in the Tumpak Sewu area with breakfast",
+    "1 night accommodation in the Ijen crater area (Banyuwangi city) with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway & parking during the trip",
+    "Private English speaking guide",
+    "The jeep for Mount Bromo tour",
+    "Gas mask and headlamp for Ijen blue fire tour",
+    "Health certificate for Ijen trip",
+    "Mineral water during the trip",
+    "Entrance fee (Mount Bromo, Tumpak Sewu waterfall, Ijen crater)",
+    "Ferry tickets from Java to Bali"
+   ],
+   "excluded": [
+    "Trolley in Ijen",
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen & Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen & Tumpak Sewu climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Bromo Area",
+     "options": [
+      "Homestay: Kopikuin Homestay, Gubug Ndeso Homestay",
+      "Hotel: Lava View Lodge Hotel, Joglo Kecombran Bromo"
+     ]
+    },
+    {
+     "area": "Tumpak Sewu Area",
+     "options": [
+      "Homestay: Tumpak Sewu Cottaga, Artha Cottage, Kaliningrad Cottage"
+     ]
+    },
+    {
+     "area": "Ijen Area (Banyuwangi City)",
+     "options": [
+      "Homestay: Didus Homestay, Berliant Homestay, Pesona Java Ijen Homestay",
+      "Hotel: Ketapang Indah Hotel, El-Hotel, Grand Harvest"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "IMG_2450",
+    "card": "IMG_2878"
+   },
+   "open_questions": [],
+   "source_doc": "START SURABAYA BROMO - TUMPAK SEWU - IJEN TOUR - DROP BALI 4D3N.docx"
+  },
+  {
+   "id": "Trip10",
+   "slug": "tumpak-sewu-ijen-bromo-4d3n-from-surabaya",
+   "name": "Tumpak Sewu · Ijen · Bromo",
+   "region": "East Java",
+   "duration": {
+    "days": 4,
+    "nights": 3,
+    "label": "4 days · 3 nights"
+   },
+   "start": "Surabaya",
+   "end": "Surabaya",
+   "route_label": "Surabaya round trip",
+   "destinations": [
+    "Ijen",
+    "Tumpak Sewu",
+    "Bromo"
+   ],
+   "difficulty": "Challenging",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 4
+   },
+   "summary": "A midnight climb of about 3 km at Ijen, about 1 hour on foot down to the waterfall at Tumpak Sewu and an early 4WD jeep ride to the Bromo viewpoints. The blue fire descent is optional.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "hotel",
+     "homestay"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "hotel": 6511000,
+      "homestay": 5536000
+     },
+     {
+      "pax": 3,
+      "hotel": 4927000,
+      "homestay": 4119000
+     },
+     {
+      "pax": 4,
+      "hotel": 4261000,
+      "homestay": 3786000
+     }
+    ],
+    "from_price_4_pax": 3786000,
+    "notes": [
+     "Peak season (Eid Al-Fitr and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "Prices are valid for 2026.",
+     "For more than 4 people or other hotel choices, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Surabaya to Banyuwangi – Overnight Stay in the Ijen Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your Bromo, Tumpak Sewu Waterfall, and Ijen adventure begins at 09:00 AM. Our driver will pick you up from Juanda International Airport or your hotel in Surabaya before starting the journey to Banyuwangi, where your accommodation near Ijen Crater is located."
+      },
+      {
+       "type": "paragraph",
+       "text": "The drive takes approximately 6–7 hours, depending on traffic conditions. Along the way, you will pass through busy city areas, long stretches of highway, traditional villages, and the expansive landscape of Baluran Forest."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival in Banyuwangi, check in to your hotel and take some time to relax after the long drive. You can enjoy the available hotel facilities and get some rest before the midnight excursion to Mount Ijen."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Ijen Crater Midnight Hike – Transfer to Tumpak Sewu Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The Ijen Crater adventure starts at approximately 00:00 AM. We will depart from your hotel and drive to Paltuding Base Camp, the main starting point for the Mount Ijen hike, located at around 1,800 metres above sea level. The journey takes approximately one hour, passing through local villages, rice fields, and forested areas filled with tall, ancient trees."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once we arrive at Paltuding, you can enjoy a warm cup of coffee or tea while our guide explains the hiking route and provides important safety instructions. At around 02:00 AM, we will begin the trek towards Ijen Crater."
+      },
+      {
+       "type": "paragraph",
+       "text": "The uphill trail covers approximately 3 kilometres and usually takes 1.5–2 hours, depending on your fitness level and walking pace. Along the route, there are six checkpoints, with small food stalls and toilet facilities available at most of them."
+      },
+      {
+       "type": "paragraph",
+       "text": "After reaching the upper section of Mount Ijen, at an elevation of approximately 2,386 metres, we will continue towards the crater rim. For those interested in witnessing the famous blue fire, the journey includes a descent of around 800 metres along a steep, rocky, and slippery path. Reaching the crater floor takes approximately 30–45 minutes."
+      },
+      {
+       "type": "paragraph",
+       "text": "The blue fire is a rare natural phenomenon created by ignited sulphuric gases and is one of the main highlights of the Ijen experience. If access is permitted and weather conditions are suitable, you will have the opportunity to witness this unique sight and take memorable photographs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Important note: If you are unable or prefer not to descend to the blue fire area, you can skip this section and continue directly towards the sunrise viewpoint."
+      },
+      {
+       "type": "paragraph",
+       "text": "After exploring the blue fire area, we will climb back up the same trail and proceed to the sunrise point. This section takes approximately 30 minutes to one hour, depending on your pace. At the viewpoint, enjoy the spectacular scenery of Ijen Crater and capture photos of the surrounding volcanic landscape."
+      },
+      {
+       "type": "paragraph",
+       "text": "At around 07:00 AM, we will descend to Paltuding Base Camp before returning to your accommodation for breakfast and time to freshen up."
+      },
+      {
+       "type": "paragraph",
+       "text": "In the afternoon, we will check out and continue the journey to Pronojiwo, Lumajang, where your accommodation near Tumpak Sewu Waterfall is located. The drive takes approximately 6–7 hours, depending on road and traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, check in and spend the evening resting after the day's activities. Make sure to get enough sleep before the waterfall trekking excursion the following morning."
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Tumpak Sewu Waterfall Exploration – Overnight Stay in the Bromo Area",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "After breakfast, we will begin the Tumpak Sewu excursion at approximately 07:00 AM. Our first destination is the panoramic viewpoint, offering an impressive view of the waterfall cascading down the surrounding cliffs. You will have time to admire the scenery and take photographs from above."
+      },
+      {
+       "type": "paragraph",
+       "text": "From the viewpoint, we will continue on foot towards the lower section of the waterfall. The trek takes around one hour and involves descending hillside paths and following the river. Along the way, you will pass several scenic attractions, including Tetes Cave and Blue Lake, where you can stop to enjoy the natural surroundings and take pictures."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Tumpak Sewu Waterfall, take some time to appreciate its dramatic cascades and magnificent cliff formations. This is an excellent opportunity to capture unforgettable memories of one of East Java's most beautiful natural destinations."
+      },
+      {
+       "type": "paragraph",
+       "text": "After completing the trek, we will return to the accommodation, where you can freshen up and have lunch (at your own expense)."
+      },
+      {
+       "type": "paragraph",
+       "text": "Following lunch, we will travel to Sukapura, Probolinggo, for your overnight stay in the Bromo area. The journey takes approximately 4–5 hours, depending on traffic conditions. Along the way, you will enjoy views of the countryside, natural cliffs, and changing landscapes as we approach the mountainous region."
+      },
+      {
+       "type": "paragraph",
+       "text": "Once you arrive at the hotel, check in and enjoy the cool mountain atmosphere. The rest of the day is reserved for relaxation, allowing you to recharge before the early-morning Mount Bromo sunrise tour."
+      }
+     ]
+    },
+    {
+     "label": "Day 4",
+     "title": "Mount Bromo Sunrise Tour – Transfer to Surabaya",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "The final day of your adventure begins at approximately 03:30 AM, when our 4WD jeep picks you up from your hotel for the Mount Bromo sunrise excursion."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will head to some of the most popular viewpoints along the edge of the Tengger Caldera, including Penanjakan and Kingkong Hill, situated at an elevation of approximately 2,700 metres. From these locations, you can enjoy a stunning sunrise accompanied by panoramic views of Mount Bromo, Mount Batok, and Mount Semeru."
+      },
+      {
+       "type": "paragraph",
+       "text": "After sunrise, we will continue the journey across the famous Sea of Sand, a vast volcanic plain surrounding Mount Bromo. From the jeep parking area, you can choose to walk or take an optional horse ride towards the staircase leading to the crater rim."
+      },
+      {
+       "type": "paragraph",
+       "text": "At approximately 08:30 AM, we will return to the hotel for breakfast, a shower, packing, and check-out. Once everything is ready, we will depart for Surabaya. The drive takes approximately 3–4 hours, depending on traffic conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival in Surabaya, your four-day journey exploring Ijen Crater, Tumpak Sewu Waterfall, and Mount Bromo comes to an end."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pick up service from Surabaya and transfer out to Surabaya",
+    "1 night accommodation in the Mount Bromo area with breakfast",
+    "1 night accommodation in the Tumpak Sewu area with breakfast",
+    "1 night accommodation in the Ijen crater area (Banyuwangi city) with breakfast",
+    "Private land transportation with the driver and fuel during the trip",
+    "Cost for highway & parking during the trip",
+    "Private English speaking guide",
+    "The jeep for Mount Bromo tour",
+    "Gas mask and headlamp for Ijen blue fire tour",
+    "Health certificate for Ijen trip",
+    "Mineral water during the trip",
+    "Entrance fee (Mount Bromo, Tumpak Sewu waterfall, Ijen crater)"
+   ],
+   "excluded": [
+    "Trolley in Ijen",
+    "Horse in Bromo",
+    "Personal cost",
+    "Meals (cost for lunch & dinner during the trip)",
+    "Tip (gratuity) for driver/guide",
+    "Travel insurance"
+   ],
+   "third_card": {
+    "title": "What to bring",
+    "items": [
+     "Ijen & Bromo peak temperature can reach 5-15 degree Celsius, the stronger the wind, the colder.",
+     "Prepare a pair of good walking shoes; trekking shoes, running shoes, hiking shoes (highly recommended for Ijen & Tumpak Sewu climbing)",
+     "Warm clothing (jacket, trousers, scarf, jacket, hoody)",
+     "Raincoat and wet wipes for dust removal (can be purchased at petrol stations or convenience stores)",
+     "Warm cloth hat / beanie",
+     "Small backpack to carry your stuff up the mountain; personal identity card (or photocopy), mineral water & snack",
+     "Important things you should read before booking a tour: your insurance for this tour is your own responsibility.",
+     "Alcoholic beverages are strictly prohibited during the trip."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Bromo Area",
+     "options": [
+      "Homestay: Kopikuin Homestay, Gubug Ndeso Homestay",
+      "Hotel: Lava View Lodge Hotel, Joglo Kecombran Bromo"
+     ]
+    },
+    {
+     "area": "Tumpak Sewu Area",
+     "options": [
+      "Homestay: Tumpak Sewu Cottaga, Artha Cottage, Kaliningrad Cottage"
+     ]
+    },
+    {
+     "area": "Ijen Area (Banyuwangi City)",
+     "options": [
+      "Homestay: Borobudur Homestay, Berliant Homestay",
+      "Hotel: Ketapang Indah Hotel, El-Hotel, Grand Harvest"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "IMG_2907",
+    "card": "IMG_2450"
+   },
+   "open_questions": [],
+   "source_doc": "START SURABAYA TUMPAK SEWU-IJEN-BROMO DROP SURABAYA 4D3N.docx"
+  },
+  {
+   "id": "Trip11",
+   "slug": "sukamade-wildlife-2d1n-from-banyuwangi",
+   "name": "Sukamade Wildlife",
+   "region": "East Java",
+   "duration": {
+    "days": 2,
+    "nights": 1,
+    "label": "2 days · 1 night"
+   },
+   "start": "Banyuwangi",
+   "end": "Banyuwangi",
+   "route_label": "Banyuwangi round trip",
+   "destinations": [
+    "Sukamade"
+   ],
+   "difficulty": "Moderate",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 1,
+    "max": 4
+   },
+   "summary": "A 4WD off-road journey through the jungle and a basic eco-lodge.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "price"
+    ],
+    "rows": [
+     {
+      "pax": 1,
+      "price": 4955000
+     },
+     {
+      "pax": 2,
+      "price": 2855000
+     },
+     {
+      "pax": 3,
+      "price": 2605000
+     },
+     {
+      "pax": 4,
+      "price": 2268000
+     }
+    ],
+    "from_price_4_pax": 2268000,
+    "notes": [
+     "Rates apply to foreign visitors only.",
+     "Peak season (Eid holidays and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "For groups of more than 4 people, send us a request for a special price."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [
+    "Escape the ordinary and discover a different side of East Java through an unforgettable journey into the wilderness of Meru Betiri National Park. This two-day adventure takes you deep into tropical forests, across rugged off-road trails and river crossings, and into the peaceful coastal village of Sukamade, one of the natural habitats of sea turtles.",
+    "Beyond the thrill of the journey, experience the beauty of nature up close, witness the remarkable nesting behavior of sea turtles at night, and take part in releasing baby turtles, locally known as tukik, back into the ocean when conditions and conservation activities permit.",
+    "From the untouched atmosphere of Sukamade to the coastal charm of Pulau Merah, this trip combines wildlife encounters, local experiences, and an exciting 4WD journey into one memorable adventure."
+   ],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Banyuwangi City – Off-Road Journey to Sukamade",
+     "items": [
+      {
+       "type": "subheading",
+       "text": "A Journey Through Plantations, Tropical Forests & Untouched Wilderness"
+      },
+      {
+       "type": "paragraph",
+       "text": "Your adventure begins with a pick-up from your hotel, train station, or another agreed meeting point within Banyuwangi City. Meet your local team, receive a short introduction to the journey, and get ready to explore the remote landscapes of southern Banyuwangi aboard a rugged 4WD vehicle."
+      },
+      {
+       "type": "paragraph",
+       "text": "As we leave the city behind, the scenery gradually changes from local settlements and countryside roads to expansive plantations of cocoa, rubber, and other tropical crops. Along the way, enjoy glimpses of rural life before entering the greener and more secluded surroundings of Meru Betiri National Park."
+      },
+      {
+       "type": "paragraph",
+       "text": "The journey becomes increasingly adventurous as the vehicle navigates winding forest tracks, uneven terrain, muddy paths, and river crossings, depending on the weather and road conditions. Every turn reveals a different view of the rainforest, making the journey itself an essential part of the experience."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Sukamade, a quiet coastal area surrounded by tropical vegetation, we will check in at a simple eco-lodge. Take some time to settle in, enjoy the peaceful surroundings, and recharge before the evening's main activity."
+      },
+      {
+       "type": "subheading",
+       "text": "Evening Experience | Sea Turtle Nesting Tour"
+      },
+      {
+       "type": "paragraph",
+       "text": "After dinner, prepare for a guided night excursion to Sukamade Beach, a well-known nesting area for sea turtles. Accompanied by local guides and following the conservation team's instructions, you will have the opportunity to learn about the nesting process and, if nature allows, observe a female sea turtle coming ashore to lay her eggs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Experience the remarkable atmosphere of the beach at night, where the sound of the waves and the darkness of the coastline create a truly special wildlife encounter. The activity is conducted with respect for the turtles and their natural habitat, so visitors must follow the guide's instructions regarding distance, lighting, photography, and movement."
+      },
+      {
+       "type": "paragraph",
+       "text": "Sea turtle sightings are never guaranteed, as the activity depends on natural conditions and the animals' behavior. However, the opportunity to explore this protected coastal environment makes the experience memorable in its own right."
+      },
+      {
+       "type": "paragraph",
+       "text": "After the excursion, return to the lodge and enjoy a well-deserved rest surrounded by the sounds of nature."
+      },
+      {
+       "type": "paragraph",
+       "text": "Overnight: Sukamade Eco-Lodge (basic accommodation)"
+      },
+      {
+       "type": "paragraph",
+       "text": "Main Experiences: 4WD off-road adventure, cocoa and rubber plantations, rainforest exploration, river crossings, and a guided sea turtle nesting excursion."
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Sukamade Beach – Turtle Conservation Experience – Pulau Merah – Banyuwangi City",
+     "items": [
+      {
+       "type": "subheading",
+       "text": "From Wildlife Encounters to the Beautiful Southern Coast"
+      },
+      {
+       "type": "paragraph",
+       "text": "Wake up early and enjoy the peaceful atmosphere of Sukamade before beginning the morning's conservation-related activity."
+      },
+      {
+       "type": "subheading",
+       "text": "Morning Experience | Baby Turtle Release"
+      },
+      {
+       "type": "paragraph",
+       "text": "If a release session is scheduled and baby turtles are available, join a guided activity to release young sea turtles, known locally as tukik, into the ocean. Watch as these tiny creatures make their first journey toward the sea, an inspiring moment that highlights the importance of protecting marine wildlife and preserving coastal ecosystems."
+      },
+      {
+       "type": "paragraph",
+       "text": "The activity depends on hatchling availability, conservation schedules, weather, and local regulations. The release is supervised by local conservation personnel, and participants must follow all instructions to minimize disturbance to the animals."
+      },
+      {
+       "type": "paragraph",
+       "text": "After the activity, return to the lodge for breakfast. Enjoy your final moments in Sukamade, pack your belongings, and complete the check-out process before continuing the journey."
+      },
+      {
+       "type": "subheading",
+       "text": "Late Morning | Off-Road Journey Out of Sukamade"
+      },
+      {
+       "type": "paragraph",
+       "text": "Board the 4WD vehicle once again and travel back through the forest tracks of Meru Betiri National Park. The return journey offers another opportunity to appreciate the surrounding rainforest, plantation landscapes, and remote countryside."
+      },
+      {
+       "type": "paragraph",
+       "text": "Road conditions can affect the travel time, so the schedule may be adjusted to ensure a safe and comfortable journey."
+      },
+      {
+       "type": "subheading",
+       "text": "Midday to Afternoon | Visit Pulau Merah (Red Island)"
+      },
+      {
+       "type": "paragraph",
+       "text": "Continue toward Pulau Merah, one of Banyuwangi's best-known coastal destinations, recognized for its broad sandy beach, scenic coastline, and distinctive reddish hill near the shore."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, enjoy time to relax by the beach, admire the ocean views, or take photographs of the surrounding landscape. For guests interested in surfing, a surfboard rental is included in the package, subject to local availability and suitable sea conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Whether you prefer enjoying the coastal scenery or trying a few waves, Pulau Merah provides a refreshing contrast to the dense forests and remote wilderness of Sukamade."
+      },
+      {
+       "type": "paragraph",
+       "text": "Guests are encouraged to follow local safety advice before entering the water, especially when waves or currents are strong."
+      },
+      {
+       "type": "subheading",
+       "text": "Afternoon | Return to Banyuwangi City"
+      },
+      {
+       "type": "paragraph",
+       "text": "After enjoying the beach, we will begin the return journey to Banyuwangi City. Sit back and relax as the scenery transitions from the southern coastline and countryside to the more developed areas of the city."
+      },
+      {
+       "type": "paragraph",
+       "text": "The tour concludes with a drop-off at your preferred location within Banyuwangi City, which can include:"
+      },
+      {
+       "type": "bullet",
+       "text": "Your hotel or accommodation in Banyuwangi City"
+      },
+      {
+       "type": "bullet",
+       "text": "Banyuwangi Kota Train Station"
+      },
+      {
+       "type": "bullet",
+       "text": "Ketapang Train Station"
+      },
+      {
+       "type": "bullet",
+       "text": "Banyuwangi Bus Terminal"
+      },
+      {
+       "type": "bullet",
+       "text": "Ketapang Ferry Port"
+      },
+      {
+       "type": "bullet",
+       "text": "Another agreed drop-off point within the Banyuwangi area"
+      },
+      {
+       "type": "paragraph",
+       "text": "Please provide your preferred drop-off location in advance so the team can coordinate the schedule accordingly. For train or ferry departures, we recommend allowing sufficient time for the journey and check-in procedures."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Private 4WD jeep for jungle & trip",
+    "1 night stay at Sukamade eco-lodge (basic accommodation)",
+    "Meals 4x: lunch & dinner (Day 1), breakfast & lunch (Day 2)",
+    "Night tour to see sea turtles laying eggs",
+    "Baby turtle release activity",
+    "Surfboard rental at Red Island",
+    "English-speaking local guide",
+    "Mineral water during the trip",
+    "Entrance fees & permits (Meru Betiri NP & Sukamade beach)"
+   ],
+   "excluded": [
+    "Flight / train tickets to & from Banyuwangi",
+    "Personal expenses",
+    "Travel insurance",
+    "Tipping (driver/guide)"
+   ],
+   "third_card": {
+    "title": "Things to know",
+    "items": [
+     "Epic adventure / off-road vibes – crossing rivers & deep jungle",
+     "Forget the signal, it’s pure offline paradise",
+     "Accommodation at Sukamade is basic & simple (eco-lodge style, no luxury, limited electricity). It’s part of the adventure vibes",
+     "Turtle sighting is natural, so it depends on nature’s luck (but chances are high!).",
+     "Bring comfortable shoes, light jacket, and some snacks."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Where you will sleep",
+     "options": [
+      "1 night stay at Sukamade eco-lodge (basic accommodation)",
+      "Accommodation at Sukamade is basic & simple (eco-lodge style, no luxury, limited electricity). It’s part of the adventure vibes"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "n_pulau_merah",
+    "card": "n_turtle_laying"
+   },
+   "open_questions": [
+    "Rates apply to foreign visitors only (per source)."
+   ],
+   "source_doc": "SUKAMADE WILDLIFE ADVENTURE 2D1N.docx"
+  },
+  {
+   "id": "Trip12",
+   "slug": "sukamade-wildlife-3d2n-from-surabaya",
+   "name": "Sukamade Wildlife",
+   "region": "East Java",
+   "duration": {
+    "days": 3,
+    "nights": 2,
+    "label": "3 days · 2 nights"
+   },
+   "start": "Surabaya",
+   "end": "Banyuwangi",
+   "route_label": "Surabaya to Banyuwangi",
+   "destinations": [
+    "Sukamade"
+   ],
+   "difficulty": "Moderate",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 1,
+    "max": 4
+   },
+   "summary": "A 4WD off-road journey through the jungle and a basic eco-lodge.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "banyuwangi_hotel",
+     "banyuwangi_homestay"
+    ],
+    "rows": [
+     {
+      "pax": 1,
+      "banyuwangi_hotel": 8528000,
+      "banyuwangi_homestay": 7878000
+     },
+     {
+      "pax": 2,
+      "banyuwangi_hotel": 4563000,
+      "banyuwangi_homestay": 4238000
+     },
+     {
+      "pax": 3,
+      "banyuwangi_hotel": 3783000,
+      "banyuwangi_homestay": 3350000
+     },
+     {
+      "pax": 4,
+      "banyuwangi_hotel": 3036000,
+      "banyuwangi_homestay": 2711000
+     }
+    ],
+    "from_price_4_pax": 2711000,
+    "notes": [
+     "Rates apply to foreign visitors only.",
+     "Peak season (Eid holidays and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "For groups of more than 4 people, send us a request for a special price.",
+     "The Sukamade stay is a homestay (eco-lodge) in both options."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Surabaya to Banyuwangi City | the Journey East",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your journey begins with a pick-up from your hotel or the airport in Surabaya at the agreed time. From here, we will travel east toward Banyuwangi, passing through a variety of landscapes, from bustling towns and traditional villages to green rice fields and scenic countryside."
+      },
+      {
+       "type": "paragraph",
+       "text": "The drive takes approximately 6–7 hours, depending on traffic and road conditions. Along the way, we can make stops for meals, refreshments, and short breaks to ensure a more comfortable journey."
+      },
+      {
+       "type": "paragraph",
+       "text": "By late afternoon or early evening, we will arrive in Banyuwangi City and proceed to your hotel for check-in. The rest of the day is free for you to relax, enjoy the hotel facilities, and recharge your energy before heading into the wilderness the following morning."
+      },
+      {
+       "type": "paragraph",
+       "text": "Enjoy a peaceful night in Banyuwangi as you prepare for an exciting adventure to one of East Java's remote coastal destinations."
+      },
+      {
+       "type": "paragraph",
+       "text": "Overnight: Hotel in Banyuwangi City"
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Banyuwangi to Sukamade | Off-Road Jungle Expedition",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "After preparing for the day, we will begin our journey from Banyuwangi City toward Sukamade, a secluded coastal destination located within the natural surroundings of Meru Betiri National Park."
+      },
+      {
+       "type": "paragraph",
+       "text": "Travel aboard a 4WD vehicle as we leave the urban landscape behind and make our way through local settlements, cocoa plantations, and rubber estates. As the journey continues, the scenery gradually transforms into dense tropical forest, offering a glimpse of the area's rich natural environment."
+      },
+      {
+       "type": "paragraph",
+       "text": "The route itself is part of the adventure. Navigate winding dirt roads, uneven forest tracks, and river crossings where conditions permit. The journey offers a thrilling off-road experience while showcasing the wilder side of Banyuwangi."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Sukamade, we will check in at a simple eco-lodge and take some time to settle in. Enjoy dinner featuring local food before preparing for the evening's main attraction."
+      },
+      {
+       "type": "subheading",
+       "text": "Night Activity – Sea Turtle Observation"
+      },
+      {
+       "type": "paragraph",
+       "text": "After dark, join a guided excursion to Sukamade Beach, a recognized sea turtle nesting area. Accompanied by a local guide, you will have the opportunity to learn about the nesting habits of sea turtles and, if conditions are favorable, observe a female turtle coming ashore to lay her eggs."
+      },
+      {
+       "type": "paragraph",
+       "text": "Experience the quiet atmosphere of the beach at night and discover the importance of protecting these remarkable marine animals. To avoid disturbing the turtles, visitors must follow the guide's instructions regarding lighting, noise, movement, and photography."
+      },
+      {
+       "type": "paragraph",
+       "text": "Please note that turtle sightings depend on natural conditions and cannot be guaranteed."
+      },
+      {
+       "type": "paragraph",
+       "text": "After the excursion, return to the lodge and rest for the next day's activities."
+      },
+      {
+       "type": "paragraph",
+       "text": "Overnight: Sukamade Eco-Lodge"
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Baby Turtle Release, Pulau Merah & Return to Banyuwangi City",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Start the morning surrounded by the peaceful atmosphere of Sukamade's coastal wilderness. Today brings another memorable opportunity to experience the area's natural beauty and conservation efforts."
+      },
+      {
+       "type": "subheading",
+       "text": "Morning Activity – Baby Turtle Release"
+      },
+      {
+       "type": "paragraph",
+       "text": "If hatchlings are available and a release session is scheduled, take part in a supervised activity to release baby sea turtles, locally known as tukik, toward the ocean. Watching these tiny creatures make their way to the sea is a special experience that highlights the importance of preserving marine life and its natural habitat."
+      },
+      {
+       "type": "paragraph",
+       "text": "The activity is subject to hatchling availability, conservation schedules, weather, and local regulations."
+      },
+      {
+       "type": "paragraph",
+       "text": "Afterward, return to the lodge for breakfast, prepare your belongings, and check out before continuing the journey."
+      },
+      {
+       "type": "subheading",
+       "text": "Continue the Adventure – Visit Pulau Merah (Red Island)"
+      },
+      {
+       "type": "paragraph",
+       "text": "We will then travel toward Pulau Merah, one of Banyuwangi's most recognizable beach destinations. Famous for its wide sandy shoreline, coastal scenery, and distinctive reddish hill near the beach, this destination provides a refreshing contrast to the rainforest landscapes of Sukamade."
+      },
+      {
+       "type": "paragraph",
+       "text": "Spend some free time enjoying the sea views, taking photographs, relaxing on the beach, or experiencing the local surf scene. Surfboard rental is included in the package, subject to availability and suitable sea conditions. Guests who wish to enter the water should follow local safety advice and respect the prevailing wave and current conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Take this opportunity to enjoy the laid-back coastal atmosphere before beginning the final leg of your journey."
+      },
+      {
+       "type": "subheading",
+       "text": "Afternoon – Transfer Back to Banyuwangi City"
+      },
+      {
+       "type": "paragraph",
+       "text": "After exploring Pulau Merah, we will continue the drive back to Banyuwangi City. The journey concludes with a drop-off at your selected location within the Banyuwangi City area, which can include:"
+      },
+      {
+       "type": "bullet",
+       "text": "Your hotel or accommodation in Banyuwangi City"
+      },
+      {
+       "type": "bullet",
+       "text": "Banyuwangi Kota Train Station"
+      },
+      {
+       "type": "bullet",
+       "text": "Ketapang Train Station"
+      },
+      {
+       "type": "bullet",
+       "text": "Banyuwangi Bus Terminal"
+      },
+      {
+       "type": "bullet",
+       "text": "Ketapang Ferry Port"
+      },
+      {
+       "type": "bullet",
+       "text": "Another agreed drop-off point within Banyuwangi City and its surrounding service area"
+      },
+      {
+       "type": "paragraph",
+       "text": "Please inform our team of your preferred drop-off location in advance so we can coordinate the transfer accordingly."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pickup service from Surabaya & drop-off at the designated location",
+    "Private 4WD jeep for Sukamade trip",
+    "1 night stay at Banyuwangi city hotel / homestay + breakfast",
+    "1 night stay at Sukamade eco-lodge (basic accommodation) + breakfast",
+    "Night tour to see sea turtles laying eggs",
+    "Baby turtle release activity",
+    "Surfboard rental at Red Island",
+    "English-speaking guide as photographer",
+    "Mineral water during the trip",
+    "Entrance fees & permits (Meru Betiri NP, Sukamade beach, & Red Island)",
+    "Ferry tickets"
+   ],
+   "excluded": [
+    "Flight / train tickets to & from Banyuwangi",
+    "Lunch & dinner during the trip",
+    "Personal expenses",
+    "Travel insurance",
+    "Tipping (driver / guide )"
+   ],
+   "third_card": {
+    "title": "Things to know",
+    "items": [
+     "Long drives, so be ready with snacks & music.",
+     "Epic adventure / off-road vibes – crossing rivers & deep jungle",
+     "Forget the signal, it’s pure offline paradise",
+     "Accommodation at Sukamade is basic & simple (eco-lodge style, no luxury, limited electricity). It’s part of the adventure vibes",
+     "Turtle sighting is natural, so it depends on nature’s luck (but chances are high!).",
+     "Bring comfortable shoes, light jacket, and some snacks."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Where you will sleep",
+     "options": [
+      "1 night stay at Banyuwangi city hotel / homestay + breakfast",
+      "1 night stay at Sukamade eco-lodge (basic accommodation) + breakfast",
+      "Accommodation at Sukamade is basic & simple (eco-lodge style, no luxury, limited electricity). It’s part of the adventure vibes"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "n_hatchling_sea",
+    "card": "n_hatchling_sea"
+   },
+   "open_questions": [],
+   "source_doc": "SUKAMADE WILDLIFE FROM SURABAYA 3D2N.docx"
+  },
+  {
+   "id": "Trip13",
+   "slug": "sukamade-wildlife-3d2n-from-bali",
+   "name": "Sukamade Wildlife",
+   "region": "East Java",
+   "duration": {
+    "days": 3,
+    "nights": 2,
+    "label": "3 days · 2 nights"
+   },
+   "start": "Bali",
+   "end": "Banyuwangi",
+   "route_label": "Bali to Banyuwangi",
+   "destinations": [
+    "Sukamade"
+   ],
+   "difficulty": "Moderate",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 1,
+    "max": 4
+   },
+   "summary": "A 4WD off-road journey through the jungle and a basic eco-lodge.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "banyuwangi_hotel",
+     "banyuwangi_homestay"
+    ],
+    "rows": [
+     {
+      "pax": 1,
+      "banyuwangi_hotel": 8346000,
+      "banyuwangi_homestay": 7696000
+     },
+     {
+      "pax": 2,
+      "banyuwangi_hotel": 4479000,
+      "banyuwangi_homestay": 4154000
+     },
+     {
+      "pax": 3,
+      "banyuwangi_hotel": 3731000,
+      "banyuwangi_homestay": 3298000
+     },
+     {
+      "pax": 4,
+      "banyuwangi_hotel": 3049000,
+      "banyuwangi_homestay": 2724000
+     }
+    ],
+    "from_price_4_pax": 2724000,
+    "notes": [
+     "Rates apply to foreign visitors only.",
+     "Peak season (Eid holidays and New Year, from 7 days before to 7 days after) adds a 20% surcharge.",
+     "For groups of more than 4 people, send us a request for a special price.",
+     "The Sukamade stay is a homestay (eco-lodge) in both options."
+    ],
+    "peak_season_surcharge_percent": 20
+   },
+   "overview": [
+    "Discover the untamed beauty of East Java through a unique journey combining scenic island transfers, thrilling jungle trails, sea turtle conservation experiences, and the beautiful southern coastline of Banyuwangi."
+   ],
+   "itinerary": [
+    {
+     "label": "Day 1",
+     "title": "Bali to Banyuwangi City | Island Crossing & Scenic Journey",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Your adventure begins with a pick-up from your accommodation in Bali at the agreed departure time. Pick-up is available from various areas, including Sanur, Kuta, Seminyak, Canggu, Jimbaran, Nusa Dua, Ubud, Denpasar, and other locations upon arrangement."
+      },
+      {
+       "type": "paragraph",
+       "text": "We will travel across the island toward Gilimanuk Harbour in West Bali. Along the way, enjoy views of traditional Balinese villages, tropical greenery, coastal landscapes, and local communities as we make our way to the western tip of the island."
+      },
+      {
+       "type": "paragraph",
+       "text": "Estimated driving times to Gilimanuk Harbour:"
+      },
+      {
+       "type": "bullet",
+       "text": "Denpasar, Sanur, Kuta, Seminyak & Canggu: approximately 4.5–5 hours"
+      },
+      {
+       "type": "bullet",
+       "text": "Jimbaran, Nusa Dua & Uluwatu: approximately 5–5.5 hours"
+      },
+      {
+       "type": "bullet",
+       "text": "Ubud: approximately 4 hours"
+      },
+      {
+       "type": "bullet",
+       "text": "Lovina & North Bali: approximately 2 hours"
+      },
+      {
+       "type": "paragraph",
+       "text": "Travel times may vary depending on your pick-up location, traffic, and road conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon reaching Gilimanuk Harbour, we will board the ferry for the crossing to Ketapang Harbour in Banyuwangi, East Java. The ferry journey generally takes around one hour, depending on sailing conditions and port operations."
+      },
+      {
+       "type": "paragraph",
+       "text": "After arriving in Java, we will continue to your accommodation in Banyuwangi City. Complete the check-in process, settle into your room, and enjoy some free time to relax after the journey."
+      },
+      {
+       "type": "paragraph",
+       "text": "Get a good night's rest, as the following day takes you away from the city and into the remote wilderness of Meru Betiri National Park."
+      },
+      {
+       "type": "paragraph",
+       "text": "Overnight: Hotel in Banyuwangi City"
+      }
+     ]
+    },
+    {
+     "label": "Day 2",
+     "title": "Banyuwangi to Sukamade | Into the Heart of Meru Betiri",
+     "items": [
+      {
+       "type": "subheading",
+       "text": "An Off-Road Expedition Through Plantations & Tropical Rainforest"
+      },
+      {
+       "type": "paragraph",
+       "text": "After preparing for the day, we will depart from Banyuwangi City and begin our journey toward Sukamade, a remote coastal destination surrounded by the natural landscapes of Meru Betiri National Park."
+      },
+      {
+       "type": "paragraph",
+       "text": "The adventure continues aboard a rugged 4WD vehicle, taking you beyond the usual tourist routes. As we leave the city behind, the scenery changes to rural settlements, expansive cocoa plantations, and rubber estates before gradually entering the dense tropical forest."
+      },
+      {
+       "type": "paragraph",
+       "text": "Along the way, experience the excitement of navigating winding jungle tracks, uneven roads, and river crossings where conditions permit. The route offers a glimpse into the area's untouched natural environment, with lush vegetation and fresh forest air accompanying the journey."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival in Sukamade, we will check in at a simple eco-lodge and take some time to unwind. Enjoy a local dinner before preparing for the evening's main activity."
+      },
+      {
+       "type": "subheading",
+       "text": "Night Excursion – Sea Turtle Nesting Experience"
+      },
+      {
+       "type": "paragraph",
+       "text": "After dark, join a guided visit to Sukamade Beach, an important nesting habitat for sea turtles. Accompanied by a local guide, you will learn about the turtles' nesting behavior and conservation efforts carried out in the area."
+      },
+      {
+       "type": "paragraph",
+       "text": "If conditions are favorable and turtles come ashore, you may have the opportunity to witness a female sea turtle laying her eggs in its natural habitat. The experience offers a rare glimpse into the wildlife of Banyuwangi's southern coast and the importance of protecting endangered marine species."
+      },
+      {
+       "type": "paragraph",
+       "text": "To minimize disturbance, visitors must follow the guide's instructions regarding lighting, noise, movement, and photography. Wildlife sightings depend on natural conditions and cannot be guaranteed."
+      },
+      {
+       "type": "paragraph",
+       "text": "After the excursion, return to the eco-lodge and enjoy a peaceful night surrounded by the sounds of nature."
+      },
+      {
+       "type": "paragraph",
+       "text": "Overnight: Sukamade Eco-Lodge"
+      }
+     ]
+    },
+    {
+     "label": "Day 3",
+     "title": "Baby Turtle Release, Pulau Merah & Return to Banyuwangi",
+     "items": [
+      {
+       "type": "subheading",
+       "text": "A Meaningful Wildlife Encounter Followed by Coastal Exploration"
+      },
+      {
+       "type": "paragraph",
+       "text": "Begin the morning in the peaceful surroundings of Sukamade, where the forest meets the coastline."
+      },
+      {
+       "type": "subheading",
+       "text": "Morning Activity – Baby Sea Turtle Release"
+      },
+      {
+       "type": "paragraph",
+       "text": "When hatchlings are available and a release session is scheduled, take part in a supervised conservation activity by helping baby sea turtles, locally known as tukik, begin their journey toward the ocean."
+      },
+      {
+       "type": "paragraph",
+       "text": "Watching these tiny creatures make their way across the sand is a memorable experience that highlights the importance of preserving marine wildlife and protecting their natural habitats."
+      },
+      {
+       "type": "paragraph",
+       "text": "Please note that the release activity depends on hatchling availability, conservation schedules, weather, and local regulations."
+      },
+      {
+       "type": "paragraph",
+       "text": "After the activity, return to the lodge for breakfast, pack your belongings, and check out before continuing the journey."
+      },
+      {
+       "type": "subheading",
+       "text": "Late Morning to Afternoon – Discover Pulau Merah (Red Island)"
+      },
+      {
+       "type": "paragraph",
+       "text": "We will leave Sukamade and travel toward Pulau Merah, a popular coastal destination known for its broad sandy beach, scenic ocean views, and distinctive reddish hill near the shoreline."
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, enjoy free time to explore the beach, relax by the sea, or capture photographs of the surrounding coastal scenery. For those interested in surfing, surfboard rental is included in the package, subject to availability and suitable sea conditions."
+      },
+      {
+       "type": "paragraph",
+       "text": "Whether you choose to try the waves or simply enjoy the relaxed beach atmosphere, Pulau Merah provides a wonderful final stop after the adventure through the jungle."
+      },
+      {
+       "type": "paragraph",
+       "text": "Please follow local safety guidance before entering the water, as wave and current conditions can vary."
+      },
+      {
+       "type": "subheading",
+       "text": "Afternoon – Transfer to Your Drop-off Point in Banyuwangi City"
+      },
+      {
+       "type": "paragraph",
+       "text": "After enjoying Pulau Merah, we will begin the return journey to Banyuwangi City. Sit back and enjoy the final stretch of the trip as we travel through the countryside toward the city."
+      },
+      {
+       "type": "paragraph",
+       "text": "Your tour concludes with a drop-off at your preferred location within the Banyuwangi service area. Available drop-off points include:"
+      },
+      {
+       "type": "bullet",
+       "text": "Hotels and accommodations in Banyuwangi City"
+      },
+      {
+       "type": "bullet",
+       "text": "Banyuwangi Kota Train Station"
+      },
+      {
+       "type": "bullet",
+       "text": "Ketapang Train Station"
+      },
+      {
+       "type": "bullet",
+       "text": "Banyuwangi Bus Terminal"
+      },
+      {
+       "type": "bullet",
+       "text": "Ketapang Ferry Harbour"
+      },
+      {
+       "type": "bullet",
+       "text": "Another agreed location within the Banyuwangi area"
+      },
+      {
+       "type": "paragraph",
+       "text": "Please inform our team of your preferred destination in advance so that the transfer can be arranged accordingly."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Pickup service from Bali & drop-off at the designated location",
+    "Private 4WD jeep for Sukamade trip",
+    "1 night stay at Banyuwangi city hotel / homestay",
+    "1 night stay at Sukamade eco-lodge (basic accommodation)",
+    "Night tour to see sea turtles laying eggs",
+    "Baby turtle release activity",
+    "Surfboard rental at Red Island",
+    "English-speaking local guide as photographer",
+    "Mineral water during the trip",
+    "Entrance fees & permits (Meru Betiri NP, Sukamade beach, & Red Island)",
+    "Ferry tickets"
+   ],
+   "excluded": [
+    "Flight / train tickets to & from Banyuwangi",
+    "Lunch & dinner during the trip",
+    "Personal expenses",
+    "Travel insurance",
+    "Tipping ( driver / guide )"
+   ],
+   "third_card": {
+    "title": "Things to know",
+    "items": [
+     "Long drives, so be ready with snacks & music.",
+     "Epic adventure / off-road vibes – crossing rivers & deep jungle",
+     "Forget the signal, it’s pure offline paradise",
+     "Accommodation at Sukamade is basic & simple (eco-lodge style, no luxury, limited electricity). It’s part of the adventure vibes",
+     "Turtle sighting is natural, so it depends on nature’s luck (but chances are high!).",
+     "Bring comfortable shoes, light jacket, and some snacks."
+    ]
+   },
+   "stays": [
+    {
+     "area": "Where you will sleep",
+     "options": [
+      "1 night stay at Banyuwangi city hotel / homestay",
+      "1 night stay at Sukamade eco-lodge (basic accommodation)",
+      "Accommodation at Sukamade is basic & simple (eco-lodge style, no luxury, limited electricity). It’s part of the adventure vibes"
+     ]
+    }
+   ],
+   "photos": {
+    "hero": "n_sukamade_jeep",
+    "card": "n_sukamade_jeep"
+   },
+   "open_questions": [],
+   "source_doc": "SUKAMADE WILDLIFE FROM BALI 3D2N.docx"
+  },
+  {
+   "id": "Trip14",
+   "slug": "borobudur-prambanan-1-day-from-yogyakarta",
+   "name": "Borobudur & Prambanan",
+   "region": "Yogyakarta",
+   "duration": {
+    "days": 1,
+    "nights": 0,
+    "label": "1 day"
+   },
+   "start": "Yogyakarta",
+   "end": "Yogyakarta",
+   "route_label": "Yogyakarta round trip",
+   "destinations": [
+    "Borobudur",
+    "Prambanan"
+   ],
+   "difficulty": "Easy",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 5
+   },
+   "summary": "Hotel pick-up at 05:00 in Yogyakarta. Two temples in one day with a private driver and local guide assistance.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "price"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "price": 2020000
+     },
+     {
+      "pax": 3,
+      "price": 1930000
+     },
+     {
+      "pax": 4,
+      "price": 1920000
+     },
+     {
+      "pax": 5,
+      "price": 1920000
+     }
+    ],
+    "from_price_4_pax": 1920000,
+    "notes": [
+     "Ticket-inclusive and no-ticket options are offered."
+    ],
+    "peak_season_surcharge_percent": null
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "FULL DAY",
+     "title": "Borobudur & Prambanan Sunrise Private Tour",
+     "items": [
+      {
+       "type": "subheading",
+       "text": "05:00 AM – Hotel Pick-up in Yogyakarta"
+      },
+      {
+       "type": "paragraph",
+       "text": "Start your day with an early morning pick-up from your hotel in Yogyakarta. Meet your driver and begin a comfortable journey to explore two of Central Java’s most iconic cultural landmarks."
+      },
+      {
+       "type": "subheading",
+       "text": "Transfer to Borobudur Temple"
+      },
+      {
+       "type": "paragraph",
+       "text": "Enjoy the early morning drive through the peaceful landscapes of Central Java as you make your way to the magnificent Borobudur Temple."
+      },
+      {
+       "type": "subheading",
+       "text": "Explore Borobudur Temple"
+      },
+      {
+       "type": "paragraph",
+       "text": "Discover the beauty of Borobudur, a UNESCO World Heritage Site celebrated for its remarkable Buddhist architecture, intricate stone carvings, and rich cultural heritage. Enjoy time to explore the temple, admire its impressive structures, and capture memorable photographs."
+      },
+      {
+       "type": "subheading",
+       "text": "Transfer to Prambanan Temple"
+      },
+      {
+       "type": "paragraph",
+       "text": "Continue your journey to Prambanan Temple, enjoying a scenic drive to another of Indonesia’s most extraordinary historical landmarks."
+      },
+      {
+       "type": "subheading",
+       "text": "Explore Prambanan Temple"
+      },
+      {
+       "type": "paragraph",
+       "text": "Explore the magnificent Prambanan Temple complex, renowned for its towering Hindu temples and detailed stone reliefs depicting ancient Hindu epics. Take your time to appreciate the architecture, learn about its history, and capture beautiful photos of this remarkable heritage site."
+      },
+      {
+       "type": "subheading",
+       "text": "Return Transfer to Yogyakarta"
+      },
+      {
+       "type": "paragraph",
+       "text": "After visiting both temples, relax during the return journey to Yogyakarta."
+      },
+      {
+       "type": "subheading",
+       "text": "Hotel Drop-off"
+      },
+      {
+       "type": "paragraph",
+       "text": "Arrive back at your hotel, bringing your cultural adventure through Central Java to a comfortable close."
+      }
+     ]
+    },
+    {
+     "label": "HIGHLIGHTS",
+     "title": "What makes it special",
+     "items": [
+      {
+       "type": "bullet",
+       "text": "Magical Dawn Experience: Start your day in the early hours to witness a breathtaking sunrise over the Borobudur area as the morning mist clears."
+      },
+      {
+       "type": "bullet",
+       "text": "Climb the Great Stupa: Ascend the ancient steps of Borobudur with special access to explore the upper terraces, intricate reliefs, and iconic stupas up close."
+      },
+      {
+       "type": "bullet",
+       "text": "Explore Prambanan: Wander through the towering, intricately carved stone spires of Indonesia's largest and most magnificent Hindu temple complex."
+      },
+      {
+       "type": "bullet",
+       "text": "Flexible Booking Options: Choose our hassle-free \"With Ticket\" package or select the \"No Ticket\" option for maximum budget control and flexibility."
+      },
+      {
+       "type": "bullet",
+       "text": "Comfortable Transit: Enjoy seamless, air-conditioned transport and local expertise with the NusaTrails team from start to finish."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Hotel pick-up and drop-off in Yogyakarta",
+    "Private transportation throughout the tour",
+    "Entrance tickets to borobudur and prambanan temples",
+    "Breakfast",
+    "Local retribution fees",
+    "Local guide assistance",
+    "Standard Upanat sandals for the Borobudur Temple visit",
+    "Traditional woven bag",
+    "Mineral water during the trip"
+   ],
+   "excluded": [
+    "Lunch",
+    "Personal expenses",
+    "Optional additional stops, including setumbu hill, pawon temple, and mendut temple",
+    "Tips for the guide and driver (optional)"
+   ],
+   "third_card": {
+    "title": "Important notes",
+    "items": [
+     "Please select the ticket-inclusive option if you would like your temple entrance tickets to be included in the package price.",
+     "Additional stops outside the standard itinerary can be arranged upon request and may incur extra charges.",
+     "Hotel accommodation is not included in the standard package. If you would like to include accommodation, simply let us know, and we will be happy to arrange it according to your preferences."
+    ]
+   },
+   "stays": [],
+   "photos": {
+    "hero": "n_borobudur_aerial",
+    "card": "n_borobudur_stupa"
+   },
+   "open_questions": [
+    "Ticket-inclusive and no-ticket options are offered but only one price list exists. Confirm both prices.",
+    "Sunrise claim vs 05:00 pick-up, and \"special access\" to the upper terraces: verify with the operator.",
+    "No durations or end time in the source."
+   ],
+   "source_doc": "BOROBUDUR AND PRAMBANAN TEMPLES TOUR FULL DAY PRIVATE TRIP.docx"
+  },
+  {
+   "id": "Trip15",
+   "slug": "jomblang-pindul-cave-1-day-from-yogyakarta",
+   "name": "Jomblang & Pindul Cave",
+   "region": "Yogyakarta",
+   "duration": {
+    "days": 1,
+    "nights": 0,
+    "label": "1 day"
+   },
+   "start": "Yogyakarta",
+   "end": "Yogyakarta",
+   "route_label": "Yogyakarta round trip",
+   "destinations": [
+    "Jomblang Cave",
+    "Pindul Cave",
+    "Oyo River"
+   ],
+   "difficulty": "Moderate",
+   "difficulty_source": "assumed by designer, confirm with operator",
+   "group_size": {
+    "min": 2,
+    "max": 6
+   },
+   "summary": "Hotel pick-up at 07:00 in Yogyakarta. A vertical cave descent at Jomblang, then tubing through Pindul Cave and the Oyo River.",
+   "pricing": {
+    "currency": "IDR",
+    "unit": "per person",
+    "columns": [
+     "price"
+    ],
+    "rows": [
+     {
+      "pax": 2,
+      "price": 1200000
+     },
+     {
+      "pax": 3,
+      "price": 1150000
+     },
+     {
+      "pax": 4,
+      "price": 1050000
+     },
+     {
+      "pax": 5,
+      "price": 1050000
+     },
+     {
+      "pax": 6,
+      "price": 1000000
+     }
+    ],
+    "from_price_4_pax": 1050000,
+    "notes": [
+     "Ticket-inclusive and no-ticket options are offered."
+    ],
+    "peak_season_surcharge_percent": null
+   },
+   "overview": [],
+   "itinerary": [
+    {
+     "label": "FULL DAY",
+     "title": "Jomblang Cave, Pindul Cave & Oyo River Adventure",
+     "items": [
+      {
+       "type": "paragraph",
+       "text": "Get ready for an unforgettable adventure through the hidden natural wonders of Yogyakarta! This full-day experience combines the breathtaking underground beauty of Jomblang Cave, the unique river cave exploration of Pindul Cave, and an exciting tubing adventure along the Oyo River."
+      },
+      {
+       "type": "subheading",
+       "text": "07:00 AM – Hotel Pickup in Yogyakarta"
+      },
+      {
+       "type": "paragraph",
+       "text": "Your adventure begins with a convenient pickup from your hotel in Yogyakarta city, followed by a scenic drive to Jomblang Cave Basecamp."
+      },
+      {
+       "type": "subheading",
+       "text": "Arrival at Jomblang Cave Basecamp"
+      },
+      {
+       "type": "paragraph",
+       "text": "Upon arrival, you will receive a safety briefing and instructions from the local team. Get equipped with the necessary safety gear before preparing to descend into the spectacular underground world of Jomblang Cave."
+      },
+      {
+       "type": "subheading",
+       "text": "Explore Jomblang Cave"
+      },
+      {
+       "type": "paragraph",
+       "text": "Experience the thrill of descending into one of Indonesia’s most extraordinary vertical caves. Explore its ancient underground forest and witness the magical Light of Heaven, where sunlight streams through the cave opening, creating a breathtaking natural spectacle."
+      },
+      {
+       "type": "subheading",
+       "text": "Return to the Surface & Lunch"
+      },
+      {
+       "type": "paragraph",
+       "text": "After completing your cave exploration, you will be lifted back to the main ground. Take a break and enjoy lunch at the basecamp before continuing to your next destination."
+      },
+      {
+       "type": "subheading",
+       "text": "Transfer to Pindul Cave Basecamp"
+      },
+      {
+       "type": "paragraph",
+       "text": "Continue your journey to Pindul Cave, another remarkable natural attraction known for its underground river and unique cave formations."
+      },
+      {
+       "type": "subheading",
+       "text": "Pindul Cave Tubing Adventure"
+      },
+      {
+       "type": "paragraph",
+       "text": "After a safety briefing and equipment preparation, begin your tubing adventure through Pindul Cave. Float along the underground river on an inner tube while admiring the impressive stalactites, stalagmites, and fascinating rock formations inside the cave."
+      },
+      {
+       "type": "subheading",
+       "text": "Oyo River Tubing Adventure"
+      },
+      {
+       "type": "paragraph",
+       "text": "The adventure continues at Oyo River, where you will enjoy a scenic tubing experience surrounded by limestone cliffs and lush natural landscapes. Depending on the river conditions, you may also have the opportunity to experience small waterfalls and refreshing natural pools along the way."
+      },
+      {
+       "type": "subheading",
+       "text": "Return to Basecamp"
+      },
+      {
+       "type": "paragraph",
+       "text": "After completing both tubing adventures, return to the basecamp to freshen up and prepare for your journey back to the city."
+      },
+      {
+       "type": "subheading",
+       "text": "Drive Back to Yogyakarta City"
+      },
+      {
+       "type": "paragraph",
+       "text": "Relax during the return drive after a full day of exploration and adventure."
+      },
+      {
+       "type": "subheading",
+       "text": "Drop-off in Yogyakarta City"
+      },
+      {
+       "type": "paragraph",
+       "text": "Your trip concludes with a drop-off at your preferred location in Yogyakarta city, leaving you with unforgettable memories of the region’s incredible underground landscapes and natural beauty."
+      }
+     ]
+    },
+    {
+     "label": "HIGHLIGHTS",
+     "title": "What makes it special",
+     "items": [
+      {
+       "type": "bullet",
+       "text": "Explore the spectacular underground world of Jomblang Cave."
+      },
+      {
+       "type": "bullet",
+       "text": "Witness the magical Light of Heaven phenomenon."
+      },
+      {
+       "type": "bullet",
+       "text": "Discover the underground river and unique rock formations of Pindul Cave."
+      },
+      {
+       "type": "bullet",
+       "text": "Enjoy an exciting tubing adventure along Oyo River."
+      },
+      {
+       "type": "bullet",
+       "text": "Experience three incredible natural attractions in one unforgettable day."
+      }
+     ]
+    }
+   ],
+   "included": [
+    "Hotel Pickup & Drop-off – Convenient pickup and drop-off at your preferred location in Yogyakarta city.",
+    "Private Transportation – Comfortable transportation for the entire adventure, from hotel pickup to drop-off.",
+    "Entrance Tickets – Admission tickets to Jomblang Cave, Pindul Cave, and Oyo River (available with the ticket-inclusive package).",
+    "Professional Local Guides – Experienced local guides to assist you throughout the cave exploration and tubing activities.",
+    "Safety Equipment – Essential caving and tubing equipment, including helmets and life jackets.",
+    "Lunch at Jomblang Cave Basecamp – Enjoy a meal and recharge before continuing your adventure."
+   ],
+   "excluded": [
+    "Entrance Tickets – Not included in the package without the ticket-inclusive option.",
+    "Personal Expenses – Any additional purchases or expenses outside the itinerary.",
+    "Waterproof Phone Case – Available for purchase or rent separately, subject to local availability."
+   ],
+   "third_card": {
+    "title": "Important notes",
+    "items": []
+   },
+   "stays": [],
+   "photos": {
+    "hero": "fk_rope",
+    "card": "fk_light"
+   },
+   "open_questions": [
+    "Ticket-inclusive and no-ticket options are offered but only one price list exists. Confirm both prices.",
+    "No safety, age or fitness information in the source.",
+    "Cave entry time decides whether Light of Heaven is visible: confirm the schedule."
+   ],
+   "source_doc": "JOMBLANG AND PINDUL CAVE EXPDITION FULL DAY.docx"
+  }
+ ]
+}

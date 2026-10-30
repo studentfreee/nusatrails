@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import { getAsset } from '../lib/data';
+
+interface Props {
+  assetKey: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  loading?: 'eager' | 'lazy';
+  sizes?: string;
+}
+
+const { assetKey, alt, width, height, class: className, loading = 'lazy', sizes } = Astro.props;
+
+const asset = getAsset(assetKey);
+if (!asset) {
+  throw new Error(`Photo component: asset key "${assetKey}" not found in assets_manifest.json`);
+}
+
+// Vite glob for all photos under src/assets/photos
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/photos/**/*.{jpg,jpeg,png,webp}');
+
+// asset.file is e.g. "src/assets/photos/02_own/Bromo_sunrise_landscape.jpg"
+const imagePath = asset.file.startsWith('/') ? asset.file : `/${asset.file}`;
+const imageLoader = images[imagePath];
+
+if (!imageLoader) {
+  throw new Error(`Photo component: image file "${imagePath}" not found in filesystem glob`);
+}
+
+const imageModule = await imageLoader();
+---
+
+<Image
+  src={imageModule.default}
+  alt={alt}
+  width={width || asset.width}
+  height={height || asset.height}
+  class={className}
+  loading={loading}
+  sizes={sizes}
+/>

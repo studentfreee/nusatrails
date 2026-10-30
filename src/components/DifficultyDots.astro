@@ -1,0 +1,43 @@
+---
+interface Props {
+  difficulty: 'Easy' | 'Moderate' | 'Challenging';
+  showLabel?: boolean;
+}
+
+const { difficulty, showLabel = true } = Astro.props;
+
+const dotsMap = {
+  Easy: 1,
+  Moderate: 2,
+  Challenging: 3,
+};
+
+const filled = dotsMap[difficulty] || 1;
+---
+
+<div class="diff-wrap" aria-label={`Difficulty: ${difficulty}`}>
+  <span class="dots" aria-hidden="true">
+    {[1, 2, 3].map((num) => (
+      <span class:list={['dot', { 'dot-on': num <= filled }]} />
+    ))}
+  </span>
+  {showLabel && <span class="diff-label">{difficulty}</span>}
+</div>
+
+<style>
+  .diff-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-ink);
+  }
+  .dots {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .diff-label {
+    font-weight: 500;
+  }
+</style>

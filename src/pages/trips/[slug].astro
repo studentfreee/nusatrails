@@ -1,0 +1,537 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import PriceTable from '../../components/PriceTable.astro';
+import DifficultyDots from '../../components/DifficultyDots.astro';
+import { trips, type Trip } from '../../lib/data';
+
+export function getStaticPaths() {
+  return trips.map((trip) => ({
+    params: { slug: trip.slug },
+    props: { trip },
+  }));
+}
+
+interface Props {
+  trip: Trip;
+}
+
+const { trip } = Astro.props;
+
+// JSON-LD TouristTrip / Product schema
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristTrip',
+  name: trip.name,
+  description: trip.summary,
+  touristType: ['Private Group'],
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: trip.pricing.currency,
+    price: trip.pricing.from_price_4_pax,
+    availability: 'https://schema.org/InStock',
+    validFrom: '2026-01-01',
+  },
+  itinerary: {
+    '@type': 'ItemList',
+    itemListElement: trip.itinerary.map((day, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      name: `${day.label}: ${day.title}`,
+    })),
+  },
+};
+---
+
+<Base description={trip.summary} ogTitle={trip.name}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- Trip Hero -->
+  <section class="trip-hero">
+    <div class="hero-bg">
+      <Photo assetKey={trip.photos.hero} alt={trip.name} class="hero-img" loading="eager" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container-nt hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">/</span>
+        <a href="/trips">Trips</a>
+        <span class="sep">/</span>
+        <span class="current">{trip.name}</span>
+      </nav>
+
+      <h1 class="trip-title">{trip.name}</h1>
+      <p class="trip-summary">{trip.summary}</p>
+
+      <!-- 4 Fact Cards -->
+      <div class="fact-grid">
+        <div class="glass fact-card">
+          <span class="fact-label">Duration</span>
+          <span class="fact-val">{trip.duration.label}</span>
+        </div>
+        <div class="glass fact-card">
+          <span class="fact-label">Route</span>
+          <span class="fact-val">{trip.route_label}</span>
+        </div>
+        <div class="glass fact-card">
+          <span class="fact-label">Private Group</span>
+          <span class="fact-val">{trip.group_size.min}–{trip.group_size.max} people</span>
+        </div>
+        <div class="glass fact-card">
+          <span class="fact-label">Difficulty</span>
+          <span class="fact-val">
+            <DifficultyDots difficulty={trip.difficulty} />
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Questions Warning (Development / Launch Checklist) -->
+  {trip.open_questions && trip.open_questions.length > 0 && (
+    <div class="container-nt oq-notice">
+      <div class="glass oq-box">
+        <strong>[CONFIRM with operator]:</strong>
+        <ul>
+          {trip.open_questions.map((oq) => (
+            <li>{oq}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )}
+
+  <!-- Main Content: Itinerary (Left) & Pricing/Stays (Right) -->
+  <section class="container-nt main-layout">
+    <div class="left-col">
+      <h2 class="section-title">Itinerary</h2>
+
+      {trip.overview && trip.overview.length > 0 && (
+        <div class="trip-overview">
+          {trip.overview.map((p) => (
+            <p>{p}</p>
+          ))}
+        </div>
+      )}
+
+      <div class="itinerary-list">
+        {trip.itinerary.map((day) => (
+          <article class="glass day-card">
+            <header class="day-header">
+              <span class="day-chip">{day.label}</span>
+              <h3 class="day-title">{day.title}</h3>
+            </header>
+
+            <div class="day-body">
+              {day.items.map((item) => {
+                if (item.type === 'subheading') {
+                  return <h4 class="day-subheading">{item.text || item.title}</h4>;
+                }
+                if (item.type === 'bullet') {
+                  return (
+                    <div class="bullet-item">
+                      <span class="bullet-dot"></span>
+                      <span>{item.text}</span>
+                    </div>
+                  );
+                }
+                return <p class="day-para">{item.text}</p>;
+              })}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <aside class="right-col">
+      <!-- Price Table -->
+      <div class="sticky-sidebar">
+        <PriceTable trip={trip} />
+
+        <!-- Where you'll stay (if any) -->
+        {trip.stays && trip.stays.length > 0 && (
+          <div class="glass stay-card">
+            <h3 class="stay-title">Where you'll stay</h3>
+            <div class="stay-list">
+              {trip.stays.map((stay) => (
+                <div class="stay-item">
+                  <span class="stay-area">{stay.area}</span>
+                  <ul class="stay-opts">
+                    {stay.options.map((opt) => (
+                      <li>{opt}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </aside>
+  </section>
+
+  <!-- Bottom Section: Included, Excluded, Third Card -->
+  <section class="container-nt details-bottom">
+    <div class:list={['info-grid', { 'two-cols': !trip.third_card?.items || trip.third_card.items.length === 0 }]}>
+      <!-- Included -->
+      <div class="glass info-card">
+        <h3 class="info-title">What's Included</h3>
+        <ul class="info-list inc">
+          {trip.included.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Excluded -->
+      <div class="glass info-card">
+        <h3 class="info-title">Not Included</h3>
+        <ul class="info-list exc">
+          {trip.excluded.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Third Card (What to bring / Things to know / Important notes) -->
+      {trip.third_card?.items && trip.third_card.items.length > 0 && (
+        <div class="glass info-card">
+          <h3 class="info-title">{trip.third_card.title}</h3>
+          <ul class="info-list warn">
+            {trip.third_card.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Hero */
+  .trip-hero {
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    min-height: 440px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .hero-img :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(11, 10, 10, 0.4) 0%,
+      rgba(11, 10, 10, 0.75) 60%,
+      var(--color-bg) 100%
+    );
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+    color: var(--color-muted);
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .breadcrumb a {
+    text-decoration: none;
+    color: var(--color-muted);
+    transition: color 0.2s;
+  }
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+  .breadcrumb .current {
+    color: var(--color-ink);
+  }
+
+  .trip-title {
+    font-size: clamp(36px, 5vw, 56px);
+    margin: 0 0 12px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .trip-summary {
+    max-width: 68ch;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-body);
+    margin: 0 0 28px;
+  }
+
+  /* Fact Grid */
+  .fact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .fact-card {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .fact-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .fact-val {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+
+  /* Open questions notice */
+  .oq-notice {
+    margin-top: 24px;
+  }
+  .oq-box {
+    padding: 16px 20px;
+    border-color: rgba(229, 185, 95, 0.4);
+    background: rgba(229, 185, 95, 0.08);
+    color: #e5b95f;
+    font-size: 13px;
+  }
+  .oq-box ul {
+    margin: 8px 0 0 20px;
+    padding: 0;
+  }
+
+  /* Main Layout */
+  .main-layout {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 48px;
+    align-items: start;
+  }
+  .left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .trip-overview {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-body);
+  }
+
+  /* Itinerary */
+  .itinerary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .day-card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .day-chip {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-on-accent);
+    background: var(--color-accent);
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  .day-title {
+    font-size: 20px;
+    margin: 0;
+    color: var(--color-ink);
+  }
+  .day-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .day-para {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-body);
+  }
+  .day-subheading {
+    margin: 8px 0 2px;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    color: var(--color-accent);
+  }
+  .bullet-item {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-body);
+    align-items: flex-start;
+  }
+  .bullet-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    margin-top: 8px;
+    flex: none;
+  }
+
+  /* Right column */
+  .right-col {
+    position: relative;
+  }
+  .sticky-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .stay-card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .stay-title {
+    font-size: 20px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .stay-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .stay-area {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: 4px;
+  }
+  .stay-opts {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+    color: var(--color-body);
+  }
+
+  /* Bottom Cards */
+  .details-bottom {
+    margin-top: 56px;
+    padding-bottom: 72px;
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .info-grid.two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .info-card {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .info-title {
+    font-size: 22px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .info-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-body);
+  }
+  .info-list li {
+    position: relative;
+    padding-left: 18px;
+  }
+  .info-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .info-list.inc li::before {
+    background: var(--color-accent);
+  }
+  .info-list.exc li::before {
+    background: var(--color-muted);
+  }
+  .info-list.warn li::before {
+    background: #e5b95f;
+  }
+
+  /* Responsiveness */
+  @media (max-width: 1024px) {
+    .main-layout {
+      grid-template-columns: 1fr;
+    }
+    .sticky-sidebar {
+      position: static;
+    }
+    .fact-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .fact-grid {
+      grid-template-columns: 1fr;
+    }
+    .trip-hero {
+      padding-top: 100px;
+    }
+  }
+</style>

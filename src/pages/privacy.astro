@@ -1,0 +1,134 @@
+---
+import Base from '../layouts/Base.astro';
+import { whatsappLink } from '../lib/site';
+
+const description =
+  'NusaTrails privacy policy: what information we collect, why we collect it, how it is stored securely, and how we protect your personal data.';
+---
+
+<Base description={description} ogTitle="Privacy Policy · NusaTrails">
+  <div class="container-nt py-28 md:py-36 max-w-3xl">
+    <div class="mb-10">
+      <span class="text-xs font-semibold tracking-widest uppercase text-[var(--color-accent)]">
+        Legal & Transparency
+      </span>
+      <h1 class="font-display font-semibold text-4xl sm:text-5xl md:text-6xl text-white uppercase mt-2">
+        Privacy Policy
+      </h1>
+      <p class="text-sm text-[#bdb6ab] mt-2">
+        Last updated: October 2026 · NusaTrails (<a href="https://nusatrails.id" class="text-white hover:underline">nusatrails.id</a>)
+      </p>
+    </div>
+
+    <div class="glass-card p-6 md:p-10 rounded-2xl border border-white/20 flex flex-col gap-8 text-[#d9d3c8] text-sm md:text-base leading-relaxed">
+      <!-- Section 1 -->
+      <div>
+        <h2 class="font-display font-medium text-xl md:text-2xl text-white uppercase mb-3">
+          1. Introduction
+        </h2>
+        <p>
+          At NusaTrails, we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains what personal data we collect through our website (<span class="text-white font-mono text-sm">nusatrails.id</span>), how we use it to arrange your private tour across Java, and how we keep it secure.
+        </p>
+      </div>
+
+      <!-- Section 2 -->
+      <div>
+        <h2 class="font-display font-medium text-xl md:text-2xl text-white uppercase mb-3">
+          2. What Data We Collect
+        </h2>
+        <p>
+          We only collect information necessary to prepare your itinerary, confirm availability, and communicate with you about your trip. When you submit a booking request or inquiry, we collect:
+        </p>
+        <ul class="list-disc pl-5 mt-2.5 flex flex-col gap-1.5 text-sm md:text-base">
+          <li><strong>Full Name:</strong> to address you properly in our quotes and reservation vouchers.</li>
+          <li><strong>WhatsApp Phone Number:</strong> required to send your instant reference confirmation, discuss details, and coordinate pick-up times with your driver and guide.</li>
+          <li><strong>Email Address (optional):</strong> for guests who prefer email correspondence.</li>
+          <li><strong>Trip Itinerary Details:</strong> chosen trip, travel dates, number of participants, accommodation tier (Homestay or Hotel), and pick-up area.</li>
+          <li><strong>Notes & Special Requests (optional):</strong> any dietary preferences, health notes, or custom travel plans you choose to share.</li>
+        </ul>
+        <div class="mt-4 p-3.5 rounded-lg bg-white/[0.04] border border-white/10 text-xs md:text-sm text-[#bdb6ab]">
+          <strong class="text-white">Note on sensitive data:</strong> We do <em>not</em> collect passport scans, national identity numbers, or credit card details on this website. Payments and deposits are handled transparently upon mutual agreement after WhatsApp confirmation.
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div>
+        <h2 class="font-display font-medium text-xl md:text-2xl text-white uppercase mb-3">
+          3. How We Use Your Information
+        </h2>
+        <p>We use your data solely for legitimate travel coordination purposes:</p>
+        <ul class="list-disc pl-5 mt-2 flex flex-col gap-1.5 text-sm md:text-base">
+          <li>Confirming route availability and calculating your customized private group quote.</li>
+          <li>Contacting you via WhatsApp (usually within 24 hours) with your booking reference.</li>
+          <li>Coordinating day-to-day logistics (driver hotel pick-up, Bromo 4x4 jeeps, local mountain guides, and park entrance registrations).</li>
+          <li>Responding to your questions or changes in itinerary.</li>
+        </ul>
+        <p class="mt-2.5">
+          We never sell, rent, or trade your personal data to marketing agencies or advertisers. We do not use your phone number for spam or promotional marketing campaigns.
+        </p>
+      </div>
+
+      <!-- Section 4 -->
+      <div>
+        <h2 class="font-display font-medium text-xl md:text-2xl text-white uppercase mb-3">
+          4. How Your Data Is Stored & Secured
+        </h2>
+        <p>
+          Submissions through our booking form are transmitted over encrypted connections (HTTPS) through our secure Cloudflare infrastructure directly to our internal operational tools (Google Sheets and Telegram notification bot). Access is restricted exclusively to authorized NusaTrails operations team members who manage your reservations.
+        </p>
+      </div>
+
+      <!-- Section 5 -->
+      <div>
+        <h2 class="font-display font-medium text-xl md:text-2xl text-white uppercase mb-3">
+          5. Third-Party Services
+        </h2>
+        <p>
+          We may share relevant passenger names with national park authorities (such as Balai Besar Taman Nasional Bromo Tengger Semeru or Ijen Crater conservation management) and local accommodations strictly to issue entry permits and room reservations for your trip.
+        </p>
+      </div>
+
+      <!-- Section 6 -->
+      <div>
+        <h2 class="font-display font-medium text-xl md:text-2xl text-white uppercase mb-3">
+          6. Your Rights
+        </h2>
+        <p>
+          You have the right to request access to the personal data we hold about you, request corrections, or ask us to delete your inquiry records at any time. Simply send us a message on WhatsApp or email, and we will fulfill your request promptly.
+        </p>
+      </div>
+
+      <!-- Section 7 -->
+      <div>
+        <h2 class="font-display font-medium text-xl md:text-2xl text-white uppercase mb-3">
+          7. Contact Us
+        </h2>
+        <p>
+          If you have any questions or concerns regarding this Privacy Policy or your personal information, please reach out:
+        </p>
+        <div class="mt-3 flex flex-col sm:flex-row gap-3">
+          <a
+            href={whatsappLink('Hello NusaTrails, I have a question regarding privacy.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-secondary text-xs md:text-sm py-2.5 px-5 justify-center"
+          >
+            Contact on WhatsApp
+          </a>
+          <a
+            href="/faq#terms"
+            class="btn-secondary text-xs md:text-sm py-2.5 px-5 justify-center"
+          >
+            View Terms & Conditions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+  }
+</style>

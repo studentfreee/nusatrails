@@ -1,0 +1,62 @@
+---
+import Logo from './Logo.astro';
+import { NAV_LINKS } from '../lib/site';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => path === href || path.startsWith(href + '/');
+---
+<header class="nav-wrap">
+  <div class="container-nt">
+    <nav class="nav-pill nav" aria-label="Main">
+      <Logo size={44} />
+      <ul class="links">
+        {NAV_LINKS.map((l) => (
+          <li>
+            <a href={l.href} class:list={['link', { active: isActive(l.href) }]} aria-current={isActive(l.href) ? 'page' : undefined}>{l.label}</a>
+          </li>
+        ))}
+      </ul>
+      <button class="burger" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <ul class="menu" id="nav-menu" hidden>
+      {NAV_LINKS.map((l) => (
+        <li><a href={l.href} class:list={['mlink', { active: isActive(l.href) }]}>{l.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    btn.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+    if (menu) menu.hidden = open;
+  });
+</script>
+
+<style>
+  .nav-wrap { position: absolute; top: 20px; left: 0; right: 0; z-index: 50; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 8px; }
+  .links { display: none; list-style: none; margin: 0; padding: 0 22px 0 0; gap: 34px; }
+  .link { font-size: 13px; font-weight: 500; text-decoration: none; color: var(--color-ink); transition: color .2s; }
+  .link:hover, .link.active { color: var(--color-accent); }
+  .burger { display: grid; gap: 5px; padding: 12px 14px; background: none; border: 0; cursor: pointer; }
+  .burger span { display: block; width: 22px; height: 2px; background: var(--color-ink); border-radius: 2px; }
+  .menu {
+    list-style: none; margin: 10px 0 0; padding: 12px; display: grid; gap: 4px;
+    background: rgba(11,10,10,.97); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.25); border-radius: 20px;
+  }
+  .menu[hidden] { display: none; }
+  .mlink { display: block; padding: 12px 16px; border-radius: 12px; text-decoration: none; color: var(--color-ink); font-weight: 500; }
+  .mlink.active { color: var(--color-accent); }
+  .mlink:hover { background: rgba(255,255,255,.06); }
+  @media (min-width: 768px) {
+    .links { display: flex; }
+    .burger, .menu { display: none !important; }
+  }
+</style>

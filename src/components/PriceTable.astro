@@ -1,0 +1,165 @@
+---
+import type { Trip } from '../lib/schema';
+import { formatIDR } from '../lib/data';
+import { whatsappLink } from '../lib/site';
+
+interface Props {
+  trip: Trip;
+}
+
+const { trip } = Astro.props;
+const { pricing } = trip;
+
+// Map column keys to human-friendly headers
+const columnHeaders: Record<string, string> = {
+  price: 'Price',
+  hotel: 'Hotel',
+  homestay: 'Homestay',
+  banyuwangi_hotel: 'Banyuwangi Hotel',
+  banyuwangi_homestay: 'Banyuwangi Homestay',
+};
+
+const waQuestion = whatsappLink(`Hi NusaTrails, I have a question about the ${trip.name} trip (${trip.duration.label}).`);
+---
+
+<div class="glass price-card">
+  <div class="card-header">
+    <h3 class="card-title">Pricing</h3>
+    <span class="currency-tag">IDR · {pricing.unit}</span>
+  </div>
+
+  <div class="table-wrap">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th class="th-pax">Group</th>
+          {pricing.columns.map((col) => (
+            <th class="th-price">{columnHeaders[col] || col}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {pricing.rows.map((row) => (
+          <tr>
+            <td class="td-pax">{row.pax} {row.pax === 1 ? 'person' : 'pax'}</td>
+            {pricing.columns.map((col) => {
+              const val = row[col];
+              return (
+                <td class="td-price">
+                  {typeof val === 'number' ? formatIDR(val) : val}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="price-notes">
+    {pricing.notes.map((note) => (
+      <p class="note-item">• {note}</p>
+    ))}
+    {pricing.peak_season_surcharge_percent && (
+      <p class="note-item surcharge">
+        • Peak season (Eid Al-Fitr & New Year, ±7 days) adds a {pricing.peak_season_surcharge_percent}% surcharge.
+      </p>
+    )}
+  </div>
+
+  <div class="card-actions">
+    <a href={`/book?trip=${trip.slug}`} class="btn btn-accent btn-book">
+      Book this trip
+    </a>
+    <a href={waQuestion} target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-ask">
+      Ask a question
+    </a>
+  </div>
+</div>
+
+<style>
+  .price-card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 12px;
+  }
+  .card-title {
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .currency-tag {
+    font-size: 13px;
+    color: var(--color-muted);
+  }
+  .table-wrap {
+    overflow-x: auto;
+  }
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .price-table th {
+    padding: 8px 12px;
+    text-align: left;
+    color: var(--color-muted);
+    font-weight: 500;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .price-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .th-price, .td-price {
+    text-align: right;
+  }
+  .td-pax {
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .td-price {
+    color: var(--color-body);
+  }
+  .price-notes {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .note-item {
+    margin: 0;
+  }
+  .note-item.surcharge {
+    color: #e5b95f;
+  }
+  .card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 4px;
+  }
+  .btn-book {
+    width: 100%;
+  }
+  .btn-ask {
+    width: 100%;
+  }
+  @media (max-width: 480px) {
+    .card-actions {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

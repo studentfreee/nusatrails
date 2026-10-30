@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import logoMark from '../assets/brand/logo-mark.png';
+
+interface Props {
+  /** Height of the cream tile in px. */
+  size?: number;
+  /** Show the live text wordmark next to the emblem. */
+  wordmark?: boolean;
+}
+const { size = 44, wordmark = true } = Astro.props;
+---
+<a href="/" class="logo" aria-label="NusaTrails, home">
+  <!-- logo.jpeg is dark green on cream: it sits in a cream tile so it never touches the dark background. -->
+  <span class="tile" style={`--s:${size}px`}>
+    <Image src={logoMark} alt="NusaTrails" width={size * 2} height={size * 2} loading="eager" densities={[1, 2]} />
+  </span>
+  {wordmark && (
+    <span class="word">NUSA<span>TRAILS</span></span>
+  )}
+</a>
+
+<style>
+  .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-ink); }
+  .tile {
+    width: var(--s); height: var(--s); flex: none;
+    display: grid; place-items: center;
+    background: var(--color-cream); border-radius: 14px; overflow: hidden;
+  }
+  .tile :global(img) { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .word {
+    font-family: var(--font-display); font-weight: 500; font-size: 18px;
+    letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap;
+  }
+  .word span { color: var(--color-accent); }
+</style>

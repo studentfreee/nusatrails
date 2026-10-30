@@ -1,0 +1,280 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import TripCard from '../../components/TripCard.astro';
+import { trips } from '../../lib/data';
+
+const heroAssetKey = 'IMG_3523';
+---
+
+<Base
+  description="Browse all 15 private tours across East Java and Yogyakarta: Ijen, Bromo, Tumpak Sewu, Sukamade, Borobudur, and more. Filter by duration and starting point."
+  ogTitle="Private Tours & Itineraries – NusaTrails"
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28 bg-[#0b0a0a]">
+    <div class="absolute inset-0 z-0">
+      <Photo
+        assetKey={heroAssetKey}
+        alt="NusaTrails Trips"
+        class="w-full h-full object-cover opacity-35"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0b0a0a] via-[#0b0a0a]/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0b0a0a] via-transparent to-transparent"></div>
+    </div>
+
+    <div class="container-nt relative z-10">
+      <h1 class="font-heading font-semibold text-6xl sm:text-8xl md:text-[140px] lg:text-[160px] uppercase tracking-[0.03em] leading-none text-white/90">
+        Trips
+      </h1>
+      <p class="mt-4 md:mt-6 text-lg md:text-xl text-[var(--nt-body)] max-w-[560px] leading-relaxed">
+        Pick your route, your starting point and your group size. Every private trip includes a guide and transport.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="container-nt py-8" id="catalog">
+    <div class="flex items-center gap-6 mb-8">
+      <h2 class="font-heading text-3xl md:text-4xl uppercase tracking-[0.04em] text-[var(--nt-body)] whitespace-nowrap">
+        All Trips
+      </h2>
+      <div class="flex-1 h-[1px] bg-white/20"></div>
+    </div>
+
+    <div class="space-y-4 max-w-4xl">
+      <!-- Duration Filter -->
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="w-24 text-[13px] text-[var(--nt-muted)]">Duration</span>
+        <div class="flex flex-wrap gap-2" id="duration-filters">
+          <button type="button" class="filter-chip active" data-filter="duration" data-val="All">All</button>
+          <button type="button" class="filter-chip" data-filter="duration" data-val="1 day">1 day</button>
+          <button type="button" class="filter-chip" data-filter="duration" data-val="2D1N">2D1N</button>
+          <button type="button" class="filter-chip" data-filter="duration" data-val="3D2N">3D2N</button>
+          <button type="button" class="filter-chip" data-filter="duration" data-val="4D3N">4D3N</button>
+        </div>
+      </div>
+
+      <!-- Start Point Filter -->
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="w-24 text-[13px] text-[var(--nt-muted)]">Start point</span>
+        <div class="flex flex-wrap gap-2" id="start-filters">
+          <button type="button" class="filter-chip active" data-filter="start" data-val="Any">Any</button>
+          <button type="button" class="filter-chip" data-filter="start" data-val="Bali">Bali</button>
+          <button type="button" class="filter-chip" data-filter="start" data-val="Surabaya">Surabaya</button>
+          <button type="button" class="filter-chip" data-filter="start" data-val="Banyuwangi">Banyuwangi</button>
+          <button type="button" class="filter-chip" data-filter="start" data-val="Yogyakarta">Yogyakarta</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trips Catalog Grid -->
+  <section class="container-nt pb-20">
+    <!-- Active filters counter -->
+    <div class="text-[13px] text-[var(--nt-muted)] mb-6 flex items-center justify-between">
+      <span id="trip-count">Showing all 15 private trips</span>
+      <button
+        id="reset-filters"
+        class="text-[var(--nt-lime)] hover:underline hidden"
+        type="button"
+      >
+        Reset filters
+      </button>
+    </div>
+
+    <!-- Empty state -->
+    <div id="empty-state" class="hidden glass p-10 text-center rounded-[14px] my-6">
+      <p class="text-lg text-[var(--nt-body)] mb-2">No trips match your selected filters.</p>
+      <p class="text-sm text-[var(--nt-muted)] mb-6">Try clearing one of the filters or let us know what route you'd like to do.</p>
+      <button
+        type="button"
+        id="empty-reset-btn"
+        class="btn inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/60 text-sm hover:border-[var(--nt-lime)] hover:text-[var(--nt-lime)]"
+      >
+        Show all trips
+      </button>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="trips-grid">
+      {trips.map((trip) => (
+        <TripCard trip={trip} />
+      ))}
+    </div>
+
+    <!-- Custom Route Card -->
+    <div class="glass mt-8 p-6 md:p-8 rounded-[14px] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-white/20">
+      <div class="max-w-[560px]">
+        <h3 class="font-heading text-2xl md:text-3xl font-medium text-white mb-2">
+          Can't find your route?
+        </h3>
+        <p class="text-sm md:text-[15px] leading-relaxed text-[var(--nt-body)]">
+          Tell us your dates, group size and where you start. We'll build a custom itinerary and send you a quote.
+        </p>
+      </div>
+      <a
+        href="/book?trip=custom"
+        class="btn-accent inline-flex items-center justify-center h-11 px-8 rounded-full bg-[var(--nt-lime)] text-[#14170a] font-semibold text-sm hover:brightness-110 transition whitespace-nowrap"
+      >
+        Send a request
+      </a>
+    </div>
+
+    <!-- Pricing Footnote -->
+    <p class="mt-6 text-[13px] text-[var(--nt-muted)] leading-relaxed">
+      Rates are per person for a private group of 4, 2026. Homestay option where a stay is included. Peak season (Eid, New Year) +20%.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .filter-chip {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    height: 42px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filter-chip:hover {
+    border-color: var(--nt-lime);
+    color: var(--nt-lime);
+  }
+
+  .filter-chip.active {
+    background: var(--nt-lime);
+    color: #14170a;
+    border-color: var(--nt-lime);
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  function initFilters() {
+    const durationChips = document.querySelectorAll<HTMLButtonElement>('#duration-filters .filter-chip');
+    const startChips = document.querySelectorAll<HTMLButtonElement>('#start-filters .filter-chip');
+    const cards = document.querySelectorAll<HTMLElement>('[data-trip-card]');
+    const tripCountEl = document.getElementById('trip-count');
+    const emptyStateEl = document.getElementById('empty-state');
+    const resetBtn = document.getElementById('reset-filters');
+    const emptyResetBtn = document.getElementById('empty-reset-btn');
+
+    let currentDuration = 'All';
+    let currentStart = 'Any';
+
+    // Parse URL search parameters on load
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramDuration = urlParams.get('duration');
+    const paramStart = urlParams.get('start');
+
+    if (paramDuration) {
+      const match = Array.from(durationChips).find(
+        (chip) => chip.dataset.val?.toLowerCase() === paramDuration.toLowerCase()
+      );
+      if (match) currentDuration = match.dataset.val || 'All';
+    }
+
+    if (paramStart) {
+      const match = Array.from(startChips).find(
+        (chip) => chip.dataset.val?.toLowerCase() === paramStart.toLowerCase()
+      );
+      if (match) currentStart = match.dataset.val || 'Any';
+    }
+
+    function syncUI() {
+      durationChips.forEach((chip) => {
+        chip.classList.toggle('active', chip.dataset.val === currentDuration);
+      });
+      startChips.forEach((chip) => {
+        chip.classList.toggle('active', chip.dataset.val === currentStart);
+      });
+
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const cardDuration = card.dataset.duration || '';
+        const cardStart = card.dataset.start || '';
+
+        const matchDuration =
+          currentDuration === 'All' ||
+          cardDuration.toLowerCase() === currentDuration.toLowerCase();
+        const matchStart =
+          currentStart === 'Any' ||
+          cardStart.toLowerCase() === currentStart.toLowerCase();
+
+        if (matchDuration && matchStart) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (tripCountEl) {
+        if (currentDuration === 'All' && currentStart === 'Any') {
+          tripCountEl.textContent = `Showing all ${visibleCount} private trips`;
+        } else {
+          tripCountEl.textContent = `Showing ${visibleCount} of ${cards.length} private trips`;
+        }
+      }
+
+      if (emptyStateEl) {
+        emptyStateEl.classList.toggle('hidden', visibleCount > 0);
+      }
+
+      if (resetBtn) {
+        const isFiltered = currentDuration !== 'All' || currentStart !== 'Any';
+        resetBtn.classList.toggle('hidden', !isFiltered);
+      }
+
+      // Update URL without reloading page
+      const nextParams = new URLSearchParams();
+      if (currentDuration !== 'All') nextParams.set('duration', currentDuration);
+      if (currentStart !== 'Any') nextParams.set('start', currentStart);
+
+      const qs = nextParams.toString();
+      const newUrl = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+      window.history.replaceState({}, '', newUrl);
+    }
+
+    durationChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        currentDuration = chip.dataset.val || 'All';
+        syncUI();
+      });
+    });
+
+    startChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        currentStart = chip.dataset.val || 'Any';
+        syncUI();
+      });
+    });
+
+    function reset() {
+      currentDuration = 'All';
+      currentStart = 'Any';
+      syncUI();
+    }
+
+    resetBtn?.addEventListener('click', reset);
+    emptyResetBtn?.addEventListener('click', reset);
+
+    // Initial sync
+    syncUI();
+  }
+
+  // Run on first load and view transitions
+  initFilters();
+  document.addEventListener('astro:page-load', initFilters);
+</script>

@@ -1,0 +1,704 @@
+{
+ "version": "2026-10-28",
+ "rules": [
+  "Any asset with status TEMPORARY must show a visible dev/build warning and must be listed in the launch checklist.",
+  "Convert to WebP/AVIF with responsive sizes. Do not inline images as base64.",
+  "Blur the visible licence plates before launch (e.g. IMG_3026, if used).",
+  "Photos listed with used_on_site=false are not on any page; keep them as spare options. Files named DO_NOT_USE_* must never be published."
+ ],
+ "assets": [
+  {
+   "key": "tim05",
+   "file": "src/assets/photos/01_team/Tim_kru_di_kaldera_Ijen.jpg",
+   "width": 1179,
+   "height": 786,
+   "status": "team_whatsapp_compressed",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "Staff photo, WhatsApp-compressed (max 1600 px).",
+   "used_on_site": true
+  },
+  {
+   "key": "tim06",
+   "file": "src/assets/photos/01_team/Tim_dan_tamu_di_lobi_hotel.jpg",
+   "width": 960,
+   "height": 1280,
+   "status": "team_whatsapp_compressed",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "tim22",
+   "file": "src/assets/photos/01_team/Ijen_selfie_tamu_kawah_sunrise.jpg",
+   "width": 1280,
+   "height": 720,
+   "status": "team_whatsapp_compressed",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "tim24",
+   "file": "src/assets/photos/01_team/Ijen_grup_di_bibir_kawah.jpg",
+   "width": 1280,
+   "height": 960,
+   "status": "team_whatsapp_compressed",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "tim25",
+   "file": "src/assets/photos/01_team/Ijen_tamu_dan_pemandu_danau_biru.jpg",
+   "width": 960,
+   "height": 1280,
+   "status": "team_whatsapp_compressed",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "tim20",
+   "file": "src/assets/photos/01_team/TumpakSewu_grup_air_terjun.jpg",
+   "width": 960,
+   "height": 1280,
+   "status": "team_whatsapp_compressed",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "tim10",
+   "file": "src/assets/photos/01_team/Bromo_grup_di_jeep.jpg",
+   "width": 720,
+   "height": 1280,
+   "status": "team_whatsapp_compressed",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "bromo_mist",
+   "file": "src/assets/photos/02_own/Bromo_kabut_Semeru.jpg",
+   "width": 1125,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "Original HEIC is 2240x3983; used as a landscape crop.",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2414",
+   "file": "src/assets/photos/02_own/TumpakSewu_pemandangan_air_terjun.jpg",
+   "width": 1125,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2507",
+   "file": "src/assets/photos/02_own/Bromo_sunrise_landscape.jpg",
+   "width": 2000,
+   "height": 1125,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2509",
+   "file": "src/assets/photos/02_own/Bromo_sunrise_portrait.jpg",
+   "width": 1125,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_0683",
+   "file": "src/assets/photos/02_own/Ijen_api_biru.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_3523",
+   "file": "src/assets/photos/02_own/Ijen_grup_di_danau_kawah.jpg",
+   "width": 2000,
+   "height": 1500,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_0607",
+   "file": "src/assets/photos/02_own/Ijen_tamu_sunrise_topi.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_0619",
+   "file": "src/assets/photos/02_own/Ijen_dua_tamu_danau.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_0686",
+   "file": "src/assets/photos/02_own/Ijen_selfie_masker_api_biru.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_0863",
+   "file": "src/assets/photos/02_own/Ijen_tamu_sunrise_ransel.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_3358",
+   "file": "src/assets/photos/02_own/Ijen_grup_besar.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "Untitled",
+   "file": "src/assets/photos/02_own/Ijen_pasangan_api_biru.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2998",
+   "file": "src/assets/photos/02_own/Bromo_pasangan_sunset.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_3054",
+   "file": "src/assets/photos/02_own/Bromo_jeep_di_lautan_pasir.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2450",
+   "file": "src/assets/photos/02_own/TumpakSewu_air_terjun_siluet.jpg",
+   "width": 1125,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2866",
+   "file": "src/assets/photos/02_own/TumpakSewu_tamu_di_pagar.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2878",
+   "file": "src/assets/photos/02_own/TumpakSewu_pasangan_di_pagar.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2907",
+   "file": "src/assets/photos/02_own/TumpakSewu_tamu_di_batu.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "IMG_2827",
+   "file": "src/assets/photos/02_own/TumpakSewu_tamu_kolam_batu.jpg",
+   "width": 1500,
+   "height": 2000,
+   "status": "own",
+   "must_replace_before_launch": false,
+   "rights": "own / guest consent confirmed by the operator",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "fk_turtle",
+   "file": "src/assets/photos/03_temporary/Sukamade_penyu_di_pantai.jpg",
+   "width": 586,
+   "height": 384,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "",
+   "used_on_site": false
+  },
+  {
+   "key": "fk_tukik",
+   "file": "src/assets/photos/03_temporary/Sukamade_tukik_di_pasir.jpg",
+   "width": 557,
+   "height": 390,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "",
+   "used_on_site": false
+  },
+  {
+   "key": "fk_pantai",
+   "file": "src/assets/photos/03_temporary/Sukamade_pantai.jpg",
+   "width": 738,
+   "height": 415,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "738x415 px; looks soft in a 1440 px hero.",
+   "used_on_site": false
+  },
+  {
+   "key": "fk_cove",
+   "file": "src/assets/photos/03_temporary/Teluk_pasir_putih_hutan.jpg",
+   "width": 495,
+   "height": 619,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "Location not confirmed (Sukamade?).",
+   "used_on_site": false
+  },
+  {
+   "key": "fk_merah",
+   "file": "src/assets/photos/03_temporary/Pulau_Merah_sunset.jpg",
+   "width": 843,
+   "height": 474,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "Heavily colour-edited, resort-style image.",
+   "used_on_site": false
+  },
+  {
+   "key": "fk_jeep",
+   "file": "src/assets/photos/03_temporary/Sukamade_jeep_3_orang.jpg",
+   "width": 1355,
+   "height": 1020,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "People in the photo are not NusaTrails guests; third-party source.",
+   "used_on_site": false
+  },
+  {
+   "key": "fk_kabut",
+   "file": "src/assets/photos/03_temporary/Borobudur_pagi_berkabut.jpg",
+   "width": 480,
+   "height": 270,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "Only 480x270 px.",
+   "used_on_site": false
+  },
+  {
+   "key": "fk_prambanan",
+   "file": "src/assets/photos/03_temporary/Prambanan_wisatawan_berjalan.jpg",
+   "width": 1139,
+   "height": 854,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "Tourists walking; not a guest-and-guide photo.",
+   "used_on_site": false
+  },
+  {
+   "key": "fk_light",
+   "file": "src/assets/photos/03_temporary/Jomblang_light_of_heaven.jpg",
+   "width": 800,
+   "height": 530,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "fk_rope",
+   "file": "src/assets/photos/03_temporary/Jomblang_turun_dengan_tali.jpg",
+   "width": 1200,
+   "height": 800,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed (downloaded from the web)",
+   "note": "",
+   "used_on_site": true
+  },
+  {
+   "key": "n_light_of_heaven",
+   "file": "src/assets/photos/03_temporary/Jomblang_light_of_heaven_pink.jpg",
+   "width": 736,
+   "height": 918,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "Colour-graded pink/purple; fk_light looks more natural.",
+   "original_name": "5 light of heaven.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_borobudur_stupa",
+   "file": "src/assets/photos/03_temporary/Borobudur_stupa_golden_hour.jpg",
+   "width": 600,
+   "height": 447,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "",
+   "original_name": "WhatsApp ...20.53.45 (1).jpeg",
+   "used_on_site": true
+  },
+  {
+   "key": "n_borobudur_aerial",
+   "file": "src/assets/photos/03_temporary/Borobudur_aerial_morning.jpg",
+   "width": 1120,
+   "height": 629,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "1120x629, the sharpest Borobudur image so far.",
+   "original_name": "WhatsApp ...20.53.45.jpeg",
+   "used_on_site": true
+  },
+  {
+   "key": "n_prambanan_towers",
+   "file": "src/assets/photos/03_temporary/Prambanan_towers_dusk.jpg",
+   "width": 1265,
+   "height": 1600,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "1265x1600, the sharpest image in the whole set; not used on a page yet.",
+   "original_name": "WhatsApp ...20.57.00.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_sukamade_jeep",
+   "file": "src/assets/photos/03_temporary/Sukamade_jeep_offroad_black.jpg",
+   "width": 680,
+   "height": 451,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "680x451: soft in a 1440 px hero.",
+   "original_name": "jeep ofroad sukamade.jpeg",
+   "used_on_site": true
+  },
+  {
+   "key": "n_oyo_tubing",
+   "file": "src/assets/photos/03_temporary/Oyo_river_tubing.jpg",
+   "width": 739,
+   "height": 415,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "",
+   "original_name": "oyo river.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_sukamade_beach",
+   "file": "src/assets/photos/03_temporary/Sukamade_beach.jpg",
+   "width": 592,
+   "height": 337,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "",
+   "original_name": "pantai sukamade.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_turtle_laying",
+   "file": "src/assets/photos/03_temporary/Sukamade_turtle_laying_eggs.jpg",
+   "width": 547,
+   "height": 365,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "",
+   "original_name": "penyu bertelur malam hari.jpeg",
+   "used_on_site": true
+  },
+  {
+   "key": "n_prambanan_sunset",
+   "file": "src/assets/photos/03_temporary/Prambanan_sunset_path.jpg",
+   "width": 335,
+   "height": 597,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "",
+   "original_name": "perambanan.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_pulau_merah",
+   "file": "src/assets/photos/03_temporary/Pulau_Merah_beach.jpg",
+   "width": 888,
+   "height": 600,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "888x600, beach with loungers (resort-like).",
+   "original_name": "pulau merah.jpeg",
+   "used_on_site": true
+  },
+  {
+   "key": "n_pindul_tubing",
+   "file": "src/assets/photos/03_temporary/Pindul_cave_tubing.jpg",
+   "width": 680,
+   "height": 451,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "",
+   "original_name": "tubing pindul.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_hatchling_sea",
+   "file": "src/assets/photos/03_temporary/Sukamade_hatchling_to_sea.jpg",
+   "width": 720,
+   "height": 405,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "720x405: soft in a 1440 px hero.",
+   "original_name": "tukik menuju laut.jpeg",
+   "used_on_site": true
+  },
+  {
+   "key": "n_borobudur_mist",
+   "file": "src/assets/photos/03_temporary/Borobudur_mist_volcano.jpg",
+   "width": 415,
+   "height": 739,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "",
+   "original_name": "brobudur.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_prambanan_sewu",
+   "file": "src/assets/photos/03_temporary/Candi_sewu_golden_light.jpg",
+   "width": 640,
+   "height": 480,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "Likely Candi Sewu/Prambanan complex; location not confirmed.",
+   "original_name": "WhatsApp ...20.56.59 (1).jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_prambanan_orange",
+   "file": "src/assets/photos/03_temporary/Prambanan_orange_sky.jpg",
+   "width": 503,
+   "height": 610,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "",
+   "original_name": "WhatsApp ...20.56.59.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_rope_couple",
+   "file": "src/assets/photos/03_temporary/Jomblang_rope_couple.jpg",
+   "width": 399,
+   "height": 501,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "399x501, faces of third parties; fk_rope is better.",
+   "original_name": "turung dengan tali.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_ecolodge_tents",
+   "file": "src/assets/photos/03_temporary/DO_NOT_USE_glamping_tents.jpg",
+   "width": 474,
+   "height": 346,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "Upscale glamping tents: does NOT match the simple Sukamade eco-lodge. Do not use.",
+   "original_name": "eco lodge.jpeg",
+   "used_on_site": false
+  },
+  {
+   "key": "n_ecolodge_lake_huts",
+   "file": "src/assets/photos/03_temporary/DO_NOT_USE_lake_huts.jpg",
+   "width": 236,
+   "height": 340,
+   "status": "TEMPORARY",
+   "must_replace_before_launch": true,
+   "rights": "unverified, source not confirmed",
+   "note": "Lake huts, tiny (236x340), not Sukamade. Do not use.",
+   "original_name": "eco lodge1.jpeg",
+   "used_on_site": false
+  }
+ ],
+ "slots": {
+  "home.hero_background": "bromo_mist",
+  "home.contact_background": "IMG_2414",
+  "home.hero_cards": [
+   "IMG_0619",
+   "IMG_2509",
+   "IMG_0683",
+   "tim06",
+   "n_hatchling_sea"
+  ],
+  "home.about_timeline": {
+   "crater": "IMG_0863",
+   "blue_fire": "IMG_0686",
+   "sunrise": "IMG_2507",
+   "sea_of_sand": "IMG_3054",
+   "waterfall": "IMG_2450",
+   "blue_lake": "IMG_2827",
+   "jungle": "n_sukamade_jeep",
+   "red_island": "n_pulau_merah"
+  },
+  "home.popular_trips": [
+   "IMG_0683",
+   "IMG_2507",
+   "IMG_2414",
+   "n_hatchling_sea",
+   "n_borobudur_stupa",
+   "fk_light"
+  ],
+  "trips.hero": "IMG_2507",
+  "about.hero": "IMG_3358",
+  "about.team_photo": "tim05",
+  "about.gallery": [
+   "tim22",
+   "IMG_2507",
+   "tim20",
+   "tim25",
+   "tim10"
+  ],
+  "faq.hero": "IMG_0683",
+  "booking.hero": "tim24",
+  "booking.summary_card": "IMG_2414",
+  "trip_pages": "see photos.hero and photos.card in trips.json"
+ },
+ "still_missing": [
+  {
+   "need": "Sukamade",
+   "items": [
+    "real Sukamade eco-lodge (simple cabins; the supplied glamping tents do not match)"
+   ]
+  },
+  {
+   "need": "Borobudur & Prambanan",
+   "items": [
+    "guests with a guide inside the complex",
+    "sharper originals of the Borobudur and Prambanan images (most are 335-1120 px)"
+   ]
+  },
+  {
+   "need": "Jomblang & Pindul",
+   "items": [
+    "basecamp",
+    "sharper rope-descent and Light of Heaven originals"
+   ]
+  },
+  {
+   "need": "All TEMPORARY photos",
+   "items": [
+    "confirm source and licence, or replace with your own photos"
+   ]
+  },
+  {
+   "need": "Nice to have",
+   "items": [
+    "2 Ijen crater or sunrise photos without people",
+    "2 Bromo Sea of Sand and crater-stairs photos",
+    "2 Tumpak Sewu Tetes Cave and Blue Lake photos",
+    "3-6 photos of homestays and hotels",
+    "original, uncompressed files of the team photos"
+   ]
+  }
+ ]
+}

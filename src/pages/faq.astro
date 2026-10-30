@@ -1,0 +1,164 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import faqData from '../data/faq.json';
+
+const description =
+  'Frequently asked questions about booking, deposit, cancellation, pricing, inclusions, pick-up points, and what to expect on trips to Ijen, Bromo, Tumpak Sewu, and Yogyakarta.';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.categories.flatMap((cat) =>
+    cat.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    }))
+  ),
+};
+---
+
+<Base description={description} ogTitle="FAQ & Terms · NusaTrails">
+  <!-- FAQ Schema for Rich Results -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden min-h-[380px] md:min-h-[420px] flex items-end pb-12 pt-32 bg-[#0b0a0a]">
+    <div class="absolute inset-0 z-0">
+      <Photo
+        assetKey="IMG_0683"
+        alt="NusaTrails trail landscape"
+        priority={true}
+        class="w-full h-full object-cover object-center"
+      />
+      <!-- Dark gradients matching design reference -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#0b0a0a]/90 via-[#0b0a0a]/70 to-[#0b0a0a]/40"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-[#0b0a0a]/40 via-transparent to-[#0b0a0a]"
+      ></div>
+    </div>
+
+    <div class="container-nt relative z-10 w-full">
+      <h1 class="font-display font-semibold text-[72px] sm:text-[110px] md:text-[160px] lg:text-[180px] leading-none tracking-[0.03em] text-[#fff6e8]/90 uppercase m-0">
+        FAQ
+      </h1>
+      <p class="max-w-[560px] mt-3 text-base md:text-lg text-[#d9d3c8] leading-relaxed">
+        Answers about booking, pricing and what to expect on the trail.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content & Q&A Groups -->
+  <section class="container-nt py-12 md:py-16">
+    <!-- Category Chips Navigation -->
+    <div class="sticky top-20 z-30 py-3 bg-[#0b0a0a]/85 backdrop-blur-md -mx-4 px-4 sm:mx-0 sm:px-0">
+      <div class="flex gap-2.5 overflow-x-auto pb-1 scrollbar-none items-center" id="faq-chips">
+        {faqData.categories.map((cat, idx) => (
+          <a
+            href={`#${cat.id}`}
+            class:list={[
+              'chip-tab px-5 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all whitespace-nowrap border',
+              idx === 0
+                ? 'bg-[var(--color-accent)] text-[#14170a] border-[var(--color-accent)] font-semibold shadow-sm'
+                : 'bg-transparent text-white border-white/30 hover:border-white/60 hover:text-[var(--color-accent)]'
+            ]}
+          >
+            {cat.title}
+          </a>
+        ))}
+        <a
+          href="#terms"
+          class="chip-tab px-5 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all whitespace-nowrap border bg-transparent text-white border-white/30 hover:border-white/60 hover:text-[var(--color-accent)]"
+        >
+          Terms & conditions
+        </a>
+      </div>
+    </div>
+
+    <!-- Category Groups -->
+    <div class="mt-8 flex flex-col gap-12 md:gap-16">
+      {faqData.categories.map((cat) => (
+        <div id={cat.id} class="scroll-mt-36">
+          <h2 class="category-heading font-display font-medium text-2xl md:text-3xl tracking-wider text-white uppercase flex items-center gap-4">
+            <span>{cat.title}</span>
+            <span class="flex-1 h-px bg-white/20"></span>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 mt-6">
+            {cat.items.map((item) => (
+              <div class="glass-card p-6 rounded-[14px] flex flex-col gap-2.5 border border-white/20 hover:border-white/40 transition-colors">
+                <h3 class="font-display font-normal text-lg md:text-xl text-white leading-snug">
+                  {item.q}
+                </h3>
+                <p class="text-sm leading-relaxed text-[#d9d3c8]">
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Terms & Conditions Section -->
+    <div id="terms" class="mt-16 md:mt-24 scroll-mt-36">
+      <h2 class="category-heading font-display font-medium text-2xl md:text-3xl tracking-wider text-[#d9d3c8] uppercase flex items-center gap-4">
+        <span>Terms & conditions</span>
+        <span class="flex-1 h-px bg-white/25"></span>
+      </h2>
+
+      <div class="glass-card mt-6 p-6 md:p-8 rounded-[14px] border border-white/25 flex flex-col gap-3.5">
+        {faqData.terms.map((term) => (
+          <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+            <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+            <span>{term}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Simple intersection observer to highlight current category chip
+  const chips = document.querySelectorAll('#faq-chips .chip-tab');
+  const sections = document.querySelectorAll('section [id]');
+
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    const scrollPos = window.scrollY + 200;
+
+    sections.forEach((sec) => {
+      const top = (sec as HTMLElement).offsetTop;
+      const height = (sec as HTMLElement).offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = sec.id;
+      }
+    });
+
+    if (currentId) {
+      chips.forEach((chip) => {
+        const href = chip.getAttribute('href');
+        if (href === `#${currentId}`) {
+          chip.classList.add('bg-[var(--color-accent)]', 'text-[#14170a]', 'border-[var(--color-accent)]', 'font-semibold');
+          chip.classList.remove('bg-transparent', 'text-white', 'border-white/30');
+        } else {
+          chip.classList.remove('bg-[var(--color-accent)]', 'text-[#14170a]', 'border-[var(--color-accent)]', 'font-semibold');
+          chip.classList.add('bg-transparent', 'text-white', 'border-white/30');
+        }
+      });
+    }
+  }, { passive: true });
+</script>
+
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+  }
+</style>

@@ -1,0 +1,109 @@
+{
+ "categories": [
+  {
+   "id": "book",
+   "title": "Booking & payment",
+   "items": [
+    {
+     "q": "How do I book a trip?",
+     "a": "Send a booking request with your trip, dates and group size. You get a reference number right away, and our team contacts you on WhatsApp, usually within 24 hours, to confirm availability and your final quote."
+    },
+    {
+     "q": "Do I need to pay a deposit?",
+     "a": "Yes. A down payment of at least 30% of the total cost secures your slot. It is due after confirmation, or 2 weeks before the trip at the latest. Full payment is made on the first day."
+    },
+    {
+     "q": "What is the cancellation policy?",
+     "a": "If you cancel between 5 days and 1 day before the trip (H-5 to H-1), the down payment is non-refundable."
+    },
+    {
+     "q": "What if a place is closed or the weather is bad?",
+     "a": "Closures, bad weather and other conditions beyond our control do not entitle participants to compensation. Ijen blue fire depends on weather, safety and official access."
+    }
+   ]
+  },
+  {
+   "id": "price",
+   "title": "Pricing",
+   "items": [
+    {
+     "q": "How is the price calculated?",
+     "a": "Rates are per person for a private group of 2 to 4 people (up to 5 or 6 on the Yogyakarta tours), and the price per person drops as the group grows. For more than 4 people or other hotels, send us a request for a special price."
+    },
+    {
+     "q": "Is there a peak-season surcharge?",
+     "a": "Yes. Eid Al-Fitr and New Year, from 7 days before to 7 days after, add 20% to the rate."
+    },
+    {
+     "q": "What is included in the price?",
+     "a": "Private car with driver, fuel, toll and parking, an English-speaking guide, entrance fees, accommodation with breakfast, the Bromo jeep, Ijen equipment and mineral water."
+    },
+    {
+     "q": "What is not included?",
+     "a": "Lunch and dinner, tips for the driver and guide, travel insurance, the Ijen trolley, horse rides at Bromo and personal expenses."
+    }
+   ]
+  },
+  {
+   "id": "before",
+   "title": "Before the trip",
+   "items": [
+    {
+     "q": "What should I bring?",
+     "a": "Good walking or trekking shoes, warm clothes, a beanie, a raincoat, a small backpack, a copy of your ID, water and snacks. Peaks can be 5–15°C, colder with wind."
+    },
+    {
+     "q": "How fit do I need to be for Ijen?",
+     "a": "The ascent is about 3 km and takes 1.5–2 hours. The optional blue fire descent is about 800 m on steep, slippery ground. If it is not for you, wait on the upper trail and go to the sunrise viewpoint."
+    },
+    {
+     "q": "Is travel insurance included?",
+     "a": "No. Insurance for the trip is your own responsibility, so please arrange it before you travel."
+    },
+    {
+     "q": "Do I get equipment for Ijen?",
+     "a": "Yes. A gas mask, a headlamp and the health certificate for Ijen are included. If you have your own standard gear, we recommend bringing it."
+    }
+   ]
+  },
+  {
+   "id": "trip",
+   "title": "On the trip",
+   "items": [
+    {
+     "q": "Where will you pick me up in Bali?",
+     "a": "From your hotel at 09:00. Driving time to Gilimanuk Harbour is about 4–5 hours from Ubud, Sanur, Kuta, Legian and Denpasar, 2 hours from Lovina and 30 minutes from Pemuteran."
+    },
+    {
+     "q": "Where does each trip end?",
+     "a": "It depends on the route: Surabaya, Bali or Banyuwangi, as shown on each trip page. Sukamade trips end in Banyuwangi, so plan your onward travel."
+    },
+    {
+     "q": "Will I see the blue fire?",
+     "a": "It depends on weather, safety conditions and official access to the crater, so we cannot guarantee it."
+    },
+    {
+     "q": "Will I see sea turtles at Sukamade?",
+     "a": "Sightings depend on natural conditions and cannot be guaranteed. Baby turtle releases also depend on hatchling availability, conservation schedules, weather and local rules."
+    },
+    {
+     "q": "Do you run tours in Yogyakarta?",
+     "a": "Yes. We offer two full-day private tours: Borobudur & Prambanan (hotel pick-up at 05:00) and Jomblang & Pindul Cave (hotel pick-up at 07:00). We collect you from your hotel in Yogyakarta city."
+    },
+    {
+     "q": "Are tickets included on the Yogyakarta tours?",
+     "a": "Both tours offer a ticket-inclusive package and a no-ticket option. [CONFIRM: price difference between the two options]"
+    }
+   ]
+  }
+ ],
+ "terms": [
+  "A down payment of at least 30% of the total cost is required after confirmation, or 2 weeks before the trip at the latest, to secure your slot.",
+  "Full payment is completed on the first day of the trip.",
+  "Cancellations between H-5 and H-1 make the down payment non-refundable.",
+  "No compensation is given if a destination is closed, affected by bad weather or by any other condition beyond our control.",
+  "Equipment we provide is standard tour equipment. Bring your own gas mask, headlamp, snorkeling gear or trekking pole if you prefer.",
+  "By registering, participants agree to these terms and conditions."
+ ],
+ "note": "[CONFIRM] markers inside answers are placeholders awaiting the owner."
+}

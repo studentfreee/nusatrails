@@ -1,0 +1,219 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import { whatsappLink } from '../lib/site';
+
+const description =
+  'Meet NusaTrails: private volcano and nature trips across East Java and Yogyakarta. Founded by local mountain guides, focused on small groups, safety, and transparent pricing.';
+
+const galleryAssets = [
+  { key: 'tim22', caption: 'Guests at Ijen crater sunrise' },
+  { key: 'IMG_2507', caption: 'Bromo morning landscape' },
+  { key: 'tim20', caption: 'Group at Tumpak Sewu waterfall' },
+  { key: 'tim25', caption: 'Guests & guide at Ijen lake' },
+  { key: 'tim10', caption: 'Bromo 4x4 jeep adventure' },
+];
+---
+
+<Base description={description} ogTitle="About NusaTrails · Private Java Trips">
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden min-h-[380px] md:min-h-[440px] flex items-end pb-12 pt-32 bg-[#0b0a0a]">
+    <div class="absolute inset-0 z-0">
+      <Photo
+        assetKey="IMG_3358"
+        alt="NusaTrails trail journey"
+        priority={true}
+        class="w-full h-full object-cover object-center"
+      />
+      <!-- Gradient overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#0b0a0a]/90 via-[#0b0a0a]/75 to-[#0b0a0a]/40"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-[#0b0a0a]/40 via-transparent to-[#0b0a0a]"
+      ></div>
+    </div>
+
+    <div class="container-nt relative z-10 w-full">
+      <h1 class="font-display font-semibold text-[72px] sm:text-[110px] md:text-[160px] lg:text-[180px] leading-none tracking-[0.03em] text-[#fff6e8]/90 uppercase m-0">
+        About
+      </h1>
+      <p class="max-w-[620px] mt-3 text-base md:text-lg text-[#d9d3c8] leading-relaxed">
+        The people and the thinking behind your trip across Java.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="container-nt py-14 md:py-20">
+    <h2 class="font-display font-medium text-3xl md:text-4xl tracking-wider text-[#d9d3c8] uppercase flex items-center gap-4 m-0">
+      <span>Our story</span>
+      <span class="flex-1 h-px bg-white/25"></span>
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 md:gap-14 mt-8 items-start">
+      <div class="flex flex-col gap-4">
+        <p class="text-base md:text-lg text-white leading-relaxed">
+          NusaTrails runs private trips across Java: Ijen, Bromo, Tumpak Sewu and Sukamade in East Java, plus Borobudur, Prambanan and the Jomblang and Pindul caves near Yogyakarta. We pick you up from Bali, Surabaya or Yogyakarta.
+        </p>
+
+        <div class="border border-dashed border-white/35 rounded-lg p-4 md:p-5 text-sm md:text-base leading-relaxed text-[#bdb6ab] bg-white/[0.02]">
+          [YOUR STORY: who started NusaTrails, where you are from, and why you began guiding trips in East Java]
+        </div>
+
+        <div class="border border-dashed border-white/35 rounded-lg p-4 md:p-5 text-sm md:text-base leading-relaxed text-[#bdb6ab] bg-white/[0.02]">
+          [YOUR STORY: what makes your trips different, in your own words]
+        </div>
+      </div>
+
+      <!-- Team Photo -->
+      <div class="rounded-xl overflow-hidden border border-white/20 glass-card">
+        <div class="aspect-[4/3] w-full overflow-hidden">
+          <Photo
+            assetKey="tim05"
+            alt="NusaTrails team at Mount Ijen caldera"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-3.5 text-xs tracking-wider uppercase text-[#d9d3c8] bg-black/40">
+          NusaTrails team on the trail · East Java
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why NusaTrails -->
+  <section class="container-nt py-12 md:py-16">
+    <h2 class="font-display font-medium text-3xl md:text-4xl tracking-wider text-[#d9d3c8] uppercase flex items-center gap-4 m-0">
+      <span>Why NusaTrails</span>
+      <span class="flex-1 h-px bg-white/25"></span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mt-8">
+      <div class="glass-card p-6 rounded-[14px] border border-white/20 flex flex-col gap-2">
+        <h3 class="font-display font-medium text-xl text-white">Private small groups</h3>
+        <p class="text-sm leading-relaxed text-[#d9d3c8]">
+          Trips are for 2 to 4 people with your own car and driver. No big crowds, and the pace is yours.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-[14px] border border-white/20 flex flex-col gap-2">
+        <h3 class="font-display font-medium text-xl text-white">Private English-speaking guide</h3>
+        <p class="text-sm leading-relaxed text-[#d9d3c8]">
+          Your guide walks every trail with you, explains the route and safety, and takes your photos.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-[14px] border border-white/20 flex flex-col gap-2">
+        <h3 class="font-display font-medium text-xl text-white">Everything arranged</h3>
+        <p class="text-sm leading-relaxed text-[#d9d3c8]">
+          Transport, entrance fees, stay with breakfast, the Bromo jeep, Ijen equipment and water are included.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-[14px] border border-white/20 flex flex-col gap-2">
+        <h3 class="font-display font-medium text-xl text-white">Pick-up from Bali, Surabaya or Yogyakarta</h3>
+        <p class="text-sm leading-relaxed text-[#d9d3c8]">
+          No need to plan the long drive to the mountains. We collect you from your hotel and drop you at the end.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety & Responsible Travel -->
+  <section class="container-nt py-12 md:py-16">
+    <h2 class="font-display font-medium text-3xl md:text-4xl tracking-wider text-[#d9d3c8] uppercase flex items-center gap-4 m-0">
+      <span>Safety &amp; responsible travel</span>
+      <span class="flex-1 h-px bg-white/25"></span>
+    </h2>
+
+    <div class="glass-card mt-8 p-6 md:p-8 rounded-[14px] border border-white/25 flex flex-col gap-5">
+      <div>
+        <h3 class="font-display font-medium text-2xl text-white">Wild places have real rules.</h3>
+        <p class="text-sm md:text-base leading-relaxed text-[#d9d3c8] mt-1 max-w-2xl">
+          Volcano hikes and wildlife visits come with real risks. This is how we look after you and the places we visit.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3.5 pt-2 border-t border-white/10">
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>Ijen: a gas mask, a headlamp and the health certificate are included.</span>
+        </div>
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>The blue fire descent is optional. If it is not for you, wait on the upper trail and go to the sunrise viewpoint.</span>
+        </div>
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>Blue fire and sunrise depend on weather, safety conditions and official access, so we can never promise them.</span>
+        </div>
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>Sukamade: follow the guide on light, noise, movement and photography around the turtles.</span>
+        </div>
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>No alcohol during the trip. Travel insurance is your own responsibility, so please arrange it before you travel.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Moments from the trail (Photo Mosaic) -->
+  <section class="container-nt py-12 md:py-16">
+    <h2 class="font-display font-medium text-3xl md:text-4xl tracking-wider text-[#d9d3c8] uppercase flex items-center gap-4 m-0">
+      <span>Moments from the trail</span>
+      <span class="flex-1 h-px bg-white/25"></span>
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 mt-8">
+      {galleryAssets.map((item) => (
+        <div class="group relative aspect-[3/4] rounded-xl overflow-hidden border border-white/20 glass-card">
+          <Photo
+            assetKey={item.key}
+            alt={item.caption}
+            loading="eager"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex items-end p-3">
+            <span class="text-xs text-[#e9e4dc] leading-tight drop-shadow-sm font-medium">
+              {item.caption}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Closing Call to Action -->
+  <section class="container-nt py-16 md:py-20 text-center">
+    <div class="glass-card max-w-2xl mx-auto p-8 md:p-12 rounded-2xl border border-white/25 flex flex-col items-center gap-4">
+      <h2 class="font-display font-medium text-3xl md:text-4xl uppercase text-white m-0">
+        Ready to go?
+      </h2>
+      <p class="text-sm md:text-base text-[#d9d3c8] max-w-md">
+        Pick a trip, or tell us your dates and we'll plan it with you.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3.5 mt-2 w-full sm:w-auto">
+        <a href="/book" class="btn-primary w-full sm:w-auto justify-center">
+          Book a trip
+        </a>
+        <a
+          href={whatsappLink('Hello NusaTrails, I’d like to plan a custom trip across Java.')}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary w-full sm:w-auto justify-center"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+  }
+</style>

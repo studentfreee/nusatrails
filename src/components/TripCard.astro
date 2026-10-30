@@ -1,0 +1,64 @@
+---
+import type { Trip } from '../lib/schema';
+import Photo from './Photo.astro';
+import DifficultyDots from './DifficultyDots.astro';
+import { formatIDR } from '../lib/data';
+
+interface Props {
+  trip: Trip;
+  class?: string;
+}
+
+const { trip, class: className = '' } = Astro.props;
+
+const durationCode =
+  trip.duration.days === 1
+    ? '1 DAY'
+    : `${trip.duration.days}D${trip.duration.nights}N`;
+
+const durationFilterVal = trip.duration.days === 1 ? '1 day' : durationCode;
+const tag = `${durationCode} · START ${trip.start.toUpperCase()}`;
+
+// Build arrow route string: Start → Destinations → End
+const dests = trip.destinations.map((d) => d.replace(' Cave', ''));
+const arrowRoute = [trip.start, ...dests, trip.end].join(' → ');
+---
+
+<a
+  href={`/trips/${trip.slug}`}
+  class={`glass trip-card group flex flex-col p-4 rounded-[14px] transition-all duration-300 hover:border-[var(--nt-lime)]/50 hover:bg-white/[0.08] hover:-translate-y-1 ${className}`}
+  data-trip-card
+  data-duration={durationFilterVal}
+  data-start={trip.start}
+>
+  <div class="relative w-full aspect-[16/10] rounded-[8px] overflow-hidden bg-black/40 mb-3">
+    <Photo
+      assetKey={trip.photos.hero}
+      alt={trip.name}
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="tag text-[12px] font-medium tracking-[0.08em] uppercase text-[var(--nt-lime)]">
+    {tag}
+  </div>
+
+  <div class="difficulty-row flex items-center gap-2 text-[13px] text-[var(--nt-body)] mt-1.5">
+    <DifficultyDots difficulty={trip.difficulty} />
+  </div>
+
+  <h3 class="font-heading text-[22px] font-medium leading-[1.3] text-white mt-1.5 group-hover:text-[var(--nt-lime)] transition-colors">
+    {trip.name}
+  </h3>
+
+  <p class="text-[14px] leading-[1.5] text-[var(--nt-muted)] mt-1 line-clamp-2">
+    {arrowRoute}
+  </p>
+
+  <div class="price-row mt-auto pt-4 flex items-baseline gap-1.5 text-[20px] font-semibold text-white">
+    <span class="text-[13px] font-normal text-[var(--nt-muted)]">from</span>
+    <span class="text-white font-semibold">{formatIDR(trip.pricing.from_price_4_pax)}</span>
+    <span class="text-[13px] font-normal text-[var(--nt-muted)]">/ pax</span>
+  </div>
+</a>
