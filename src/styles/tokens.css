@@ -108,22 +108,23 @@
   .btn-outline:hover { border-color: #fff; background: rgba(255, 255, 255, 0.08); }
 
   /* Section title: Oswald 500, 44 px, uppercase, with a 1 px line filling the row. */
-  .section-title {
+  .section-title, .h2 {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 18px;
+    margin: 0;
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: clamp(30px, 4vw, 44px);
+    font-size: clamp(28px, 3.5vw, 44px);
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--color-ink);
+    color: #fff;
   }
-  .section-title::after {
+  .section-title::after, .h2::after {
     content: "";
     flex: 1;
     height: 1px;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.45);
   }
 
   /* Difficulty: three dots, accent = filled. */

@@ -12,7 +12,7 @@ const heroAssetKey = 'IMG_2507';
   ogTitle="Private Tours & Itineraries – NusaTrails"
 >
   <!-- Hero Section -->
-  <section class="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28 bg-[#0b0a0a]">
+  <section class="relative overflow-hidden min-h-[440px] md:h-[440px] flex items-end pb-8 pt-28 bg-[#0b0a0a]">
     <div class="absolute inset-0 z-0">
       <Photo
         assetKey={heroAssetKey}
@@ -27,24 +27,19 @@ const heroAssetKey = 'IMG_2507';
       ></div>
     </div>
 
-    <div class="container-nt relative z-10">
-      <h1 class="font-heading font-semibold text-6xl sm:text-8xl md:text-[140px] lg:text-[160px] uppercase tracking-[0.03em] leading-none text-white/90">
+    <div class="container-nt relative z-10 w-full">
+      <h1 class="font-heading font-semibold text-6xl sm:text-8xl md:text-[140px] lg:text-[180px] uppercase tracking-[0.03em] leading-none text-[rgba(255,246,232,.9)] m-0">
         Trips
       </h1>
-      <p class="mt-4 md:mt-6 text-lg md:text-xl text-[var(--nt-body)] max-w-[560px] leading-relaxed">
+      <p class="mt-2 text-base md:text-lg text-white max-w-[520px] leading-[1.6]">
         Pick your route, your starting point and your group size. Every private trip includes a guide and transport.
       </p>
     </div>
   </section>
 
   <!-- Filters Section -->
-  <section class="container-nt py-8" id="catalog">
-    <div class="flex items-center gap-6 mb-8">
-      <h2 class="font-heading text-3xl md:text-4xl uppercase tracking-[0.04em] text-[var(--nt-body)] whitespace-nowrap">
-        All Trips
-      </h2>
-      <div class="flex-1 h-[1px] bg-white/20"></div>
-    </div>
+  <section class="container-nt pt-10 pb-4" id="catalog">
+    <h2 class="h2 mb-7">All trips</h2>
 
     <div class="space-y-4 max-w-4xl">
       <!-- Duration Filter -->

@@ -17,8 +17,9 @@ interface Props {
   /** Descriptive social title (e.g. the trip name). The browser tab title is always SITE_TITLE. */
   ogTitle?: string;
   ogImage?: string;
+  hideFooter?: boolean;
 }
-const { description = DEFAULT_DESCRIPTION, ogTitle = SITE_TITLE, ogImage = '/icon-512.png' } = Astro.props;
+const { description = DEFAULT_DESCRIPTION, ogTitle = SITE_TITLE, ogImage = '/icon-512.png', hideFooter = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const ogImageUrl = new URL(ogImage, Astro.site).toString();
 ---
@@ -48,7 +49,7 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
     <main id="main">
       <slot />
     </main>
-    <Footer />
+    {!hideFooter && <Footer />}
     <WhatsAppButton />
   </body>
 </html>

@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
 import TripCard from '../components/TripCard.astro';
+import Footer from '../components/Footer.astro';
 import { getTrips } from '../lib/data';
 
 const allTrips = getTrips();
@@ -41,6 +42,7 @@ const orgSchema = {
 <Base
   description="Private trips across East Java & Yogyakarta: Ijen blue fire, Mount Bromo, Tumpak Sewu waterfall, Sukamade turtles, Borobudur and Prambanan. Small private groups with driver and guide."
   ogTitle="NusaTrails – Private Trips in East Java & Yogyakarta"
+  hideFooter={true}
 >
   <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
 
@@ -166,91 +168,88 @@ const orgSchema = {
 
   <!-- 2. ABOUT THE TOUR SECTION -->
   <section class="container-nt py-20 md:py-28" id="about">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <h2 class="h2">About the tour</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 mt-12 lg:mt-14 items-start">
       <!-- Left Column: Intro Description -->
-      <div class="lg:col-span-5 sticky top-28">
-        <div class="flex items-center gap-4 mb-6">
-          <h2 class="font-heading text-3xl md:text-4xl uppercase tracking-[0.04em] text-[var(--nt-body)]">
-            About the tour
-          </h2>
-          <div class="flex-1 h-[1px] bg-white/20"></div>
-        </div>
-        <p class="text-base md:text-lg leading-relaxed text-[var(--nt-body)] mb-6">
-          We've planned simple, convenient itineraries across Java. Choose from six places: <strong class="text-white">Ijen, Bromo, Tumpak Sewu and Sukamade</strong> in East Java, plus <strong class="text-white">Borobudur & Prambanan</strong> and <strong class="text-white">Jomblang & Pindul Cave</strong> near Yogyakarta.
+      <div class="text-[16px] leading-[1.7] text-[#d9d3c8]">
+        <p class="m-0">
+          We've planned simple, convenient itineraries across Java. Choose from six places: <span class="text-[var(--color-accent)] font-medium">Ijen, Bromo, Tumpak Sewu and Sukamade</span> in East Java, plus <span class="text-[var(--color-accent)] font-medium">Borobudur & Prambanan</span> and <span class="text-[var(--color-accent)] font-medium">Jomblang & Pindul Cave</span> near Yogyakarta.
         </p>
-        <p class="text-sm md:text-base leading-relaxed text-[var(--nt-muted)]">
-          No need to worry about routes, schedules or finding places. Everything is organized: private driver, English-speaking guide, tickets and stays. Pick 1 to 4 days and enjoy the journey.
+        <p class="mt-8 lg:mt-32">
+          No need to worry about routes, schedules or finding places. Everything is organized: private driver, English-speaking guide, tickets and stays. Pick 1 to 4 days and <span class="text-[var(--color-accent)] font-medium">enjoy the journey</span>.
         </p>
       </div>
 
       <!-- Right Column: Zig-zag Timeline -->
-      <div class="lg:col-span-7 space-y-12 relative before:absolute before:left-1/2 before:top-4 before:bottom-4 before:-ml-[1px] before:w-[1px] before:bg-white/20 hidden md:block">
+      <div class="relative hidden md:grid grid-cols-[1fr_28px_1fr] row-gap-9 gap-y-9">
+        <div class="absolute left-1/2 top-2 bottom-2 w-px bg-white/45 -translate-x-1/2 pointer-events-none"></div>
+
         <!-- Stop 1: Ijen -->
-        <div class="grid grid-cols-2 gap-8 items-center relative">
-          <div class="text-right pr-6">
-            <span class="text-[13px] text-[var(--nt-muted)]">Midnight hike</span>
-            <h3 class="font-heading text-2xl md:text-3xl font-medium text-white">Ijen</h3>
+        <div class="text-right pt-0.5">
+          <div class="text-[13px] text-[#bdb6ab]">Midnight hike</div>
+          <div class="font-heading text-[24px] text-white leading-normal">Ijen</div>
+        </div>
+        <div class="flex justify-center">
+          <span class="w-[11px] h-[11px] rounded-full bg-[#e9e4dc] mt-2"></span>
+        </div>
+        <div class="flex gap-2.5">
+          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+            <Photo assetKey="IMG_0683" alt="Ijen blue fire" class="w-full h-full object-cover" />
           </div>
-          <div class="absolute left-1/2 -ml-[6px] w-3 h-3 rounded-full bg-[var(--nt-ink)] ring-4 ring-[#0b0a0a]"></div>
-          <div class="flex gap-3 pl-6">
-            <div class="w-24 h-20 rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_0683" alt="Ijen blue fire" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-24 h-20 rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_3523" alt="Ijen crater" class="w-full h-full object-cover" />
-            </div>
+          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+            <Photo assetKey="IMG_3523" alt="Ijen crater" class="w-full h-full object-cover" />
           </div>
         </div>
 
         <!-- Stop 2: Bromo -->
-        <div class="grid grid-cols-2 gap-8 items-center relative">
-          <div class="flex gap-3 justify-end pr-6">
-            <div class="w-24 h-20 rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_3054" alt="Bromo jeep" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-24 h-20 rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_2507" alt="Bromo sunrise" class="w-full h-full object-cover" />
-            </div>
+        <div class="flex gap-2.5 justify-end">
+          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+            <Photo assetKey="IMG_3054" alt="Bromo jeep" class="w-full h-full object-cover" />
           </div>
-          <div class="absolute left-1/2 -ml-[6px] w-3 h-3 rounded-full bg-[var(--nt-ink)] ring-4 ring-[#0b0a0a]"></div>
-          <div class="pl-6">
-            <span class="text-[13px] text-[var(--nt-muted)]">4WD jeep at 03:30</span>
-            <h3 class="font-heading text-2xl md:text-3xl font-medium text-white">Bromo</h3>
+          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+            <Photo assetKey="IMG_2507" alt="Bromo sunrise" class="w-full h-full object-cover" />
           </div>
+        </div>
+        <div class="flex justify-center">
+          <span class="w-[11px] h-[11px] rounded-full bg-[#e9e4dc] mt-2"></span>
+        </div>
+        <div>
+          <div class="text-[13px] text-[#bdb6ab]">4WD jeep at 03:30</div>
+          <div class="font-heading text-[24px] text-white leading-normal">Bromo</div>
         </div>
 
         <!-- Stop 3: Tumpak Sewu -->
-        <div class="grid grid-cols-2 gap-8 items-center relative">
-          <div class="text-right pr-6">
-            <span class="text-[13px] text-[var(--nt-muted)]">Waterfall trek</span>
-            <h3 class="font-heading text-2xl md:text-3xl font-medium text-white">Tumpak Sewu</h3>
+        <div class="text-right pt-0.5">
+          <div class="text-[13px] text-[#bdb6ab]">Waterfall trek</div>
+          <div class="font-heading text-[24px] text-white leading-normal">Tumpak Sewu</div>
+        </div>
+        <div class="flex justify-center">
+          <span class="w-[11px] h-[11px] rounded-full bg-[#e9e4dc] mt-2"></span>
+        </div>
+        <div class="flex gap-2.5">
+          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+            <Photo assetKey="IMG_2414" alt="Tumpak Sewu vista" class="w-full h-full object-cover" />
           </div>
-          <div class="absolute left-1/2 -ml-[6px] w-3 h-3 rounded-full bg-[var(--nt-ink)] ring-4 ring-[#0b0a0a]"></div>
-          <div class="flex gap-3 pl-6">
-            <div class="w-24 h-20 rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_2414" alt="Tumpak Sewu vista" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-24 h-20 rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_2866" alt="Tumpak Sewu stairs" class="w-full h-full object-cover" />
-            </div>
+          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+            <Photo assetKey="IMG_2866" alt="Tumpak Sewu stairs" class="w-full h-full object-cover" />
           </div>
         </div>
 
         <!-- Stop 4: Sukamade -->
-        <div class="grid grid-cols-2 gap-8 items-center relative">
-          <div class="flex gap-3 justify-end pr-6">
-            <div class="w-24 h-20 rounded-[6px] overflow-hidden">
-              <Photo assetKey="n_sukamade_jeep" alt="Sukamade offroad" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-24 h-20 rounded-[6px] overflow-hidden">
-              <Photo assetKey="fk_turtle" alt="Sukamade turtles" class="w-full h-full object-cover" />
-            </div>
+        <div class="flex gap-2.5 justify-end">
+          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+            <Photo assetKey="n_sukamade_jeep" alt="Sukamade offroad" class="w-full h-full object-cover" />
           </div>
-          <div class="absolute left-1/2 -ml-[6px] w-3 h-3 rounded-full bg-[var(--nt-ink)] ring-4 ring-[#0b0a0a]"></div>
-          <div class="pl-6">
-            <span class="text-[13px] text-[var(--nt-muted)]">Turtles & off-road</span>
-            <h3 class="font-heading text-2xl md:text-3xl font-medium text-white">Sukamade</h3>
+          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+            <Photo assetKey="fk_turtle" alt="Sukamade turtles" class="w-full h-full object-cover" />
           </div>
+        </div>
+        <div class="flex justify-center">
+          <span class="w-[11px] h-[11px] rounded-full bg-[#e9e4dc] mt-2"></span>
+        </div>
+        <div>
+          <div class="text-[13px] text-[#bdb6ab]">Turtles & off-road</div>
+          <div class="font-heading text-[24px] text-white leading-normal">Sukamade</div>
         </div>
       </div>
 
@@ -529,7 +528,11 @@ const orgSchema = {
   </section>
 
   <!-- 7. CONTACT / LEAVE A REQUEST SECTION -->
-  <section class="relative overflow-hidden py-24 md:py-32" id="contact">
+  <section
+    id="contact"
+    class="relative overflow-hidden h-[820px]"
+    style="background: linear-gradient(180deg, #0b0a0a 0%, #2a1d2a 35%, #6a4a58 75%, #5e4250 100%);"
+  >
     <div class="absolute inset-0 z-0">
       <Photo assetKey="contact_bg" alt="Tumpak Sewu Waterfall" class="w-full h-full object-cover" />
       <div
@@ -538,71 +541,58 @@ const orgSchema = {
       ></div>
     </div>
 
-    <div class="container-nt relative z-10">
-      <div class="max-w-[480px] glass p-8 md:p-10 rounded-[14px] bg-black/65 border-white/20">
-        <h2 class="font-heading text-3xl md:text-4xl font-medium text-white leading-tight mb-3">
+    <div class="relative z-10 h-full max-w-[1240px] mx-auto px-6 lg:px-12 pt-16 lg:pt-18 pb-8 flex flex-col justify-between">
+      <div class="glass max-w-[460px] p-8 rounded-[14px] bg-black/55 border border-white/25">
+        <h2 class="font-heading font-medium text-[30px] text-white leading-[1.25] m-0">
           Want to join us,<br />but still have questions?
         </h2>
-        <p class="text-sm md:text-base text-[var(--nt-body)] mb-6">
+        <p class="mt-3 mb-5 text-[15px] text-[#d9d3c8]">
           Leave a request and we'll reply with a quote.
         </p>
 
-        <form id="home-lead-form" class="space-y-4">
+        <form id="home-lead-form">
           <!-- Honeypot -->
           <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
 
-          <div>
-            <label for="home-name" class="block text-[13px] text-[var(--nt-body)] mb-1">
-              Your name
-            </label>
-            <input
-              id="home-name"
-              name="name"
-              type="text"
-              required
-              class="w-full h-11 px-3.5 rounded-[6px] border border-white/30 bg-white/10 text-white placeholder-white/40 focus:border-[var(--nt-lime)] focus:outline-none text-sm"
-              placeholder="e.g. Alex"
-            />
-          </div>
+          <label for="n" class="block text-[13px] text-[#d9d3c8]">Your name</label>
+          <input
+            id="n"
+            name="name"
+            type="text"
+            required
+            class="block w-full h-11 my-1 mb-3.5 px-3 rounded-[6px] border border-white/40 bg-white/[0.08] text-white font-inherit focus:border-[var(--color-accent)] focus:outline-none"
+          />
 
-          <div>
-            <label for="home-phone" class="block text-[13px] text-[var(--nt-body)] mb-1">
-              Phone number (WhatsApp)
-            </label>
-            <input
-              id="home-phone"
-              name="whatsapp"
-              type="tel"
-              required
-              class="w-full h-11 px-3.5 rounded-[6px] border border-white/30 bg-white/10 text-white placeholder-white/40 focus:border-[var(--nt-lime)] focus:outline-none text-sm"
-              placeholder="e.g. +62 812 3456 7890"
-            />
-          </div>
+          <label for="p" class="block text-[13px] text-[#d9d3c8]">Phone number</label>
+          <input
+            id="p"
+            name="whatsapp"
+            type="tel"
+            required
+            class="block w-full h-11 my-1 mb-3.5 px-3 rounded-[6px] border border-white/40 bg-white/[0.08] text-white font-inherit focus:border-[var(--color-accent)] focus:outline-none"
+          />
 
-          <div>
-            <label for="home-comment" class="block text-[13px] text-[var(--nt-body)] mb-1">
-              Comment
-            </label>
-            <textarea
-              id="home-comment"
-              name="comment"
-              rows="3"
-              class="w-full p-3 rounded-[6px] border border-white/30 bg-white/10 text-white placeholder-white/40 focus:border-[var(--nt-lime)] focus:outline-none text-sm resize-none"
-              placeholder="Ask about dates, route customizations, or group size..."
-            ></textarea>
-          </div>
+          <label for="c" class="block text-[13px] text-[#d9d3c8]">Comment</label>
+          <input
+            id="c"
+            name="comment"
+            type="text"
+            class="block w-full h-11 my-1 mb-5 px-3 rounded-[6px] border border-white/40 bg-white/[0.08] text-white font-inherit focus:border-[var(--color-accent)] focus:outline-none"
+          />
 
-          <div id="home-form-status" class="text-sm hidden pt-1"></div>
+          <div id="home-form-status" class="text-sm hidden pb-2"></div>
 
           <button
             type="submit"
             id="home-form-btn"
-            class="w-full h-12 rounded-[6px] bg-[var(--nt-lime)] text-[#14170a] font-semibold text-sm hover:brightness-110 transition flex items-center justify-center cursor-pointer mt-2"
+            class="w-full h-12 border-0 rounded-[6px] bg-[var(--color-accent)] text-[#14170a] font-semibold text-[15px] cursor-pointer hover:brightness-105 transition"
           >
-            Send request
+            Send
           </button>
         </form>
       </div>
+
+      <Footer embedded={true} />
     </div>
   </section>
 </Base>
@@ -694,7 +684,7 @@ const orgSchema = {
         statusEl.classList.remove('hidden');
       } finally {
         btn.disabled = false;
-        btn.textContent = 'Send request';
+        btn.textContent = 'Send';
       }
     });
   }
