@@ -14,7 +14,8 @@ export const NAV_LINKS = [
 const env = import.meta.env;
 
 export const SITE_URL: string = env.PUBLIC_SITE_URL || 'https://nusatrails.id';
-export const WHATSAPP_NUMBER: string = String(env.PUBLIC_WHATSAPP_NUMBER ?? '');
+export const WHATSAPP_NUMBER: string = String(env.PUBLIC_WHATSAPP_NUMBER || '6285151852256').replace(/\D/g, '');
+export const INSTAGRAM_URL: string = String(env.PUBLIC_INSTAGRAM_URL || 'https://www.instagram.com/nusatrails.id');
 /** True only when the owner has supplied a real number (digits only, with country code). */
 export const HAS_WHATSAPP = /^\d{8,15}$/.test(WHATSAPP_NUMBER);
 

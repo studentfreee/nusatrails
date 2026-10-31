@@ -1,6 +1,6 @@
 ---
 import Logo from './Logo.astro';
-import { NAV_LINKS, HAS_WHATSAPP, whatsappLink } from '../lib/site';
+import { NAV_LINKS, HAS_WHATSAPP, whatsappLink, INSTAGRAM_URL } from '../lib/site';
 
 interface Props {
   /** If embedded inside a page's existing contact section (like Home) */
@@ -12,7 +12,7 @@ const { embedded = false } = Astro.props;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isActive = (href: string) => path === href || path.startsWith(href + '/');
 
-const instagram = import.meta.env.PUBLIC_INSTAGRAM_URL || '';
+const instagram = import.meta.env.PUBLIC_INSTAGRAM_URL || INSTAGRAM_URL;
 const email = import.meta.env.PUBLIC_CONTACT_EMAIL || '';
 const waHref = whatsappLink();
 ---
@@ -20,10 +20,10 @@ const waHref = whatsappLink();
 {embedded ? (
   <footer class="footer-wrap">
     <div class="footer-icons">
-      <a href={instagram || '#contact'} aria-label="Instagram" class="f-icon">
+      <a href={instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="f-icon">
         <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
       </a>
-      <a href={waHref} aria-label="WhatsApp" class="f-icon">
+      <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="f-icon">
         <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l1.5-4.5A8 8 0 1 1 8.5 18.5z"/></svg>
       </a>
       <a href={email ? `mailto:${email}` : '#contact'} aria-label="Email" class="f-icon">
@@ -44,10 +44,10 @@ const waHref = whatsappLink();
     <div class="container-nt h-full relative">
       <footer class="footer-wrap">
         <div class="footer-icons">
-          <a href={instagram || '#contact'} aria-label="Instagram" class="f-icon">
+          <a href={instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="f-icon">
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
           </a>
-          <a href={waHref} aria-label="WhatsApp" class="f-icon">
+          <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="f-icon">
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l1.5-4.5A8 8 0 1 1 8.5 18.5z"/></svg>
           </a>
           <a href={email ? `mailto:${email}` : '#contact'} aria-label="Email" class="f-icon">
