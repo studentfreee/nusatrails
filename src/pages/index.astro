@@ -60,7 +60,7 @@ const orgSchema = {
 
     <!-- Layer 2: Big Title behind the mountain ridge -->
     <div class="absolute top-[70px] inset-x-0 mx-auto max-w-[1240px] px-6 lg:px-12 z-10 pointer-events-none select-none">
-      <h1 class="font-heading font-semibold text-[76px] sm:text-[110px] md:text-[145px] lg:text-[180px] uppercase tracking-[0.03em] leading-none text-white/80 whitespace-nowrap">
+      <h1 class="font-heading font-semibold text-[clamp(40px,11.5vw,76px)] sm:text-[110px] md:text-[145px] lg:text-[180px] uppercase tracking-[0.03em] leading-none text-white/80 whitespace-nowrap">
         NusaTrails
       </h1>
     </div>
@@ -85,8 +85,8 @@ const orgSchema = {
     <div class="absolute bottom-10 lg:bottom-14 inset-x-0 mx-auto max-w-[1240px] px-6 lg:px-12 z-30">
       <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-8">
         <!-- 5 Mini Photo Cards -->
-        <div class="w-full lg:w-auto overflow-x-auto pb-2 scrollbar-none">
-          <div class="flex gap-3.5 min-w-max">
+        <div class="w-full lg:w-auto overflow-x-auto pb-2 scrollbar-none [mask-image:linear-gradient(to_right,black_calc(100%-36px),transparent)] lg:[mask-image:none]">
+          <div class="flex gap-3.5 min-w-max pr-8 lg:pr-0">
             <!-- Card 1: 6 destinations across Java -->
             <div class="glass w-32 md:w-[140px] p-2 rounded-[8px] bg-black/55 flex flex-col">
               <div class="w-full h-28 md:h-[150px] rounded-[4px] overflow-hidden mb-2.5">
@@ -317,8 +317,8 @@ const orgSchema = {
     </div>
 
     <!-- Route Line Container -->
-    <div class="overflow-x-auto pb-6 scrollbar-none">
-      <div class="min-w-[800px] relative pt-12 pb-24">
+    <div class="overflow-x-auto pb-6 scrollbar-none [mask-image:linear-gradient(to_right,black_calc(100%-36px),transparent)] lg:[mask-image:none]">
+      <div class="min-w-[800px] h-[300px] relative pt-12">
         <!-- Main Line -->
         <div class="absolute left-[10%] right-[10%] top-[96px] h-[1px] bg-white/40"></div>
 
@@ -327,7 +327,7 @@ const orgSchema = {
           4–5 h drive<br />+ ~1 h ferry
         </div>
         <div class="absolute top-[56px] left-[40%] -translate-x-1/2 text-center text-[13px] leading-tight text-[var(--nt-body)] whitespace-nowrap">
-          6–7 h
+          6–8 h
         </div>
         <div class="absolute top-[56px] left-[60%] -translate-x-1/2 text-center text-[13px] leading-tight text-[var(--nt-body)] whitespace-nowrap">
           3–4 h
@@ -384,7 +384,7 @@ const orgSchema = {
 
     <!-- Footnote about route times -->
     <p class="mt-4 text-[13px] text-[var(--nt-muted)] leading-relaxed">
-      Surabaya ↔ Banyuwangi: 6–7 h. Drive times are estimates and change with traffic. The Yogyakarta tours are full-day trips from Yogyakarta city.
+      Surabaya ↔ Banyuwangi: 6–8 h (subject to traffic). Drive times are estimates and change with traffic. The Yogyakarta tours are full-day trips from Yogyakarta city.
     </p>
   </section>
 

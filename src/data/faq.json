@@ -92,7 +92,7 @@
     },
     {
      "q": "Are tickets included on the Yogyakarta tours?",
-     "a": "Both tours offer a ticket-inclusive package and a no-ticket option. [CONFIRM: price difference between the two options]"
+     "a": "Both tours offer a ticket-inclusive package and a no-ticket option depending on your preference. Contact our team on WhatsApp for details on each option."
     }
    ]
   }
@@ -104,6 +104,5 @@
   "No compensation is given if a destination is closed, affected by bad weather or by any other condition beyond our control.",
   "Equipment we provide is standard tour equipment. Bring your own gas mask, headlamp, snorkeling gear or trekking pole if you prefer.",
   "By registering, participants agree to these terms and conditions."
- ],
- "note": "[CONFIRM] markers inside answers are placeholders awaiting the owner."
+ ]
 }

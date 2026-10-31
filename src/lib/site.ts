@@ -21,5 +21,5 @@ export const HAS_WHATSAPP = /^\d{8,15}$/.test(WHATSAPP_NUMBER);
 export function whatsappLink(message = "Hello NusaTrails, I'd like to ask about a private trip."): string {
   return HAS_WHATSAPP
     ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
-    : '/book';
+    : `https://wa.me/?text=${encodeURIComponent(message)}`;
 }

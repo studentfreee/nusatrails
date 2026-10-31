@@ -596,30 +596,6 @@
    "used_on_site": false
   },
   {
-   "key": "n_ecolodge_tents",
-   "file": "src/assets/photos/03_temporary/DO_NOT_USE_glamping_tents.jpg",
-   "width": 474,
-   "height": 346,
-   "status": "TEMPORARY",
-   "must_replace_before_launch": true,
-   "rights": "unverified, source not confirmed",
-   "note": "Upscale glamping tents: does NOT match the simple Sukamade eco-lodge. Do not use.",
-   "original_name": "eco lodge.jpeg",
-   "used_on_site": false
-  },
-  {
-   "key": "n_ecolodge_lake_huts",
-   "file": "src/assets/photos/03_temporary/DO_NOT_USE_lake_huts.jpg",
-   "width": 236,
-   "height": 340,
-   "status": "TEMPORARY",
-   "must_replace_before_launch": true,
-   "rights": "unverified, source not confirmed",
-   "note": "Lake huts, tiny (236x340), not Sukamade. Do not use.",
-   "original_name": "eco lodge1.jpeg",
-   "used_on_site": false
-  },
-  {
    "key": "contact_bg",
    "file": "src/assets/photos/02_own/TumpakSewu_contact_bg.jpg",
    "width": 1600,

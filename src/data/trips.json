@@ -1423,117 +1423,130 @@
    "itinerary": [
     {
      "label": "Day 1",
-     "title": "Bali to Banyuwangi – Hotel Check-in",
+     "title": "Bali to Banyuwangi",
      "items": [
       {
-       "type": "paragraph",
-       "text": "Your adventure to explore Ijen Crater and Mount Bromo begins at 09:00 AM Bali time. Our driver will pick you up directly from your hotel in Bali before heading towards Gilimanuk Harbour. The drive usually takes around 4–5 hours, depending on your pickup location and traffic conditions."
+       "type": "schedule",
+       "label": "09:00",
+       "text": "Hotel pick-up in Bali, then drive to Gilimanuk Harbour (about 4–5 hours, depending on pick-up point)."
       },
       {
-       "type": "paragraph",
-       "text": "Once you arrive at the harbour, you will board a ferry to Ketapang Harbour in East Java. The crossing takes approximately one hour. After reaching Banyuwangi, we will stop at a local restaurant for lunch (personal expenses) before continuing to your hotel in the Banyuwangi area."
+       "type": "schedule",
+       "label": "Ferry",
+       "text": "Ferry to Ketapang Harbour in East Java, about 1 hour."
       },
       {
-       "type": "paragraph",
-       "text": "The rest of the day is free for you to relax and prepare for the midnight hike to Ijen Crater."
+       "type": "schedule",
+       "label": "Lunch",
+       "text": "Local restaurant in Banyuwangi (own cost)."
       },
       {
-       "type": "paragraph",
-       "text": "Travel time to Gilimanuk Harbour: Ubud, Sanur, Kuta, Legian, and Denpasar approximately 4–5 hours; Pemuteran around 30 minutes; and Lovina approximately 2 hours."
+       "type": "schedule",
+       "label": "Evening",
+       "text": "Check in at your Banyuwangi hotel and rest before the midnight hike."
       }
      ]
     },
     {
      "label": "Day 2",
-     "title": "Ijen Crater Exploration – Transfer to Tumpak Sewu",
+     "title": "Ijen Crater to Tumpak Sewu",
      "items": [
       {
-       "type": "paragraph",
-       "text": "The journey to Ijen Crater begins at approximately 00:00 AM, when we leave the hotel and drive to Paltuding Base Camp, located at an elevation of around 1,800 metres. The drive takes about one hour, passing through traditional villages, plantations, rice fields, and forested mountain roads."
+       "type": "schedule",
+       "label": "00:00",
+       "text": "Leave the hotel and drive 1 hour to Paltuding Base Camp (1,800 m)."
       },
       {
-       "type": "paragraph",
-       "text": "Upon arrival at Paltuding, you can enjoy a warm drink while our guide explains the hiking route and safety guidelines. At approximately 02:00 AM, we will start the ascent towards Ijen Crater. The uphill trek covers roughly 3 kilometres and generally takes 1.5–2 hours, depending on your pace and fitness level. Several rest points are available along the trail, with small stalls and toilet facilities at various locations."
+       "type": "schedule",
+       "label": "02:00",
+       "text": "Start the 3 km ascent to the crater rim, 1.5–2 hours at your own pace."
       },
       {
-       "type": "paragraph",
-       "text": "After reaching the upper section of Mount Ijen, at approximately 2,386 metres above sea level, we will continue towards the crater area. For those who wish to see the famous blue fire, the route involves a descent of approximately 800 metres over steep, uneven, and potentially slippery terrain. Reaching the blue fire area requires an additional 30–45 minutes of descent, depending on trail conditions."
+       "type": "schedule",
+       "label": "Blue fire",
+       "text": "Optional descent of about 800 m, 30–45 minutes, depending on weather and official access."
       },
       {
-       "type": "paragraph",
-       "text": "The blue flames are a rare natural phenomenon caused by ignited sulphuric gases. If conditions permit and access is open, you will have the opportunity to witness this remarkable sight and take photographs."
+       "type": "schedule",
+       "label": "Sunrise",
+       "text": "Sunrise viewpoint above the turquoise crater lake, 30 minutes to 1 hour."
       },
       {
-       "type": "paragraph",
-       "text": "Please note: Visiting the blue fire requires additional physical effort and depends on weather, safety conditions, and official access restrictions. If the descent is unsuitable for you, you can remain on the upper trail and proceed towards the sunrise viewpoint instead."
+       "type": "schedule",
+       "label": "07:00",
+       "text": "Walk down to Paltuding, back to the hotel for breakfast, a shower and rest."
       },
       {
-       "type": "paragraph",
-       "text": "After exploring the crater area, we will make our way back uphill and continue towards the sunrise viewpoint. Depending on your location and walking pace, this section may take approximately 30 minutes to one hour. Enjoy the morning scenery and take in the impressive views of Ijen's turquoise crater lake and surrounding volcanic landscape."
+       "type": "schedule",
+       "label": "11:00",
+       "text": "Check out and drive 6–7 hours to Pronojiwo, Lumajang."
       },
       {
-       "type": "paragraph",
-       "text": "At around 07:00 AM, we will descend to Paltuding Base Camp and return to the hotel for breakfast, a shower, and some well-deserved rest."
-      },
-      {
-       "type": "paragraph",
-       "text": "We will check out at approximately 11:00 AM and begin the overland journey to Pronojiwo, Lumajang, where your next accommodation is located near Tumpak Sewu Waterfall. The drive takes around 6–7 hours, with scenic views of countryside settlements, green hills, and natural rock formations along the way."
-      },
-      {
-       "type": "paragraph",
-       "text": "After arriving at your accommodation, check in and relax for the evening in preparation for the waterfall exploration the following morning."
+       "type": "schedule",
+       "label": "Evening",
+       "text": "Check in near Tumpak Sewu Waterfall."
       }
      ]
     },
     {
      "label": "Day 3",
-     "title": "Tumpak Sewu Waterfall Adventure – Transfer to Bromo",
+     "title": "Tumpak Sewu to Bromo",
      "items": [
       {
-       "type": "paragraph",
-       "text": "After breakfast, we will start the Tumpak Sewu excursion at approximately 07:00 AM. Our first stop is the panoramic viewpoint, where you can admire the waterfall cascading down the surrounding cliffs from above. This is an ideal location to take photos of one of East Java's most spectacular natural attractions."
+       "type": "schedule",
+       "label": "07:00",
+       "text": "Panoramic viewpoint over the waterfall, then about 1 hour on foot down to the base."
       },
       {
-       "type": "paragraph",
-       "text": "From the viewpoint, we will continue on foot towards the waterfall's lower area. The trek takes approximately one hour and includes descending hillside paths and walking alongside the river. During the journey, we will also pass several scenic locations, including Tetes Cave and Blue Lake, where you can stop to enjoy the surroundings and capture memorable photographs."
+       "type": "schedule",
+       "label": "On foot",
+       "text": "Pass Tetes Cave and Blue Lake on the way, with time for photos at the main waterfall."
       },
       {
-       "type": "paragraph",
-       "text": "Once we reach the main waterfall, take some time to appreciate the dramatic landscape and towering streams of water flowing down the cliffs. After the exploration, we will return to the accommodation to freshen up and have lunch (personal expenses)."
+       "type": "schedule",
+       "label": "Return",
+       "text": "Back at your stay to freshen up and have lunch (own cost)."
       },
       {
-       "type": "paragraph",
-       "text": "In the afternoon, we will continue the journey to the Bromo area, with accommodation arranged around Sukapura, Probolinggo. The transfer usually takes 3–4 hours, depending on road and traffic conditions."
+       "type": "schedule",
+       "label": "Afternoon",
+       "text": "Drive 3–4 hours to Sukapura, Probolinggo, and check in."
       },
       {
-       "type": "paragraph",
-       "text": "Upon arrival, check in and enjoy a relaxing evening in the cool mountain atmosphere. An early night is recommended, as the Mount Bromo sunrise excursion will begin before dawn."
+       "type": "schedule",
+       "label": "Evening",
+       "text": "Early night. The jeep comes before dawn."
       }
      ]
     },
     {
      "label": "Day 4",
-     "title": "Mount Bromo Sunrise Experience – Transfer to Surabaya",
+     "title": "Bromo Sunrise to Surabaya",
      "items": [
       {
-       "type": "paragraph",
-       "text": "The final day begins at approximately 03:30 AM, when our 4WD jeep picks you up from your hotel for the Mount Bromo sunrise excursion."
+       "type": "schedule",
+       "label": "03:30",
+       "text": "4WD jeep picks you up from your hotel."
       },
       {
-       "type": "paragraph",
-       "text": "We will travel to selected viewpoints along the edge of the Tengger Caldera, including Penanjakan and Kingkong Hill, both famous for their sweeping views across the volcanic landscape. At an elevation of around 2,700 metres, these viewpoints offer an opportunity to witness the sunrise over Mount Bromo, Mount Batok, and Mount Semeru, weather permitting."
+       "type": "schedule",
+       "label": "Sunrise",
+       "text": "Penanjakan and Kingkong Hill at about 2,700 m, weather permitting."
       },
       {
-       "type": "paragraph",
-       "text": "After sunrise, the adventure continues with a jeep ride across the vast Sea of Sand. From the designated parking area, you can walk towards Mount Bromo's crater staircase or choose to hire a horse as an optional activity, subject to local availability and additional charges."
+       "type": "schedule",
+       "label": "Sea of Sand",
+       "text": "Jeep across the Sea of Sand, then walk to the crater stairs. Horse is optional, extra cost."
       },
       {
-       "type": "paragraph",
-       "text": "Once you have finished exploring the Bromo area, we will return to the hotel at approximately 08:30 AM. Enjoy breakfast, take a shower, pack your belongings, and complete the check-out process."
+       "type": "schedule",
+       "label": "08:30",
+       "text": "Back at the hotel for breakfast, a shower and check-out."
       },
       {
-       "type": "paragraph",
-       "text": "We will then depart for Surabaya, with an estimated transfer time of 3–4 hours depending on traffic conditions. Upon arrival in Surabaya, your Ijen, Tumpak Sewu, and Bromo adventure comes to an end."
+       "type": "schedule",
+       "label": "Transfer",
+       "text": "Drive 3–4 hours to Surabaya. The trip ends on arrival."
       }
      ]
     }

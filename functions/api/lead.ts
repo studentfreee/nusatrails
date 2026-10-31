@@ -27,8 +27,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (type === 'booking') {
     if (!d.trip_slug) return fail('no_trip');
     if (!/^\d{4}-\d{2}-\d{2}$/.test(String(d.start_date ?? ''))) return fail('bad_date');
+    const isMoreThanFour = String(d.participants ?? '').trim().toLowerCase() === 'more than 4';
     const n = parseInt(d.participants, 10);
-    if (!(n >= 1 && n <= 20)) return fail('bad_participants');
+    if (!isMoreThanFour && !(n >= 1 && n <= 20)) return fail('bad_participants');
   }
 
   // Turnstile (invisible bot check - checked when TURNSTILE_SECRET is configured)

@@ -17,9 +17,11 @@ export const PricingSchema = z.object({
 });
 
 export const ItineraryItemSchema = z.object({
-  type: z.enum(['paragraph', 'subheading', 'bullet']),
+  type: z.enum(['paragraph', 'subheading', 'bullet', 'schedule']).default('paragraph'),
   text: z.string().optional(),
   title: z.string().optional(),
+  label: z.string().optional(),
+  time: z.string().optional(),
 });
 
 export const ItineraryDaySchema = z.object({

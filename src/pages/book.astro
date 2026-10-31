@@ -2,10 +2,26 @@
 import Base from '../layouts/Base.astro';
 import BookingForm from '../components/BookingForm';
 import Photo from '../components/Photo.astro';
-import { getTrips } from '../lib/data';
+import { getTrips, getAsset } from '../lib/data';
 import { WHATSAPP_NUMBER } from '../lib/site';
 
-const trips = getTrips();
+const rawTrips = getTrips();
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/photos/**/*.{jpg,jpeg,png,webp}', { eager: true });
+
+const trips = rawTrips.map((t) => {
+  const asset = getAsset(t.photos.hero);
+  let heroImageUrl = '';
+  if (asset) {
+    const path = asset.file.startsWith('/') ? asset.file : `/${asset.file}`;
+    if (images[path]) {
+      heroImageUrl = images[path].default.src;
+    }
+  }
+  return {
+    ...t,
+    heroImageUrl,
+  };
+});
 ---
 
 <Base

@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
 export interface TripPricingRow {
-  group_size: number;
+  pax?: number;
+  group_size?: number;
   price?: number;
   hotel?: number;
   homestay?: number;
@@ -25,6 +26,8 @@ export interface TripData {
     from_price_4_pax: number;
   };
   photos: { hero: string };
+  heroImageUrl?: string;
+  included?: string[];
 }
 
 interface Props {
@@ -95,7 +98,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
     }
     if (!selectedTrip) return { ratePerPerson: null, estimatedTotal: null, isSpecialPrice: false };
 
-    const row = selectedTrip.pricing.rows.find((r) => r.group_size === participants);
+    const row = selectedTrip.pricing.rows.find((r) => (r.pax ?? r.group_size) === participants);
     if (!row) {
       return { ratePerPerson: null, estimatedTotal: null, isSpecialPrice: true };
     }
@@ -140,7 +143,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
         trip_slug: selectedSlug,
         trip_name: selectedTrip ? selectedTrip.name : 'Custom Route',
         start_date: startDate,
-        participants: typeof participants === 'number' ? participants : 5,
+        participants: participants,
         accommodation: hasStayChoice ? accommodation : 'Included in trip',
         pickup_area: pickupArea,
         hotel_name: hotelName,
@@ -160,10 +163,10 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
 
       const data = await res.json().catch(() => ({}));
 
-      if (res.ok && data.ok) {
-        setSuccessRef(data.reference || 'NT-REQ-01');
+      if (res.ok && data.ok && data.reference) {
+        setSuccessRef(data.reference);
       } else {
-        setErrorMsg(data.error || 'Failed to submit booking request. Please chat directly on WhatsApp.');
+        setErrorMsg(data.error || 'Failed to generate booking reference. Please chat directly with our team on WhatsApp.');
       }
     } catch (err) {
       setErrorMsg('Network error. Please chat with our team on WhatsApp directly.');
@@ -445,10 +448,31 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                 </div>
               )}
 
+              {/* Live Price Estimation Banner */}
+              <div className="mt-6 p-4 rounded-[8px] bg-white/[0.04] border border-white/15 flex items-center justify-between">
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-[var(--nt-muted)] block">
+                    Estimated Total
+                  </span>
+                  <span className="text-sm text-white font-medium">
+                    {typeof participants === 'number' ? `${participants} people` : participants}
+                    {hasStayChoice ? ` · ${accommodation}` : ''}
+                  </span>
+                </div>
+                <div className="text-right">
+                  <span className="text-xl font-semibold text-[var(--nt-lime)] block">
+                    {isSpecialPrice || !estimatedTotal ? 'Quote on request' : formatIDR(estimatedTotal)}
+                  </span>
+                  {ratePerPerson && !isSpecialPrice && (
+                    <span className="text-xs text-[var(--nt-muted)] block">{formatIDR(ratePerPerson)} / person</span>
+                  )}
+                </div>
+              </div>
+
               <button
                 type="submit"
                 disabled={submitting}
-                className="mt-6 w-full h-12 rounded-[6px] bg-[var(--nt-lime)] text-[#14170a] font-semibold text-sm hover:brightness-110 transition flex items-center justify-center cursor-pointer disabled:opacity-60"
+                className="mt-4 w-full h-12 rounded-[6px] bg-[var(--nt-lime)] text-[#14170a] font-semibold text-sm hover:brightness-110 transition flex items-center justify-center cursor-pointer disabled:opacity-60"
               >
                 {submitting ? 'Sending your request...' : 'Send booking request'}
               </button>
@@ -468,6 +492,16 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
               Trip summary
             </h3>
 
+            {selectedTrip?.heroImageUrl && (
+              <div className="w-full h-40 rounded-[8px] overflow-hidden mb-4 bg-black/40 border border-white/10">
+                <img
+                  src={selectedTrip.heroImageUrl}
+                  alt={selectedTrip.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+
             <div className="pb-4 border-b border-white/10">
               <h4 className="font-heading text-2xl font-medium text-white">
                 {selectedTrip ? selectedTrip.name : 'Custom Itinerary'}
@@ -476,6 +510,22 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                 {selectedTrip ? `${selectedTrip.duration.label} · ${selectedTrip.route_label}` : 'Tailor-made private tour'}
               </p>
             </div>
+
+            {selectedTrip?.included && selectedTrip.included.length > 0 && (
+              <div className="py-3 border-b border-white/10">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[var(--nt-muted)] block mb-2">
+                  Included in trip
+                </span>
+                <ul className="space-y-1.5 text-xs text-[var(--nt-body)]">
+                  {selectedTrip.included.slice(0, 4).map((inc, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--nt-lime)] shrink-0 mt-1.5" />
+                      <span className="line-clamp-1">{inc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="py-4 space-y-3 text-sm border-b border-white/10">
               <div className="flex justify-between">
