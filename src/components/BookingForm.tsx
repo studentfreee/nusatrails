@@ -126,7 +126,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
     }
 
     // Basic international WhatsApp check (+ and at least 8 digits)
-    const cleanPhone = whatsapp.trim();
+    const cleanPhone = whatsapp.replace(/[\s\-()]/g, '');
     if (!/^\+[1-9]\d{7,14}$/.test(cleanPhone)) {
       setErrorMsg('Please enter a valid WhatsApp number with country code (e.g. +62 812 3456 7890).');
       return;

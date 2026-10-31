@@ -19,10 +19,10 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (d.website) return json({ ok: true, reference: 'NT-000000-00' });
 
   const type = d.type === 'question' ? 'question' : 'booking';
-  const fail = (error: string) => json({ ok: false, error }, 400);
+  const cleanPhone = String(d.whatsapp ?? '').replace(/[\s\-()]/g, '');
   if (!d.full_name || String(d.full_name).length > 100) return fail('bad_name');
-  if (!/^\+[1-9]\d{7,14}$/.test(String(d.whatsapp ?? ''))) return fail('bad_whatsapp');
-  if (d.consent !== true) return fail('no_consent');
+  if (!/^\+?[1-9]\d{7,14}$/.test(cleanPhone)) return fail('bad_whatsapp');
+  if (d.consent !== true && type === 'booking') return fail('no_consent');
   if (String(d.notes ?? '').length > 1000) return fail('notes_too_long');
   if (type === 'booking') {
     if (!d.trip_slug) return fail('no_trip');
@@ -56,7 +56,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     secret: env.APPS_SCRIPT_SECRET, type, consent: true,
     trip_slug: d.trip_slug, trip_name: d.trip_name, start_date: d.start_date, participants: d.participants,
     accommodation: d.accommodation, pickup_area: d.pickup_area, hotel_name: d.hotel_name,
-    full_name: d.full_name, whatsapp: d.whatsapp, email: d.email, notes: d.notes, source_page: d.source_page,
+    full_name: d.full_name, whatsapp: cleanPhone, email: d.email, notes: d.notes, source_page: d.source_page,
   };
   try {
     const res = await fetch(env.APPS_SCRIPT_URL, {
