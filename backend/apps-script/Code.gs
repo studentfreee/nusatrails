@@ -59,8 +59,9 @@ function validate_(d) {
   if (d.type === 'booking') {
     if (!d.trip_slug) return 'no_trip';
     if (!/^\d{4}-\d{2}-\d{2}$/.test(String(d.start_date || ''))) return 'bad_date';
+    const isMoreThanFour = String(d.participants || '').trim().toLowerCase() === 'more than 4';
     const n = parseInt(d.participants, 10);
-    if (!(n >= 1 && n <= 20)) return 'bad_participants';
+    if (!isMoreThanFour && !(n >= 1 && n <= 20)) return 'bad_participants';
   }
   return '';
 }
