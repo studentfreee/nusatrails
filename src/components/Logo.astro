@@ -1,19 +1,27 @@
 ---
+import { Image } from 'astro:assets';
+import logoMark from '../assets/brand/logo-mark.png';
+
 interface Props {
-  /** Size for the SVG icon */
+  /** Size for the logo icon in px */
   iconSize?: number;
   size?: number;
   /** Show the live text wordmark next to the emblem. */
   wordmark?: boolean;
 }
 const { iconSize, size, wordmark = true } = Astro.props;
-const finalSize = iconSize ?? size ?? 20;
+const finalSize = iconSize ?? size ?? 26;
 ---
 <a href="/" class="logo" aria-label="NusaTrails, home">
-  <svg class="logo-icon" width={finalSize} height={finalSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-    <circle cx="12" cy="12" r="9"></circle>
-    <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path>
-  </svg>
+  <Image
+    src={logoMark}
+    alt="NusaTrails logo"
+    width={finalSize * 2}
+    height={finalSize * 2}
+    class="logo-img"
+    style={`width: ${finalSize}px; height: ${finalSize}px;`}
+    loading="eager"
+  />
   {wordmark && (
     <span class="word">NUSA<span>TRAILS</span></span>
   )}
@@ -31,9 +39,11 @@ const finalSize = iconSize ?? size ?? 20;
   .logo:hover {
     opacity: 0.88;
   }
-  .logo-icon {
+  .logo-img {
     flex: none;
-    color: #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
   }
   .word {
     font-family: var(--font-display, Oswald, sans-serif);

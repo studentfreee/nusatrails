@@ -13,7 +13,6 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isActive = (href: string) => path === href || path.startsWith(href + '/');
 
 const instagram = import.meta.env.PUBLIC_INSTAGRAM_URL || INSTAGRAM_URL;
-const email = import.meta.env.PUBLIC_CONTACT_EMAIL || '';
 const waHref = whatsappLink();
 ---
 
@@ -26,12 +25,9 @@ const waHref = whatsappLink();
       <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="f-icon">
         <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l1.5-4.5A8 8 0 1 1 8.5 18.5z"/></svg>
       </a>
-      <a href={email ? `mailto:${email}` : '#contact'} aria-label="Email" class="f-icon">
-        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-      </a>
     </div>
     <div class="footer-row">
-      <Logo iconSize={20} />
+      <Logo iconSize={26} />
       <nav aria-label="Footer" class="footer-nav">
         {NAV_LINKS.map((l) => (
           <a href={l.href} class:list={['fl-link', { active: isActive(l.href) }]}>{l.label}</a>
@@ -50,12 +46,9 @@ const waHref = whatsappLink();
           <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="f-icon">
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l1.5-4.5A8 8 0 1 1 8.5 18.5z"/></svg>
           </a>
-          <a href={email ? `mailto:${email}` : '#contact'} aria-label="Email" class="f-icon">
-            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          </a>
         </div>
         <div class="footer-row">
-          <Logo iconSize={20} />
+          <Logo iconSize={26} />
           <nav aria-label="Footer" class="footer-nav">
             {NAV_LINKS.map((l) => (
               <a href={l.href} class:list={['fl-link', { active: isActive(l.href) }]}>{l.label}</a>
