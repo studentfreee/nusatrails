@@ -32,7 +32,7 @@ const marqueeItems = [...galleryAssets, ...galleryAssets];
         alt="NusaTrails team and travelers at Mount Ijen"
         priority={true}
         class="w-full h-full object-cover about-hero-img"
-        style="object-position: center 71%;"
+        style="object-position: center 57%;"
       />
       <!-- Gentle natural gradient overlay so people are visible down to Our Story -->
       <div
@@ -223,12 +223,24 @@ const marqueeItems = [...galleryAssets, ...galleryAssets];
   }
 
   :global(.about-hero-img) {
-    object-position: center 71% !important;
+    object-position: center 57% !important;
+  }
+
+  @media (max-width: 1280px) {
+    :global(.about-hero-img) {
+      object-position: center 60% !important;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    :global(.about-hero-img) {
+      object-position: center 64% !important;
+    }
   }
 
   @media (max-width: 640px) {
     :global(.about-hero-img) {
-      object-position: center 75% !important;
+      object-position: center 72% !important;
     }
   }
 
