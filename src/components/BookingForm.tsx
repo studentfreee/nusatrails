@@ -199,7 +199,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
       const payload = {
         type: 'booking',
         trip_slug: selectedSlug,
-        trip_name: selectedTrip ? selectedTrip.name : 'Custom Route',
+        trip_name: selectedTrip ? selectedTrip.name : 'Custom Trip',
         start_date: startDate,
         participants: participants,
         accommodation: hasStayChoice ? accommodation : 'Included in trip',
@@ -345,7 +345,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className="font-heading text-base sm:text-lg font-medium text-white group-hover:text-[var(--nt-lime)] transition-colors">
-                            Custom Route
+                            Custom Trip
                           </h3>
                           <p className="text-xs text-[var(--nt-muted)] mt-1">
                             Tailor-made private tour across East Java & Yogyakarta
@@ -853,17 +853,17 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
             <div className="p-4 md:p-6 border-b border-white/10 flex items-center justify-between shrink-0">
               <div>
                 <h3 className="font-heading text-xl md:text-2xl font-semibold text-white tracking-wide">
-                  Pilih Rute Perjalanan
+                  Choose Your Trip
                 </h3>
                 <p className="text-xs md:text-sm text-[var(--nt-muted)] mt-0.5">
-                  15 private curated routes across Java + custom itinerary
+                  15 curated private routes across Java + custom trip
                 </p>
               </div>
               <button
                 type="button"
                 onClick={() => setIsRouteModalOpen(false)}
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/80 hover:text-white transition cursor-pointer"
-                aria-label="Close route picker"
+                aria-label="Close trip picker"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -882,7 +882,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                   type="text"
                   value={routeSearch}
                   onChange={(e) => setRouteSearch(e.target.value)}
-                  placeholder="Cari rute, gunung, kota, atau durasi (Bromo, Ijen, Bali, 3D2N)..."
+                  placeholder="Search trip, volcano, city, or duration (Bromo, Ijen, Bali, 3D2N)..."
                   className="w-full h-10 pl-10 pr-16 rounded-lg bg-white/[0.06] border border-white/15 text-white text-xs md:text-sm placeholder-white/40 focus:border-[var(--nt-lime)] focus:outline-none"
                 />
                 {routeSearch && (
@@ -899,11 +899,11 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
               {/* Category Filter Pills */}
               <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none text-xs">
                 {[
-                  { id: 'all', label: `Semua Rute (${trips.length})` },
-                  { id: 'volcano', label: 'Gunung & Air Terjun' },
+                  { id: 'all', label: `All Trips (${trips.length})` },
+                  { id: 'volcano', label: 'Volcanoes & Waterfalls' },
                   { id: 'wildlife', label: 'Sukamade Wildlife' },
-                  { id: 'yogyakarta', label: 'Yogyakarta & Gua' },
-                  { id: 'custom', label: 'Custom Rute' },
+                  { id: 'yogyakarta', label: 'Yogyakarta & Caves' },
+                  { id: 'custom', label: 'Custom Trip' },
                 ].map((tab) => (
                   <button
                     key={tab.id}
@@ -923,7 +923,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
 
             {/* Scrollable Routes List */}
             <div className="flex-1 overflow-y-auto p-3.5 md:p-6 space-y-3 scrollbar-thin">
-              {/* Special Custom Route Card */}
+              {/* Special Custom Trip Card */}
               {(routeCategory === 'all' || routeCategory === 'custom') && !routeSearch && (
                 <div
                   role="button"
@@ -946,7 +946,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-heading text-base sm:text-lg font-semibold text-white group-hover:text-[var(--nt-lime)] transition-colors">
-                        Custom Route · Buat Rute Sendiri
+                        Custom Trip · Tailor-Made Itinerary
                       </span>
                       {selectedSlug === 'custom' && (
                         <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[var(--nt-lime)] text-[#14170a] shrink-0">
@@ -958,13 +958,13 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                       )}
                     </div>
                     <p className="text-xs text-[var(--nt-muted)] mt-1">
-                      Beri tahu destinasi yang ingin Anda kunjungi di Jawa. Tim lokal kami akan merancang mobil privat, pemandu, dan jadwal fleksibel.
+                      Tell us where you want to go across Java. Our local team will arrange private transport, certified guides, and flexible timing.
                     </p>
                     <div className="flex items-center gap-2 mt-2">
                       <span className="text-xs font-semibold text-[var(--nt-lime)]">
-                        Estimasi harga via WhatsApp
+                        Quote via WhatsApp
                       </span>
-                      <span className="text-[11px] text-[var(--nt-muted)]">· Tanpa uang muka diawal</span>
+                      <span className="text-[11px] text-[var(--nt-muted)]">· No upfront payment required</span>
                     </div>
                   </div>
                 </div>
@@ -1021,7 +1021,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                           </span>
                         ) : (
                           <span className="text-xs text-white/40 group-hover:text-[var(--nt-lime)] font-medium shrink-0 hidden sm:inline">
-                            Pilih →
+                            Select →
                           </span>
                         )}
                       </div>
@@ -1047,11 +1047,11 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                             From IDR {trip.pricing.from_price_4_pax.toLocaleString('id-ID')}
                           </span>
                           <span className="text-[10px] sm:text-[11px] text-[var(--nt-muted)]">
-                            / orang
+                            / person
                           </span>
                         </div>
                         <span className="text-[11px] text-[var(--nt-muted)]">
-                          {trip.group_size.min}–{trip.group_size.max} orang privat
+                          {trip.group_size.min}–{trip.group_size.max} guests · private
                         </span>
                       </div>
                     </div>
@@ -1062,7 +1062,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
               {/* Empty state when no search matches */}
               {filteredTrips.length === 0 && routeCategory !== 'custom' && (
                 <div className="py-12 text-center">
-                  <p className="text-sm text-white/70">Tidak ada rute yang cocok dengan "{routeSearch}".</p>
+                  <p className="text-sm text-white/70">No trips match "{routeSearch}".</p>
                   <button
                     type="button"
                     onClick={() => {
@@ -1071,7 +1071,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                     }}
                     className="mt-2 text-xs text-[var(--nt-lime)] hover:underline cursor-pointer"
                   >
-                    Reset pencarian
+                    Reset search
                   </button>
                 </div>
               )}
@@ -1080,9 +1080,9 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
             {/* Modal Footer */}
             <div className="p-3.5 md:p-4 border-t border-white/10 bg-[#100e0e] flex items-center justify-between shrink-0">
               <div className="truncate max-w-[200px] sm:max-w-md">
-                <span className="text-[11px] text-[var(--nt-muted)] block">Rute terpilih:</span>
+                <span className="text-[11px] text-[var(--nt-muted)] block">Selected trip:</span>
                 <span className="text-xs sm:text-sm text-white font-medium truncate block">
-                  {selectedTrip ? selectedTrip.name : 'Custom Route'}
+                  {selectedTrip ? selectedTrip.name : 'Custom Trip'}
                 </span>
               </div>
               <button
@@ -1090,7 +1090,7 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
                 onClick={() => setIsRouteModalOpen(false)}
                 className="px-5 py-2 rounded-lg bg-[var(--nt-lime)] text-[#14170a] font-semibold text-xs md:text-sm hover:brightness-105 transition cursor-pointer shadow-md"
               >
-                Gunakan Rute Ini
+                Confirm Trip
               </button>
             </div>
           </div>
