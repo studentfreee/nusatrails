@@ -10,10 +10,9 @@ interface Props {
   class?: string;
   loading?: 'eager' | 'lazy';
   sizes?: string;
-  style?: string;
 }
 
-const { assetKey, alt, width, height, class: className, loading = 'lazy', sizes, style } = Astro.props;
+const { assetKey, alt, width, height, class: className, loading = 'lazy', sizes } = Astro.props;
 
 const asset = getAsset(assetKey);
 if (!asset) {
@@ -42,5 +41,4 @@ const imageModule = await imageLoader();
   class={className}
   loading={loading}
   sizes={sizes}
-  style={style}
 />

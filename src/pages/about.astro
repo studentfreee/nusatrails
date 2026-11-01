@@ -24,18 +24,15 @@ const marqueeItems = [...galleryAssets, ...galleryAssets];
 ---
 
 <Base description={description} ogTitle="About NusaTrails · Private Java Trips">
-  <!-- 1. Hero Section (Photo positioned so the people are clearly visible down to Our Story) -->
-  <section
-    class="relative overflow-hidden min-h-[520px] sm:min-h-[560px] flex items-end pb-10 sm:pb-12 pt-28 md:pt-36 bg-[#0b0a0a]"
-    style="height: clamp(520px, 47vw, 920px);"
-  >
+  <!-- 1. Hero Section (Photo positioned so the people are clearly visible down to Our Story, compact not full page) -->
+  <section class="relative overflow-hidden min-h-[460px] sm:min-h-[500px] md:h-[560px] lg:h-[600px] flex items-end pb-10 sm:pb-12 pt-28 md:pt-36 bg-[#0b0a0a]">
     <div class="absolute inset-0 z-0">
       <Photo
         assetKey="IMG_3358"
         alt="NusaTrails team and travelers at Mount Ijen"
         priority={true}
         class="w-full h-full object-cover about-hero-img"
-        style="object-position: center 78%;"
+        style="object-position: center 71%;"
       />
       <!-- Gentle natural gradient overlay so people are visible down to Our Story -->
       <div
@@ -226,7 +223,7 @@ const marqueeItems = [...galleryAssets, ...galleryAssets];
   }
 
   :global(.about-hero-img) {
-    object-position: center 78% !important;
+    object-position: center 71% !important;
   }
 
   @media (max-width: 640px) {
