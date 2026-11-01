@@ -19,264 +19,161 @@ const galleryAssets = [
   { key: 'fk_light', caption: 'Light of Heaven in Jomblang Cave' },
 ];
 
-// Duplicate for continuous seamless marquee loop
+// Duplicate for continuous seamless marquee loop inside the container
 const marqueeItems = [...galleryAssets, ...galleryAssets];
 ---
 
 <Base description={description} ogTitle="About NusaTrails · Private Java Trips">
-  <!-- 1. Hero Section (Photo extends naturally down to Our Story) -->
-  <section class="relative overflow-hidden min-h-[460px] sm:min-h-[520px] md:min-h-[580px] lg:h-[640px] flex items-end pb-12 sm:pb-16 pt-28 md:pt-36 bg-[#0b0a0a]">
+  <!-- 1. Hero Section (Photo positioned so the people are clearly visible down to Our Story) -->
+  <section class="relative overflow-hidden min-h-[460px] sm:min-h-[500px] md:h-[540px] lg:h-[580px] flex items-end pb-10 sm:pb-12 pt-28 md:pt-36 bg-[#0b0a0a]">
     <div class="absolute inset-0 z-0">
       <Photo
         assetKey="IMG_3358"
         alt="NusaTrails team and travelers at Mount Ijen"
         priority={true}
-        class="w-full h-full object-cover object-[center_30%]"
+        class="w-full h-full object-cover object-[center_72%]"
       />
-      <!-- Natural, gentle gradient that keeps the group photo visible down to Our Story -->
+      <!-- Gentle natural gradient overlay so people are visible down to Our Story -->
       <div
         class="absolute inset-0 pointer-events-none"
-        style="background: linear-gradient(180deg, rgba(11,10,10,0.48) 0%, rgba(11,10,10,0.18) 35%, rgba(11,10,10,0.25) 65%, rgba(11,10,10,0.75) 88%, #0b0a0a 100%);"
+        style="background: linear-gradient(90deg, rgba(11,10,10,.55) 0%, rgba(11,10,10,.2) 55%, rgba(11,10,10,.1) 100%), linear-gradient(180deg, rgba(11,10,10,.35) 0%, rgba(11,10,10,0) 30%, rgba(11,10,10,.12) 55%, rgba(11,10,10,.6) 82%, #0b0a0a 100%);"
       ></div>
     </div>
 
     <div class="container-nt relative z-10 w-full">
-      <h1 class="font-display font-semibold text-6xl sm:text-8xl md:text-[130px] lg:text-[170px] uppercase tracking-[0.03em] leading-none text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.65)] m-0">
+      <h1 class="font-display font-semibold text-6xl sm:text-8xl md:text-[140px] lg:text-[180px] uppercase tracking-[0.03em] leading-none text-[rgba(255,246,232,.95)] drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] m-0">
         About
       </h1>
-      <p class="max-w-[560px] mt-3 text-base sm:text-lg md:text-xl text-white/95 leading-[1.6] drop-shadow-md font-normal">
+      <p class="max-w-[560px] mt-2.5 text-base sm:text-lg md:text-xl text-white leading-[1.6] drop-shadow-md font-normal">
         The people and the thinking behind your trip across Java.
       </p>
     </div>
   </section>
 
   <!-- 2. Our Story Section -->
-  <section class="container-nt py-12 md:py-20 relative z-10">
-    <div class="flex items-center gap-4 md:gap-8 mb-8 md:mb-12">
-      <h2 class="font-heading text-2xl md:text-4xl lg:text-5xl uppercase tracking-[0.08em] text-white whitespace-nowrap">
-        Our story
-      </h2>
-      <div class="flex-1 h-px bg-white/20"></div>
-    </div>
+  <section class="container-nt py-14 md:py-20 relative z-10">
+    <h2 class="h2 mb-8">Our story</h2>
 
-    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 md:gap-14 items-start">
-      <div class="flex flex-col gap-4 sm:gap-5">
-        <p class="text-base sm:text-lg text-white font-medium leading-relaxed">
-          NusaTrails runs private trips across Java: <span class="text-[var(--color-accent)] font-semibold">Ijen, Bromo, Tumpak Sewu and Sukamade</span> in East Java, plus <span class="text-[var(--color-accent)] font-semibold">Borobudur, Prambanan and the Jomblang and Pindul caves</span> near Yogyakarta. We pick you up from Bali, Surabaya or Yogyakarta.
+    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 md:gap-14 mt-8 items-start">
+      <div class="flex flex-col gap-4">
+        <p class="text-base md:text-lg text-white leading-relaxed">
+          NusaTrails runs private trips across Java: Ijen, Bromo, Tumpak Sewu and Sukamade in East Java, plus Borobudur, Prambanan and the Jomblang and Pindul caves near Yogyakarta. We pick you up from Bali, Surabaya or Yogyakarta.
         </p>
 
-        <p class="text-base sm:text-lg text-[#d9d3c8] leading-relaxed">
+        <p class="text-base md:text-lg text-[#d9d3c8] leading-relaxed">
           NusaTrails was started by local East Java mountain guides and road travelers born and raised in the shadow of Mount Ijen and Mount Bromo. What began as showing friends and adventurous travelers around the sulfur craters and hidden waterfalls grew into a dedicated private travel operator committed to safe, comfortable, and deeply authentic overland journeys.
         </p>
 
-        <p class="text-base sm:text-lg text-[#d9d3c8] leading-relaxed">
+        <p class="text-base md:text-lg text-[#d9d3c8] leading-relaxed">
           What makes our trips different is our focus on genuine small-group travel: no crowded buses, no rigid commercial timetables, and transparent pricing. Every itinerary is led by experienced local drivers and certified mountain guides who treat you like guests in their home region.
         </p>
       </div>
 
-      <!-- Team Photo Card -->
-      <div class="rounded-xl overflow-hidden border border-white/20 glass-card shadow-2xl">
+      <!-- Team Photo -->
+      <div class="rounded-xl overflow-hidden border border-white/20 glass-card">
         <div class="aspect-[4/3] w-full overflow-hidden">
           <Photo
             assetKey="tim05"
             alt="NusaTrails team at Mount Ijen caldera"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            class="w-full h-full object-cover"
           />
         </div>
-        <div class="p-3.5 sm:p-4 text-xs sm:text-[13px] tracking-wider uppercase text-[#d9d3c8] bg-black/50 border-t border-white/10 flex items-center justify-between">
-          <span>NusaTrails team on the trail</span>
-          <span class="text-[var(--color-accent)] font-semibold">East Java</span>
+        <div class="p-3.5 text-xs tracking-wider uppercase text-[#d9d3c8] bg-black/40">
+          NusaTrails team on the trail · East Java
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Why NusaTrails (Fully Responsive with Mobile Carousel & Desktop Grid) -->
+  <!-- 3. Why NusaTrails (Exact Original Design - Responsive) -->
   <section class="container-nt py-12 md:py-16">
-    <div class="flex items-center gap-4 md:gap-8 mb-8 md:mb-12">
-      <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl uppercase tracking-[0.08em] text-white whitespace-nowrap">
-        Why NusaTrails
-      </h2>
-      <div class="flex-1 h-px bg-white/20"></div>
-    </div>
+    <h2 class="h2 mb-8">Why NusaTrails</h2>
 
-    <!-- Responsive Layout: Swipe sideways on mobile, 2 cols on tablet, 4 cols on desktop -->
-    <div class="w-full overflow-x-auto pb-4 pt-1 scrollbar-none snap-x snap-mandatory [mask-image:linear-gradient(to_right,black_calc(100%-36px),transparent)] sm:[mask-image:none] sm:overflow-visible sm:pb-0 sm:pt-0">
-      <div class="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 min-w-max sm:min-w-0 pr-6 sm:pr-0">
-        <!-- Benefit 1 -->
-        <div class="snap-start w-[80vw] max-w-[290px] sm:w-auto shrink-0 sm:shrink glass-card p-6 rounded-[16px] border border-white/20 flex flex-col justify-between group hover:border-[var(--color-accent)]/50 transition-all duration-300">
-          <div>
-            <div class="w-11 h-11 rounded-xl bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[var(--color-accent)] group-hover:text-[#14170a] transition-all duration-300 shadow-md">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
-            <h3 class="font-display font-medium text-lg sm:text-xl text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Private small groups</h3>
-            <p class="text-sm leading-relaxed text-[#d9d3c8] m-0">
-              Trips are exclusively for 2 to 4 people with your own car and driver. No big tourist crowds, and the pace is entirely yours.
-            </p>
-          </div>
-          <span class="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-wider mt-4">100% Private</span>
-        </div>
-
-        <!-- Benefit 2 -->
-        <div class="snap-start w-[80vw] max-w-[290px] sm:w-auto shrink-0 sm:shrink glass-card p-6 rounded-[16px] border border-white/20 flex flex-col justify-between group hover:border-[var(--color-accent)]/50 transition-all duration-300">
-          <div>
-            <div class="w-11 h-11 rounded-xl bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[var(--color-accent)] group-hover:text-[#14170a] transition-all duration-300 shadow-md">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </div>
-            <h3 class="font-display font-medium text-lg sm:text-xl text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">English-speaking guide</h3>
-            <p class="text-sm leading-relaxed text-[#d9d3c8] m-0">
-              Your certified guide walks every trail with you, explains local history and safety, and takes great photos along the way.
-            </p>
-          </div>
-          <span class="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-wider mt-4">Local Experts</span>
-        </div>
-
-        <!-- Benefit 3 -->
-        <div class="snap-start w-[80vw] max-w-[290px] sm:w-auto shrink-0 sm:shrink glass-card p-6 rounded-[16px] border border-white/20 flex flex-col justify-between group hover:border-[var(--color-accent)]/50 transition-all duration-300">
-          <div>
-            <div class="w-11 h-11 rounded-xl bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[var(--color-accent)] group-hover:text-[#14170a] transition-all duration-300 shadow-md">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-            </div>
-            <h3 class="font-display font-medium text-lg sm:text-xl text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Everything arranged</h3>
-            <p class="text-sm leading-relaxed text-[#d9d3c8] m-0">
-              Private road transfers, national park entry fees, stays with breakfast, Bromo 4WD jeep, and Ijen respirators are all included.
-            </p>
-          </div>
-          <span class="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-wider mt-4">All-Inclusive</span>
-        </div>
-
-        <!-- Benefit 4 -->
-        <div class="snap-start w-[80vw] max-w-[290px] sm:w-auto shrink-0 sm:shrink glass-card p-6 rounded-[16px] border border-white/20 flex flex-col justify-between group hover:border-[var(--color-accent)]/50 transition-all duration-300">
-          <div>
-            <div class="w-11 h-11 rounded-xl bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[var(--color-accent)] group-hover:text-[#14170a] transition-all duration-300 shadow-md">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <h3 class="font-display font-medium text-lg sm:text-xl text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Flexible pick-up</h3>
-            <p class="text-sm leading-relaxed text-[#d9d3c8] m-0">
-              Picked up directly at your hotel or airport in Bali, Surabaya, or Yogyakarta, and dropped off safely at your next destination.
-            </p>
-          </div>
-          <span class="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-wider mt-4">Seamless Transfers</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Safety & Responsible Travel (Responsive Grid Cards) -->
-  <section class="container-nt py-12 md:py-16">
-    <div class="flex items-center gap-4 md:gap-8 mb-8 md:mb-12">
-      <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl uppercase tracking-[0.08em] text-white whitespace-nowrap">
-        Safety &amp; responsible travel
-      </h2>
-      <div class="flex-1 h-px bg-white/20"></div>
-    </div>
-
-    <div class="glass-card p-6 sm:p-8 md:p-10 rounded-2xl border border-white/25 flex flex-col gap-6 md:gap-8">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/15">
-        <div>
-          <span class="text-xs uppercase tracking-widest text-[var(--color-accent)] font-semibold">Strict Mountain Standards</span>
-          <h3 class="font-display font-medium text-2xl sm:text-3xl text-white mt-1">Wild places have real rules.</h3>
-        </div>
-        <p class="text-sm sm:text-base leading-relaxed text-[#d9d3c8] max-w-xl m-0">
-          Volcano hikes and wildlife visits come with real mountain conditions. Here is our non-negotiable approach to keeping you safe while protecting local ecosystems.
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mt-8">
+      <div class="glass-card p-6 rounded-[14px] border border-white/20 flex flex-col gap-2">
+        <h3 class="font-display font-medium text-xl text-white">Private small groups</h3>
+        <p class="text-sm leading-relaxed text-[#d9d3c8]">
+          Trips are for 2 to 4 people with your own car and driver. No big crowds, and the pace is yours.
         </p>
       </div>
 
-      <!-- 5 Responsive Safety Pillar Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-        <!-- Item 1: Ijen gear -->
-        <div class="p-4 sm:p-5 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2">
-          <div class="flex items-center gap-2.5 text-[var(--color-accent)] font-semibold text-sm">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Certified Ijen Equipment</span>
-          </div>
-          <p class="text-xs sm:text-sm text-[#d9d3c8] leading-relaxed m-0">
-            Professional gas respirator, high-beam headlamp, and official medical health certificate are provided for every single guest.
-          </p>
-        </div>
+      <div class="glass-card p-6 rounded-[14px] border border-white/20 flex flex-col gap-2">
+        <h3 class="font-display font-medium text-xl text-white">Private English-speaking guide</h3>
+        <p class="text-sm leading-relaxed text-[#d9d3c8]">
+          Your guide walks every trail with you, explains the route and safety, and takes your photos.
+        </p>
+      </div>
 
-        <!-- Item 2: Descent optional -->
-        <div class="p-4 sm:p-5 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2">
-          <div class="flex items-center gap-2.5 text-[var(--color-accent)] font-semibold text-sm">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Descent is Optional</span>
-          </div>
-          <p class="text-xs sm:text-sm text-[#d9d3c8] leading-relaxed m-0">
-            The rocky midnight crater descent to the blue flame is completely optional. If preferred, wait comfortably on the upper rim for the golden sunrise.
-          </p>
-        </div>
+      <div class="glass-card p-6 rounded-[14px] border border-white/20 flex flex-col gap-2">
+        <h3 class="font-display font-medium text-xl text-white">Everything arranged</h3>
+        <p class="text-sm leading-relaxed text-[#d9d3c8]">
+          Transport, entrance fees, stay with breakfast, the Bromo jeep, Ijen equipment and water are included.
+        </p>
+      </div>
 
-        <!-- Item 3: Weather & Safety -->
-        <div class="p-4 sm:p-5 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2">
-          <div class="flex items-center gap-2.5 text-[var(--color-accent)] font-semibold text-sm">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Weather & Nature First</span>
-          </div>
-          <p class="text-xs sm:text-sm text-[#d9d3c8] leading-relaxed m-0">
-            Blue fire visibility and summit access depend on wind, volcanic gases, and official park authority clearances. Safety always comes first.
-          </p>
-        </div>
+      <div class="glass-card p-6 rounded-[14px] border border-white/20 flex flex-col gap-2">
+        <h3 class="font-display font-medium text-xl text-white">Pick-up from Bali, Surabaya or Yogyakarta</h3>
+        <p class="text-sm leading-relaxed text-[#d9d3c8]">
+          No need to plan the long drive to the mountains. We collect you from your hotel and drop you at the end.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Item 4: Sukamade Wildlife -->
-        <div class="p-4 sm:p-5 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2">
-          <div class="flex items-center gap-2.5 text-[var(--color-accent)] font-semibold text-sm">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Turtle Habitat Protection</span>
-          </div>
-          <p class="text-xs sm:text-sm text-[#d9d3c8] leading-relaxed m-0">
-            At Sukamade, strict guidelines apply regarding red-light torches, silence, and distance to protect nesting green sea turtles and hatchlings.
-          </p>
-        </div>
+  <!-- 4. Safety & Responsible Travel (Exact Original Design - Responsive) -->
+  <section class="container-nt py-12 md:py-16">
+    <h2 class="h2 mb-8">Safety &amp; responsible travel</h2>
 
-        <!-- Item 5: Insurance & Alcohol -->
-        <div class="p-4 sm:p-5 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2 sm:col-span-2 lg:col-span-2">
-          <div class="flex items-center gap-2.5 text-[var(--color-accent)] font-semibold text-sm">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Sobriety & Personal Insurance</span>
-          </div>
-          <p class="text-xs sm:text-sm text-[#d9d3c8] leading-relaxed m-0">
-            No alcohol consumption is permitted on trekking routes. As volcano hikes involve wilderness terrain, comprehensive personal travel insurance is strongly recommended before departure.
-          </p>
+    <div class="glass-card mt-8 p-6 md:p-8 rounded-[14px] border border-white/25 flex flex-col gap-5">
+      <div>
+        <h3 class="font-display font-medium text-2xl text-white">Wild places have real rules.</h3>
+        <p class="text-sm md:text-base leading-relaxed text-[#d9d3c8] mt-1 max-w-2xl">
+          Volcano hikes and wildlife visits come with real risks. This is how we look after you and the places we visit.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3.5 pt-2 border-t border-white/10">
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>Ijen: a gas mask, a headlamp and the health certificate are included.</span>
+        </div>
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>The blue fire descent is optional. If it is not for you, wait on the upper trail and go to the sunrise viewpoint.</span>
+        </div>
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>Blue fire and sunrise depend on weather, safety conditions and official access, so we can never promise them.</span>
+        </div>
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>Sukamade: follow the guide on light, noise, movement and photography around the turtles.</span>
+        </div>
+        <div class="flex items-start gap-3.5 text-sm md:text-[15px] leading-relaxed text-[#d9d3c8]">
+          <span class="flex-none w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2"></span>
+          <span>No alcohol during the trip. Travel insurance is your own responsibility, so please arrange it before you travel.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. Moments from the trail (Smooth Auto-Scrolling Infinite Marquee) -->
-  <section class="py-12 md:py-16 overflow-hidden">
-    <div class="container-nt mb-8">
-      <div class="flex items-center gap-4 md:gap-8">
-        <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl uppercase tracking-[0.08em] text-white whitespace-nowrap">
-          Moments from the trail
-        </h2>
-        <div class="flex-1 h-px bg-white/20"></div>
-      </div>
-      <p class="text-xs sm:text-sm text-[#d9d3c8]/80 mt-2">
-        Real snapshots from recent guest expeditions across East Java &amp; Yogyakarta
-      </p>
-    </div>
+  <!-- 5. Moments from the trail (Original container boundary with smooth auto-scroll marquee) -->
+  <section class="container-nt py-12 md:py-16">
+    <h2 class="h2 mb-8">Moments from the trail</h2>
 
-    <!-- Infinite Auto-Scrolling Continuous Track -->
-    <div class="marquee-wrapper relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-      <div class="marquee-track flex gap-4 w-max py-2">
-        {marqueeItems.map((item, index) => (
-          <div class="group relative w-[210px] sm:w-[250px] md:w-[280px] aspect-[3/4] rounded-xl overflow-hidden border border-white/20 bg-black/40 shrink-0 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:border-[var(--color-accent)]/60 cursor-pointer">
+    <!-- Auto-scrolling marquee bounded cleanly inside the container -->
+    <div class="marquee-container relative w-full overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
+      <div class="marquee-track flex gap-4 w-max">
+        {marqueeItems.map((item) => (
+          <div class="group relative w-[210px] sm:w-[240px] md:w-[260px] aspect-[3/4] rounded-xl overflow-hidden border border-white/20 glass-card shrink-0">
             <Photo
               assetKey={item.key}
               alt={item.caption}
               loading="lazy"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end p-3.5 sm:p-4">
-              <span class="text-xs sm:text-sm text-white font-medium leading-snug drop-shadow-md">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex items-end p-3">
+              <span class="text-xs text-[#e9e4dc] leading-tight drop-shadow-sm font-medium">
                 {item.caption}
               </span>
             </div>
@@ -286,59 +183,27 @@ const marqueeItems = [...galleryAssets, ...galleryAssets];
     </div>
   </section>
 
-  <!-- 6. Closing Call to Action (High-End & Professional without looking tacky) -->
-  <section class="container-nt py-16 md:py-24">
-    <div class="relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/20 bg-gradient-to-b from-white/[0.08] via-white/[0.03] to-black/60 p-8 sm:p-12 md:p-16 text-center shadow-2xl backdrop-blur-xl">
-      <!-- Subtle ambient lime glow at top center -->
-      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-48 bg-[var(--color-accent)]/15 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[var(--color-accent)]/15 border border-[var(--color-accent)]/30 text-[var(--color-accent)] text-xs font-semibold uppercase tracking-widest mb-4">
-          Private Journeys · East Java & Yogyakarta
-        </span>
-        <h2 class="font-display font-medium text-3xl sm:text-4xl md:text-5xl uppercase text-white m-0 tracking-tight leading-tight">
-          Ready to begin your journey?
-        </h2>
-        <p class="text-sm sm:text-base md:text-lg text-[#d9d3c8] mt-4 mb-8 max-w-xl leading-relaxed">
-          From sunrise summits over Mount Bromo to the midnight blue flame of Ijen, our local guides and private drivers handle every detail. Pick a route, or share your dates.
-        </p>
-
-        <div class="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto justify-center">
-          <a
-            href="/book"
-            class="inline-flex items-center justify-center gap-2 w-full sm:w-auto h-12 px-8 rounded-full bg-[var(--color-accent,#b9d44a)] text-[#14170a] text-sm md:text-base font-semibold hover:brightness-105 transition-all shadow-lg hover:scale-[1.02]"
-          >
-            <span>Book a private trip</span>
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a
-            href={whatsappLink('Hello NusaTrails, I’d like to plan a custom trip across Java.')}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto h-12 px-7 rounded-full bg-white/10 hover:bg-white/15 border border-white/25 text-white text-sm md:text-base font-medium transition-all shadow-md"
-          >
-            <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.04 2a9.9 9.9 0 0 0-8.43 15.12L2 22l5-1.58A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.3-.18-2.97.94.97-2.89-.2-.31A8.1 8.1 0 0 1 12.04 3.8Zm-3.2 4.1c-.17 0-.45.06-.69.32-.24.26-.9.88-.9 2.15s.92 2.5 1.05 2.67c.13.17 1.8 2.88 4.45 3.92 2.2.87 2.65.7 3.13.65.48-.04 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.11-.24-.17-.5-.3-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.59.13-.17.26-.67.85-.82 1.02-.15.17-.3.2-.57.07-.26-.13-1.1-.4-2.1-1.29-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.07-.13-.58-1.4-.8-1.92-.2-.5-.42-.43-.58-.44h-.5Z"/>
-            </svg>
-            <span>Chat on WhatsApp</span>
-          </a>
-        </div>
-
-        <!-- Trust Badges -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mt-8 pt-6 border-t border-white/10 text-xs sm:text-sm text-[#d9d3c8]/85 w-full">
-          <span class="flex items-center justify-center gap-1.5">
-            <svg class="w-4 h-4 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            100% Private groups
-          </span>
-          <span class="flex items-center justify-center gap-1.5">
-            <svg class="w-4 h-4 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Certified local guides
-          </span>
-          <span class="flex items-center justify-center gap-1.5">
-            <svg class="w-4 h-4 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Transparent pricing
-          </span>
-        </div>
+  <!-- 6. Closing Call to Action (Original design made larger with both action buttons) -->
+  <section class="container-nt py-16 md:py-24 text-center">
+    <div class="glass-card max-w-3xl md:max-w-4xl mx-auto p-10 sm:p-14 md:p-16 rounded-2xl border border-white/25 flex flex-col items-center gap-5">
+      <h2 class="font-display font-medium text-3xl sm:text-4xl md:text-5xl uppercase text-white m-0">
+        Ready to go?
+      </h2>
+      <p class="text-base sm:text-lg text-[#d9d3c8] max-w-lg leading-relaxed">
+        Pick a trip, or tell us your dates and we'll plan it with you.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-3 w-full sm:w-auto justify-center">
+        <a href="/book" class="btn-primary w-full sm:w-auto px-8 py-3.5 justify-center text-base">
+          Book a private trip
+        </a>
+        <a
+          href={whatsappLink('Hello NusaTrails, I’d like to plan a custom trip across Java.')}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary w-full sm:w-auto px-8 py-3.5 justify-center text-base"
+        >
+          Chat on WhatsApp
+        </a>
       </div>
     </div>
   </section>
@@ -349,7 +214,7 @@ const marqueeItems = [...galleryAssets, ...galleryAssets];
     background: rgba(255, 255, 255, 0.05);
   }
 
-  /* Infinite auto-sliding marquee animation */
+  /* Auto-scrolling marquee animation inside container */
   @keyframes trailMarquee {
     0% {
       transform: translateX(0);
@@ -360,7 +225,7 @@ const marqueeItems = [...galleryAssets, ...galleryAssets];
   }
 
   .marquee-track {
-    animation: trailMarquee 42s linear infinite;
+    animation: trailMarquee 36s linear infinite;
     will-change: transform;
   }
 
