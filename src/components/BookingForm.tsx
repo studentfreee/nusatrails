@@ -73,6 +73,64 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
   const [successRef, setSuccessRef] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
+  // Route Picker Modal / Bottom Sheet State
+  const [isRouteModalOpen, setIsRouteModalOpen] = useState(false);
+  const [routeSearch, setRouteSearch] = useState('');
+  const [routeCategory, setRouteCategory] = useState<'all' | 'volcano' | 'wildlife' | 'yogyakarta' | 'custom'>('all');
+
+  // Prevent background scroll when modal is open
+  useEffect(() => {
+    if (isRouteModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isRouteModalOpen]);
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsRouteModalOpen(false);
+    };
+    if (isRouteModalOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isRouteModalOpen]);
+
+  // Filtered trips for route picker
+  const filteredTrips = useMemo(() => {
+    return trips.filter((t) => {
+      // Category filter
+      if (routeCategory === 'volcano') {
+        const isVolcano = t.name.includes('Bromo') || t.name.includes('Ijen') || t.name.includes('Tumpak Sewu');
+        const isWildlife = t.name.includes('Sukamade');
+        if (!isVolcano || isWildlife) return false;
+      } else if (routeCategory === 'wildlife') {
+        if (!t.name.includes('Sukamade')) return false;
+      } else if (routeCategory === 'yogyakarta') {
+        if (!t.name.includes('Borobudur') && !t.name.includes('Jomblang')) return false;
+      } else if (routeCategory === 'custom') {
+        return false;
+      }
+
+      // Search query
+      if (routeSearch.trim()) {
+        const q = routeSearch.toLowerCase();
+        const matchName = t.name.toLowerCase().includes(q);
+        const matchDest = t.destinations.some((d) => d.toLowerCase().includes(q));
+        const matchStart = t.start.toLowerCase().includes(q);
+        const matchEnd = t.end.toLowerCase().includes(q);
+        const matchDur = t.duration.label.toLowerCase().includes(q);
+        if (!matchName && !matchDest && !matchStart && !matchEnd && !matchDur) return false;
+      }
+      return true;
+    });
+  }, [trips, routeCategory, routeSearch]);
+
   // Available participant options based on selected trip
   const participantOptions = useMemo(() => {
     if (!selectedTrip) return [2, 3, 4, 'More than 4'];
@@ -209,24 +267,107 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
 
               <div className="space-y-5">
                 <div>
-                  <label htmlFor="trip-select" className="block text-[13px] text-[var(--nt-body)] mb-1.5">
-                    Trip route
-                  </label>
-                  <select
-                    id="trip-select"
-                    value={selectedSlug}
-                    onChange={(e) => setSelectedSlug(e.target.value)}
-                    className="w-full h-11 px-3.5 rounded-[6px] border border-white/30 bg-[#161414] text-white text-sm focus:border-[var(--nt-lime)] focus:outline-none"
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="block text-[13px] font-medium text-[var(--nt-body)]">
+                      Trip route
+                    </label>
+                    <button
+                      type="button"
+                      onClick={() => setIsRouteModalOpen(true)}
+                      className="text-xs text-[var(--nt-lime)] hover:underline flex items-center gap-1 font-medium cursor-pointer"
+                    >
+                      <span>Browse all routes</span>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  {/* Active Trip Trigger Card */}
+                  <div
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => setIsRouteModalOpen(true)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setIsRouteModalOpen(true);
+                      }
+                    }}
+                    className="group relative flex items-center gap-3.5 p-3 sm:p-3.5 rounded-xl border border-white/20 bg-white/[0.04] hover:bg-white/[0.08] hover:border-[var(--nt-lime)]/70 transition-all cursor-pointer shadow-lg"
                   >
-                    {trips.map((t) => (
-                      <option key={t.slug} value={t.slug} className="bg-[#141212] text-white">
-                        {t.name} — {t.duration.label}, {t.route_label}
-                      </option>
-                    ))}
-                    <option value="custom" className="bg-[#141212] text-white">
-                      Custom route (tell us your plan)
-                    </option>
-                  </select>
+                    {selectedTrip ? (
+                      <>
+                        {selectedTrip.heroImageUrl ? (
+                          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden shrink-0 border border-white/15 bg-black/40 relative">
+                            <img
+                              src={selectedTrip.heroImageUrl}
+                              alt={selectedTrip.name}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                            <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-black/75 text-[var(--nt-lime)] backdrop-blur-xs">
+                              {selectedTrip.duration.label}
+                            </span>
+                          </div>
+                        ) : (
+                          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg bg-[var(--nt-lime)]/15 border border-[var(--nt-lime)]/30 flex items-center justify-center shrink-0 text-[var(--nt-lime)]">
+                            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                            </svg>
+                          </div>
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <h3 className="font-heading text-base sm:text-lg font-medium text-white group-hover:text-[var(--nt-lime)] transition-colors truncate">
+                              {selectedTrip.name}
+                            </h3>
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-white/10 text-[#d9d3c8] border border-white/15">
+                              {selectedTrip.route_label}
+                            </span>
+                          </div>
+                          <p className="text-xs text-[var(--nt-muted)] mt-1 truncate">
+                            {selectedTrip.destinations.slice(0, 3).join(' · ')}
+                          </p>
+                          <div className="flex items-center gap-2 mt-1.5">
+                            <span className="text-xs font-semibold text-[var(--nt-lime)]">
+                              From IDR {selectedTrip.pricing.from_price_4_pax.toLocaleString('id-ID')}
+                            </span>
+                            <span className="text-[11px] text-[var(--nt-muted)]">/ pax</span>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg bg-[var(--nt-lime)]/15 border border-[var(--nt-lime)]/30 flex items-center justify-center shrink-0 text-[var(--nt-lime)]">
+                          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                          </svg>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-heading text-base sm:text-lg font-medium text-white group-hover:text-[var(--nt-lime)] transition-colors">
+                            Custom Route
+                          </h3>
+                          <p className="text-xs text-[var(--nt-muted)] mt-1">
+                            Tailor-made private tour across East Java & Yogyakarta
+                          </p>
+                          <span className="inline-block mt-1 text-xs font-semibold text-[var(--nt-lime)]">
+                            Personalized quote on WhatsApp
+                          </span>
+                        </div>
+                      </>
+                    )}
+
+                    {/* Change Button Pill */}
+                    <div className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 group-hover:bg-[var(--nt-lime)] group-hover:text-[#14170a] text-white text-xs font-medium transition-all">
+                      <span className="hidden sm:inline">Change</span>
+                      <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Hidden accessibility input */}
+                  <input type="hidden" name="trip" value={selectedSlug} />
                 </div>
 
                 <div>
@@ -683,6 +824,275 @@ export default function BookingForm({ trips, initialTripSlug = '', whatsappNumbe
             <p className="mt-4 text-center text-[11px] text-[var(--nt-muted)]">
               Keep your reference number. No payment is needed at this step.
             </p>
+          </div>
+        </div>
+      )}
+
+      {/* Route Picker Modal / Bottom Sheet */}
+      {isRouteModalOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Choose Trip Route"
+          className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
+        >
+          {/* Backdrop click to close */}
+          <div
+            className="absolute inset-0"
+            onClick={() => setIsRouteModalOpen(false)}
+          />
+
+          {/* Modal Container: Bottom sheet on mobile, centered modal on desktop */}
+          <div className="relative z-10 w-full md:max-w-3xl max-h-[90vh] md:max-h-[85vh] bg-[#141212] border-t md:border border-white/20 rounded-t-3xl md:rounded-2xl flex flex-col shadow-2xl overflow-hidden animate-in slide-in-from-bottom md:zoom-in-95 duration-200">
+            {/* Mobile Drag Indicator */}
+            <div className="md:hidden pt-3 pb-1 flex justify-center shrink-0">
+              <div className="w-12 h-1.5 bg-white/25 rounded-full" />
+            </div>
+
+            {/* Header */}
+            <div className="p-4 md:p-6 border-b border-white/10 flex items-center justify-between shrink-0">
+              <div>
+                <h3 className="font-heading text-xl md:text-2xl font-semibold text-white tracking-wide">
+                  Pilih Rute Perjalanan
+                </h3>
+                <p className="text-xs md:text-sm text-[var(--nt-muted)] mt-0.5">
+                  15 private curated routes across Java + custom itinerary
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsRouteModalOpen(false)}
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/80 hover:text-white transition cursor-pointer"
+                aria-label="Close route picker"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Search Input & Category Filter Tabs */}
+            <div className="p-3.5 md:px-6 md:py-3.5 border-b border-white/10 bg-[#100e0e] shrink-0 space-y-2.5">
+              {/* Search Bar */}
+              <div className="relative">
+                <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  value={routeSearch}
+                  onChange={(e) => setRouteSearch(e.target.value)}
+                  placeholder="Cari rute, gunung, kota, atau durasi (Bromo, Ijen, Bali, 3D2N)..."
+                  className="w-full h-10 pl-10 pr-16 rounded-lg bg-white/[0.06] border border-white/15 text-white text-xs md:text-sm placeholder-white/40 focus:border-[var(--nt-lime)] focus:outline-none"
+                />
+                {routeSearch && (
+                  <button
+                    type="button"
+                    onClick={() => setRouteSearch('')}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-white/50 hover:text-white cursor-pointer px-1 py-0.5"
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
+
+              {/* Category Filter Pills */}
+              <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none text-xs">
+                {[
+                  { id: 'all', label: `Semua Rute (${trips.length})` },
+                  { id: 'volcano', label: 'Gunung & Air Terjun' },
+                  { id: 'wildlife', label: 'Sukamade Wildlife' },
+                  { id: 'yogyakarta', label: 'Yogyakarta & Gua' },
+                  { id: 'custom', label: 'Custom Rute' },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setRouteCategory(tab.id as any)}
+                    className={`px-3 py-1.5 rounded-full whitespace-nowrap transition cursor-pointer font-medium ${
+                      routeCategory === tab.id
+                        ? 'bg-[var(--nt-lime)] text-[#14170a] font-semibold shadow-sm'
+                        : 'bg-white/[0.06] text-white/75 hover:bg-white/10 hover:text-white border border-white/10'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Scrollable Routes List */}
+            <div className="flex-1 overflow-y-auto p-3.5 md:p-6 space-y-3 scrollbar-thin">
+              {/* Special Custom Route Card */}
+              {(routeCategory === 'all' || routeCategory === 'custom') && !routeSearch && (
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => {
+                    setSelectedSlug('custom');
+                    setIsRouteModalOpen(false);
+                  }}
+                  className={`p-3.5 sm:p-4 rounded-xl border transition-all cursor-pointer flex items-center gap-3.5 group ${
+                    selectedSlug === 'custom'
+                      ? 'border-[var(--nt-lime)] bg-[var(--nt-lime)]/[0.1] shadow-[0_0_20px_rgba(185,212,74,0.18)]'
+                      : 'border-white/20 bg-white/[0.03] hover:border-[var(--nt-lime)]/60 hover:bg-white/[0.06]'
+                  }`}
+                >
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg bg-[var(--nt-lime)]/15 border border-[var(--nt-lime)]/30 flex items-center justify-center shrink-0 text-[var(--nt-lime)]">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-heading text-base sm:text-lg font-semibold text-white group-hover:text-[var(--nt-lime)] transition-colors">
+                        Custom Route · Buat Rute Sendiri
+                      </span>
+                      {selectedSlug === 'custom' && (
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[var(--nt-lime)] text-[#14170a] shrink-0">
+                          <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <span>Selected</span>
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-[var(--nt-muted)] mt-1">
+                      Beri tahu destinasi yang ingin Anda kunjungi di Jawa. Tim lokal kami akan merancang mobil privat, pemandu, dan jadwal fleksibel.
+                    </p>
+                    <div className="flex items-center gap-2 mt-2">
+                      <span className="text-xs font-semibold text-[var(--nt-lime)]">
+                        Estimasi harga via WhatsApp
+                      </span>
+                      <span className="text-[11px] text-[var(--nt-muted)]">· Tanpa uang muka diawal</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Standard Trip Cards */}
+              {filteredTrips.map((trip) => {
+                const isSelected = selectedSlug === trip.slug;
+                return (
+                  <div
+                    key={trip.slug}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => {
+                      setSelectedSlug(trip.slug);
+                      setIsRouteModalOpen(false);
+                    }}
+                    className={`p-3 sm:p-3.5 rounded-xl border transition-all cursor-pointer flex items-center gap-3.5 group ${
+                      isSelected
+                        ? 'border-[var(--nt-lime)] bg-[var(--nt-lime)]/[0.1] shadow-[0_0_20px_rgba(185,212,74,0.18)]'
+                        : 'border-white/15 bg-white/[0.03] hover:border-[var(--nt-lime)]/60 hover:bg-white/[0.06]'
+                    }`}
+                  >
+                    {/* Thumbnail with duration badge */}
+                    <div className="w-20 h-20 sm:w-28 sm:h-22 rounded-lg overflow-hidden shrink-0 border border-white/15 bg-black/40 relative">
+                      {trip.heroImageUrl ? (
+                        <img
+                          src={trip.heroImageUrl}
+                          alt={trip.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-white/5 flex items-center justify-center text-white/40 text-xs">
+                          NusaTrails
+                        </div>
+                      )}
+                      <span className="absolute top-1 left-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-black/80 text-[var(--nt-lime)] backdrop-blur-xs border border-white/15">
+                        {trip.duration.label}
+                      </span>
+                    </div>
+
+                    {/* Trip Info */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-2">
+                        <h4 className="font-heading text-sm sm:text-base font-semibold text-white group-hover:text-[var(--nt-lime)] transition-colors truncate">
+                          {trip.name}
+                        </h4>
+                        {isSelected ? (
+                          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[var(--nt-lime)] text-[#14170a] shrink-0">
+                            <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                            <span>Selected</span>
+                          </span>
+                        ) : (
+                          <span className="text-xs text-white/40 group-hover:text-[var(--nt-lime)] font-medium shrink-0 hidden sm:inline">
+                            Pilih →
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Route label & start point */}
+                      <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] bg-white/10 text-white/90 font-medium">
+                          <svg className="w-3 h-3 text-[var(--nt-lime)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          <span>{trip.route_label}</span>
+                        </span>
+                        <span className="text-[11px] text-[var(--nt-muted)] truncate hidden sm:inline">
+                          {trip.destinations.slice(0, 3).join(' · ')}
+                        </span>
+                      </div>
+
+                      {/* Pricing row */}
+                      <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-white/5">
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-xs sm:text-sm font-semibold text-[var(--nt-lime)]">
+                            From IDR {trip.pricing.from_price_4_pax.toLocaleString('id-ID')}
+                          </span>
+                          <span className="text-[10px] sm:text-[11px] text-[var(--nt-muted)]">
+                            / orang
+                          </span>
+                        </div>
+                        <span className="text-[11px] text-[var(--nt-muted)]">
+                          {trip.group_size.min}–{trip.group_size.max} orang privat
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* Empty state when no search matches */}
+              {filteredTrips.length === 0 && routeCategory !== 'custom' && (
+                <div className="py-12 text-center">
+                  <p className="text-sm text-white/70">Tidak ada rute yang cocok dengan "{routeSearch}".</p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setRouteSearch('');
+                      setRouteCategory('all');
+                    }}
+                    className="mt-2 text-xs text-[var(--nt-lime)] hover:underline cursor-pointer"
+                  >
+                    Reset pencarian
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-3.5 md:p-4 border-t border-white/10 bg-[#100e0e] flex items-center justify-between shrink-0">
+              <div className="truncate max-w-[200px] sm:max-w-md">
+                <span className="text-[11px] text-[var(--nt-muted)] block">Rute terpilih:</span>
+                <span className="text-xs sm:text-sm text-white font-medium truncate block">
+                  {selectedTrip ? selectedTrip.name : 'Custom Route'}
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsRouteModalOpen(false)}
+                className="px-5 py-2 rounded-lg bg-[var(--nt-lime)] text-[#14170a] font-semibold text-xs md:text-sm hover:brightness-105 transition cursor-pointer shadow-md"
+              >
+                Gunakan Rute Ini
+              </button>
+            </div>
           </div>
         </div>
       )}

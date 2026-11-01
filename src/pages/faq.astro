@@ -54,8 +54,8 @@ const faqSchema = {
 
   <!-- Content & Q&A Groups -->
   <section class="container-nt py-12 md:py-16">
-    <!-- Category Chips Navigation -->
-    <div class="sticky top-20 z-30 py-3 bg-[#0b0a0a]/85 backdrop-blur-md -mx-4 px-4 sm:mx-0 sm:px-0">
+    <!-- Category Chips Navigation (Static on mobile like /trips, sticky on desktop) -->
+    <div class="relative md:sticky md:top-20 z-10 md:z-30 py-3 bg-[#0b0a0a]/85 backdrop-blur-md -mx-4 px-4 sm:mx-0 sm:px-0">
       <div class="flex gap-2.5 overflow-x-auto pb-1 scrollbar-none items-center" id="faq-chips">
         {faqData.categories.map((cat, idx) => (
           <a
