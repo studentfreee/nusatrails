@@ -17,7 +17,7 @@ import { HAS_WHATSAPP, whatsappLink } from '../lib/site';
 
 <style>
   .wa {
-    position: fixed; right: 20px; bottom: 20px; z-index: 40;
+    position: fixed; right: 16px; bottom: calc(68px + env(safe-area-inset-bottom, 0px)); z-index: 40;
     width: 52px; height: 52px; border-radius: 50%;
     display: grid; place-items: center;
     background: var(--color-accent); color: var(--color-on-accent);

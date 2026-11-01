@@ -28,6 +28,52 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
   </div>
 </header>
 
+<!-- App-Style Bottom Navigation for Mobile (Native App Experience) -->
+<nav class="mobile-app-nav" aria-label="Mobile Navigation">
+  <a href="/" class:list={['app-tab', { active: path === '/' }]}>
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <polyline points="9 22 9 12 15 12 15 22"/>
+    </svg>
+    <span class="tab-label">Home</span>
+  </a>
+
+  <a href="/trips" class:list={['app-tab', { active: path.startsWith('/trips') }]}>
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+    </svg>
+    <span class="tab-label">Trips</span>
+  </a>
+
+  <a href="/about" class:list={['app-tab', { active: path.startsWith('/about') }]}>
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="16" x2="12" y2="12"/>
+      <line x1="12" y1="8" x2="12.01" y2="8"/>
+    </svg>
+    <span class="tab-label">About</span>
+  </a>
+
+  <a href="/faq" class:list={['app-tab', { active: path.startsWith('/faq') }]}>
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+      <line x1="12" y1="17" x2="12.01" y2="17"/>
+    </svg>
+    <span class="tab-label">FAQ</span>
+  </a>
+
+  <a href="/book" class:list={['app-tab app-tab-book', { active: path.startsWith('/book') }]}>
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/>
+      <line x1="8" y1="2" x2="8" y2="6"/>
+      <line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    <span class="tab-label">Book</span>
+  </a>
+</nav>
+
 <script>
   const btn = document.getElementById('nav-toggle');
   const menu = document.getElementById('nav-menu');
@@ -40,6 +86,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
 </script>
 
 <style>
+  /* Desktop Top Navigation (100% UNCHANGED) */
   .nav-wrap { position: absolute; top: 28px; left: 0; right: 0; z-index: 50; }
   .nav {
     display: flex;
@@ -71,5 +118,67 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
   @media (min-width: 768px) {
     .links { display: flex; }
     .burger, .menu { display: none !important; }
+  }
+
+  /* Mobile App-Style Bottom Navigation */
+  @media (max-width: 767px) {
+    .nav-wrap { display: none !important; }
+  }
+  @media (min-width: 768px) {
+    .mobile-app-nav { display: none !important; }
+  }
+
+  .mobile-app-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    height: 60px;
+    background: rgba(13, 12, 12, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 8px calc(env(safe-area-inset-bottom, 0px) + 2px);
+  }
+  .app-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1;
+    height: 100%;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  .app-tab:hover {
+    color: #ffffff;
+  }
+  .app-tab.active {
+    color: var(--color-accent, #b9d44a);
+  }
+  .tab-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+  }
+  .app-tab.active .tab-icon {
+    transform: translateY(-1px);
+  }
+  .tab-label {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .app-tab-book {
+    color: var(--color-accent, #b9d44a);
+  }
+  .app-tab-book .tab-label {
+    font-weight: 600;
   }
 </style>
