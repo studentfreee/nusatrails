@@ -82,9 +82,9 @@ const orgSchema = {
     ></div>
 
     <!-- Layer 5: Hero Content (Bottom cards and CTAs) -->
-    <div class="absolute bottom-8 sm:bottom-10 lg:bottom-12 inset-x-0 mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-8 xl:px-10 z-30">
-      <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-8">
-        <!-- 5 Rich Photo Cards -->
+    <div class="absolute bottom-8 sm:bottom-10 lg:bottom-12 inset-x-0 mx-auto max-w-[1520px] px-4 sm:px-6 md:px-8 lg:px-8 xl:px-10 z-30">
+      <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-8 xl:gap-10">
+        <!-- 6 Rich Photo Cards (Side-by-side single row) -->
         <div class="w-full lg:w-auto overflow-x-auto pb-2 scrollbar-none [mask-image:linear-gradient(to_right,black_calc(100%-36px),transparent)] lg:[mask-image:none]">
           <div class="flex gap-3 sm:gap-3.5 min-w-max pr-6 lg:pr-0">
             <!-- Card 1: 6 destinations across Java -->
@@ -117,13 +117,13 @@ const orgSchema = {
               </p>
             </div>
 
-            <!-- Card 4: from Bali, Surabaya & Yogyakarta -->
+            <!-- Card 4: thousand waterfalls at Tumpak Sewu -->
             <div class="glass w-[142px] sm:w-[152px] md:w-[162px] lg:w-[168px] p-2.5 rounded-[10px] bg-black/65 border border-white/20 hover:border-white/45 transition-all duration-300 flex flex-col group shrink-0 shadow-2xl">
               <div class="w-full h-[155px] sm:h-[170px] md:h-[185px] lg:h-[192px] rounded-[6px] overflow-hidden mb-2.5 relative">
-                <Photo assetKey="tim10" alt="Pick-up points" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <Photo assetKey="IMG_2414" alt="Tumpak Sewu waterfall" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <p class="text-[13px] md:text-[14px] font-medium leading-snug text-white px-0.5 pb-0.5">
-                from Bali, Surabaya<br />& Yogyakarta
+                thousand waterfalls<br />at Tumpak Sewu
               </p>
             </div>
 
@@ -136,27 +136,37 @@ const orgSchema = {
                 sea turtles<br />at night
               </p>
             </div>
+
+            <!-- Card 6: from Bali, Surabaya & Yogyakarta -->
+            <div class="glass w-[142px] sm:w-[152px] md:w-[162px] lg:w-[168px] p-2.5 rounded-[10px] bg-black/65 border border-white/20 hover:border-white/45 transition-all duration-300 flex flex-col group shrink-0 shadow-2xl">
+              <div class="w-full h-[155px] sm:h-[170px] md:h-[185px] lg:h-[192px] rounded-[6px] overflow-hidden mb-2.5 relative">
+                <Photo assetKey="tim10" alt="Pick-up points" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <p class="text-[13px] md:text-[14px] font-medium leading-snug text-white px-0.5 pb-0.5">
+                from Bali, Surabaya<br />& Yogyakarta
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Tag, Description & Action Buttons -->
-        <div class="max-w-[270px] lg:max-w-[260px] xl:max-w-[280px] shrink-0 text-left flex flex-col gap-3.5">
-          <div class="text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-[var(--color-accent)] font-semibold">
+        <!-- Tag, Description & Action Buttons (Slightly larger to balance bigger cards) -->
+        <div class="max-w-[290px] md:max-w-[310px] xl:max-w-[340px] shrink-0 text-left flex flex-col gap-3.5 sm:gap-4">
+          <div class="text-[13px] md:text-[14px] tracking-[0.22em] uppercase text-[var(--color-accent)] font-semibold">
             PRIVATE TRIPS · INDONESIA
           </div>
-          <p class="text-[14px] md:text-[15px] leading-[1.6] text-white/90 m-0">
+          <p class="text-[15px] sm:text-[16px] md:text-[17px] leading-[1.6] text-white/95 m-0 font-normal">
             Private trips for small groups, picked up from Bali, Surabaya or Yogyakarta. From IDR 606.000 per person.
           </p>
-          <div class="flex items-center gap-3 pt-0.5">
+          <div class="flex items-center gap-3.5 pt-1">
             <a
               href="/trips"
-              class="inline-flex items-center justify-center h-10 px-5 rounded-full bg-[var(--color-accent,#b9d44a)] text-[#14170a] text-sm font-semibold hover:brightness-105 transition shadow-lg"
+              class="inline-flex items-center justify-center h-11 px-6 rounded-full bg-[var(--color-accent,#b9d44a)] text-[#14170a] text-[15px] font-semibold hover:brightness-105 transition shadow-lg"
             >
               See trips
             </a>
             <a
               href="/book"
-              class="inline-flex items-center justify-center h-10 px-6 rounded-full bg-black/45 border border-white/60 text-white text-sm font-normal hover:bg-white/10 transition shadow-lg"
+              class="inline-flex items-center justify-center h-11 px-7 rounded-full bg-black/50 border border-white/60 text-white text-[15px] font-normal hover:bg-white/10 transition shadow-lg"
             >
               Book
             </a>
