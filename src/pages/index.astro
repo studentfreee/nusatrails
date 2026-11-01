@@ -47,7 +47,7 @@ const orgSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
 
   <!-- 1. HERO SECTION (Layered title - Key effect) -->
-  <section class="relative overflow-hidden h-[860px] bg-[#0b0a0a]">
+  <section class="relative overflow-hidden min-h-[900px] md:h-[940px] lg:h-[960px] bg-[#0b0a0a]">
     <!-- Layer 1: Background mountain photo -->
     <div class="absolute inset-0 z-0">
       <Photo
@@ -58,9 +58,9 @@ const orgSchema = {
       />
     </div>
 
-    <!-- Layer 2: Big Title behind the mountain ridge -->
-    <div class="absolute top-[70px] inset-x-0 mx-auto max-w-[1240px] px-6 lg:px-12 z-10 pointer-events-none select-none">
-      <h1 class="font-heading font-semibold text-[clamp(40px,11.5vw,76px)] sm:text-[110px] md:text-[145px] lg:text-[180px] uppercase tracking-[0.03em] leading-none text-white/80 whitespace-nowrap">
+    <!-- Layer 2: Big Title centered behind the mountain ridge -->
+    <div class="absolute top-[65px] md:top-[75px] inset-x-0 w-full z-10 pointer-events-none select-none text-center px-4">
+      <h1 class="font-heading font-semibold text-[clamp(44px,11.5vw,76px)] sm:text-[115px] md:text-[150px] lg:text-[185px] uppercase tracking-[0.03em] leading-none text-white/80 whitespace-nowrap inline-block">
         NusaTrails
       </h1>
     </div>
@@ -84,55 +84,55 @@ const orgSchema = {
     <!-- Layer 5: Hero Content (Bottom cards and CTAs) -->
     <div class="absolute bottom-10 lg:bottom-14 inset-x-0 mx-auto max-w-[1240px] px-6 lg:px-12 z-30">
       <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-8">
-        <!-- 5 Mini Photo Cards -->
+        <!-- 5 Rich Photo Cards -->
         <div class="w-full lg:w-auto overflow-x-auto pb-2 scrollbar-none [mask-image:linear-gradient(to_right,black_calc(100%-36px),transparent)] lg:[mask-image:none]">
-          <div class="flex gap-3.5 min-w-max pr-8 lg:pr-0">
+          <div class="flex gap-4 min-w-max pr-8 lg:pr-0">
             <!-- Card 1: 6 destinations across Java -->
-            <div class="glass w-32 md:w-[140px] p-2 rounded-[8px] bg-black/55 flex flex-col">
-              <div class="w-full h-28 md:h-[150px] rounded-[4px] overflow-hidden mb-2.5">
-                <Photo assetKey="tim05" alt="Java destinations" class="w-full h-full object-cover" />
+            <div class="glass w-[140px] sm:w-[150px] md:w-[165px] p-2.5 rounded-[10px] bg-black/65 border border-white/20 hover:border-white/45 transition-all duration-300 flex flex-col group shrink-0 shadow-2xl">
+              <div class="w-full h-[155px] sm:h-[170px] md:h-[190px] rounded-[6px] overflow-hidden mb-3 relative">
+                <Photo assetKey="tim05" alt="Java destinations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p class="text-[12px] md:text-[13px] font-normal leading-tight text-white px-1 pb-1">
+              <p class="text-[13px] md:text-[14px] font-medium leading-snug text-white px-1 pb-1">
                 6 destinations<br />across Java
               </p>
             </div>
 
             <!-- Card 2: sunrise at 2,700 m -->
-            <div class="glass w-32 md:w-[140px] p-2 rounded-[8px] bg-black/55 flex flex-col">
-              <div class="w-full h-28 md:h-[150px] rounded-[4px] overflow-hidden mb-2.5">
-                <Photo assetKey="IMG_2509" alt="Bromo sunrise" class="w-full h-full object-cover" />
+            <div class="glass w-[140px] sm:w-[150px] md:w-[165px] p-2.5 rounded-[10px] bg-black/65 border border-white/20 hover:border-white/45 transition-all duration-300 flex flex-col group shrink-0 shadow-2xl">
+              <div class="w-full h-[155px] sm:h-[170px] md:h-[190px] rounded-[6px] overflow-hidden mb-3 relative">
+                <Photo assetKey="IMG_2509" alt="Bromo sunrise" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p class="text-[12px] md:text-[13px] font-normal leading-tight text-white px-1 pb-1">
+              <p class="text-[13px] md:text-[14px] font-medium leading-snug text-white px-1 pb-1">
                 sunrise at<br />2,700 m
               </p>
             </div>
 
             <!-- Card 3: blue fire at midnight -->
-            <div class="glass w-32 md:w-[140px] p-2 rounded-[8px] bg-black/55 flex flex-col">
-              <div class="w-full h-28 md:h-[150px] rounded-[4px] overflow-hidden mb-2.5">
-                <Photo assetKey="IMG_0683" alt="Ijen blue fire" class="w-full h-full object-cover" />
+            <div class="glass w-[140px] sm:w-[150px] md:w-[165px] p-2.5 rounded-[10px] bg-black/65 border border-white/20 hover:border-white/45 transition-all duration-300 flex flex-col group shrink-0 shadow-2xl">
+              <div class="w-full h-[155px] sm:h-[170px] md:h-[190px] rounded-[6px] overflow-hidden mb-3 relative">
+                <Photo assetKey="IMG_0683" alt="Ijen blue fire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p class="text-[12px] md:text-[13px] font-normal leading-tight text-white px-1 pb-1">
+              <p class="text-[13px] md:text-[14px] font-medium leading-snug text-white px-1 pb-1">
                 blue fire<br />at midnight
               </p>
             </div>
 
             <!-- Card 4: from Bali, Surabaya & Yogyakarta -->
-            <div class="glass w-32 md:w-[140px] p-2 rounded-[8px] bg-black/55 flex flex-col">
-              <div class="w-full h-28 md:h-[150px] rounded-[4px] overflow-hidden mb-2.5">
-                <Photo assetKey="tim10" alt="Pick-up points" class="w-full h-full object-cover" />
+            <div class="glass w-[140px] sm:w-[150px] md:w-[165px] p-2.5 rounded-[10px] bg-black/65 border border-white/20 hover:border-white/45 transition-all duration-300 flex flex-col group shrink-0 shadow-2xl">
+              <div class="w-full h-[155px] sm:h-[170px] md:h-[190px] rounded-[6px] overflow-hidden mb-3 relative">
+                <Photo assetKey="tim10" alt="Pick-up points" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p class="text-[12px] md:text-[13px] font-normal leading-tight text-white px-1 pb-1">
+              <p class="text-[13px] md:text-[14px] font-medium leading-snug text-white px-1 pb-1">
                 from Bali, Surabaya<br />& Yogyakarta
               </p>
             </div>
 
             <!-- Card 5: sea turtles at night -->
-            <div class="glass w-32 md:w-[140px] p-2 rounded-[8px] bg-black/55 flex flex-col">
-              <div class="w-full h-28 md:h-[150px] rounded-[4px] overflow-hidden mb-2.5">
-                <Photo assetKey="fk_turtle" alt="Sukamade sea turtles" class="w-full h-full object-cover" />
+            <div class="glass w-[140px] sm:w-[150px] md:w-[165px] p-2.5 rounded-[10px] bg-black/65 border border-white/20 hover:border-white/45 transition-all duration-300 flex flex-col group shrink-0 shadow-2xl">
+              <div class="w-full h-[155px] sm:h-[170px] md:h-[190px] rounded-[6px] overflow-hidden mb-3 relative">
+                <Photo assetKey="fk_turtle" alt="Sukamade sea turtles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p class="text-[12px] md:text-[13px] font-normal leading-tight text-white px-1 pb-1">
+              <p class="text-[13px] md:text-[14px] font-medium leading-snug text-white px-1 pb-1">
                 sea turtles<br />at night
               </p>
             </div>
@@ -140,8 +140,8 @@ const orgSchema = {
         </div>
 
         <!-- Tag, Description & Action Buttons -->
-        <div class="max-w-[260px] shrink-0 text-left flex flex-col gap-3.5">
-          <div class="text-[13px] tracking-[0.2em] uppercase text-white font-normal">
+        <div class="max-w-[280px] shrink-0 text-left flex flex-col gap-4">
+          <div class="text-[13px] tracking-[0.2em] uppercase text-[var(--color-accent)] font-semibold">
             PRIVATE TRIPS · INDONESIA
           </div>
           <p class="text-[16px] leading-[1.6] text-white m-0">
@@ -168,141 +168,336 @@ const orgSchema = {
 
   <!-- 2. ABOUT THE TOUR SECTION -->
   <section class="container-nt py-20 md:py-28" id="about">
-    <h2 class="h2">About the tour</h2>
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 mt-12 lg:mt-14 items-start">
+    <div class="flex items-center justify-center gap-4 md:gap-8 mb-12 md:mb-16">
+      <div class="flex-1 h-px bg-white/25"></div>
+      <h2 class="font-heading text-2xl md:text-4xl lg:text-5xl uppercase tracking-[0.08em] text-white whitespace-nowrap text-center">
+        About the tour
+      </h2>
+      <div class="flex-1 h-px bg-white/25"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 items-start">
       <!-- Left Column: Intro Description -->
-      <div class="text-[16px] leading-[1.7] text-[#d9d3c8]">
+      <div class="text-[16px] leading-[1.7] text-[#d9d3c8] lg:sticky lg:top-24">
         <p class="m-0">
-          We've planned simple, convenient itineraries across Java. Choose from six places: <span class="text-[var(--color-accent)] font-medium">Ijen, Bromo, Tumpak Sewu and Sukamade</span> in East Java, plus <span class="text-[var(--color-accent)] font-medium">Borobudur & Prambanan</span> and <span class="text-[var(--color-accent)] font-medium">Jomblang & Pindul Cave</span> near Yogyakarta.
+          We've planned simple, convenient itineraries across Java. Choose from six iconic highlights: <span class="text-[var(--color-accent)] font-medium">Ijen, Bromo, Tumpak Sewu and Sukamade</span> in East Java, plus <span class="text-[var(--color-accent)] font-medium">Borobudur & Prambanan</span> and <span class="text-[var(--color-accent)] font-medium">Jomblang & Pindul Cave</span> near Yogyakarta.
         </p>
-        <p class="mt-8 lg:mt-32">
+        <p class="mt-6 md:mt-8">
           No need to worry about routes, schedules or finding places. Everything is organized: private driver, English-speaking guide, tickets and stays. Pick 1 to 4 days and <span class="text-[var(--color-accent)] font-medium">enjoy the journey</span>.
         </p>
+        
+        <div class="mt-8 pt-6 border-t border-white/15 hidden lg:block">
+          <div class="text-xs uppercase tracking-wider text-[var(--nt-muted)] mb-3">Trip Highlights at a Glance</div>
+          <ul class="space-y-2 text-sm text-white/90">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]"></span>
+              Private overland transfers across East Java
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]"></span>
+              Sunrise volcano summits & off-road jungle 4WD
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]"></span>
+              UNESCO ancient temples & mystical caving
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Right Column: Zig-zag Timeline -->
-      <div class="relative hidden md:grid grid-cols-[1fr_28px_1fr] row-gap-9 gap-y-9">
-        <div class="absolute left-1/2 top-2 bottom-2 w-px bg-white/45 -translate-x-1/2 pointer-events-none"></div>
+      <!-- Right Column: Rich Zig-zag Timeline with Overlapping Photo Collages -->
+      <div class="relative hidden md:grid grid-cols-[1fr_28px_1fr] row-gap-12 gap-y-12 items-center">
+        <div class="absolute left-1/2 top-4 bottom-4 w-px bg-white/35 -translate-x-1/2 pointer-events-none"></div>
 
-        <!-- Stop 1: Ijen -->
-        <div class="text-right pt-0.5">
-          <div class="text-[13px] text-[#bdb6ab]">Midnight hike</div>
-          <div class="font-heading text-[24px] text-white leading-normal">Ijen</div>
+        <!-- Stop 1: Ijen (Right side photo collage, Left side label) -->
+        <div class="text-right pr-2">
+          <div class="text-[12px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Midnight hike · 2,799 m</div>
+          <div class="font-heading text-[26px] text-white leading-tight">Ijen Crater</div>
+          <div class="text-[13px] text-[var(--nt-muted)] mt-1">Banyuwangi, East Java</div>
         </div>
         <div class="flex justify-center">
-          <span class="w-[11px] h-[11px] rounded-full bg-[#e9e4dc] mt-2"></span>
+          <span class="w-3.5 h-3.5 rounded-full bg-[var(--color-accent)] border-2 border-black/80 shadow-md"></span>
         </div>
-        <div class="flex gap-2.5">
-          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
+        <div class="relative w-52 h-32 flex items-center pl-2">
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-lg border border-white/20 absolute left-2 top-0 z-10 transform -rotate-2 hover:rotate-0 hover:scale-105 transition duration-300">
             <Photo assetKey="IMG_0683" alt="Ijen blue fire" class="w-full h-full object-cover" />
           </div>
-          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
-            <Photo assetKey="IMG_3523" alt="Ijen crater" class="w-full h-full object-cover" />
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-2xl border border-white/35 absolute right-0 bottom-0 z-20 transform rotate-3 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="IMG_3523" alt="Ijen acid lake" class="w-full h-full object-cover" />
           </div>
         </div>
 
-        <!-- Stop 2: Bromo -->
-        <div class="flex gap-2.5 justify-end">
-          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
-            <Photo assetKey="IMG_3054" alt="Bromo jeep" class="w-full h-full object-cover" />
+        <!-- Stop 2: Bromo (Left side photo collage, Right side label) -->
+        <div class="relative w-52 h-32 flex items-center justify-end pr-2 justify-self-end">
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-lg border border-white/20 absolute left-0 top-0 z-10 transform -rotate-3 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="IMG_3054" alt="Bromo 4WD Jeep" class="w-full h-full object-cover" />
           </div>
-          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
-            <Photo assetKey="IMG_2507" alt="Bromo sunrise" class="w-full h-full object-cover" />
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-2xl border border-white/35 absolute right-2 bottom-0 z-20 transform rotate-2 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="IMG_2507" alt="Bromo sunrise vista" class="w-full h-full object-cover" />
           </div>
         </div>
         <div class="flex justify-center">
-          <span class="w-[11px] h-[11px] rounded-full bg-[#e9e4dc] mt-2"></span>
+          <span class="w-3.5 h-3.5 rounded-full bg-[var(--color-accent)] border-2 border-black/80 shadow-md"></span>
         </div>
-        <div>
-          <div class="text-[13px] text-[#bdb6ab]">4WD jeep at 03:30</div>
-          <div class="font-heading text-[24px] text-white leading-normal">Bromo</div>
+        <div class="text-left pl-2">
+          <div class="text-[12px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">4WD jeep at 03:30</div>
+          <div class="font-heading text-[26px] text-white leading-tight">Mount Bromo</div>
+          <div class="text-[13px] text-[var(--nt-muted)] mt-1">Probolinggo, East Java</div>
         </div>
 
-        <!-- Stop 3: Tumpak Sewu -->
-        <div class="text-right pt-0.5">
-          <div class="text-[13px] text-[#bdb6ab]">Waterfall trek</div>
-          <div class="font-heading text-[24px] text-white leading-normal">Tumpak Sewu</div>
+        <!-- Stop 3: Tumpak Sewu (Right side photo collage, Left side label) -->
+        <div class="text-right pr-2">
+          <div class="text-[12px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Canyon waterfall trek</div>
+          <div class="font-heading text-[26px] text-white leading-tight">Tumpak Sewu</div>
+          <div class="text-[13px] text-[var(--nt-muted)] mt-1">Lumajang, East Java</div>
         </div>
         <div class="flex justify-center">
-          <span class="w-[11px] h-[11px] rounded-full bg-[#e9e4dc] mt-2"></span>
+          <span class="w-3.5 h-3.5 rounded-full bg-[var(--color-accent)] border-2 border-black/80 shadow-md"></span>
         </div>
-        <div class="flex gap-2.5">
-          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
-            <Photo assetKey="IMG_2414" alt="Tumpak Sewu vista" class="w-full h-full object-cover" />
+        <div class="relative w-52 h-32 flex items-center pl-2">
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-lg border border-white/20 absolute left-2 top-0 z-10 transform rotate-2 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="IMG_2414" alt="Tumpak Sewu panoramic" class="w-full h-full object-cover" />
           </div>
-          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
-            <Photo assetKey="IMG_2866" alt="Tumpak Sewu stairs" class="w-full h-full object-cover" />
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-2xl border border-white/35 absolute right-0 bottom-0 z-20 transform -rotate-2 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="IMG_2866" alt="Tumpak Sewu canyon floor" class="w-full h-full object-cover" />
           </div>
         </div>
 
-        <!-- Stop 4: Sukamade -->
-        <div class="flex gap-2.5 justify-end">
-          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
-            <Photo assetKey="n_sukamade_jeep" alt="Sukamade offroad" class="w-full h-full object-cover" />
+        <!-- Stop 4: Sukamade (Left side photo collage, Right side label) -->
+        <div class="relative w-52 h-32 flex items-center justify-end pr-2 justify-self-end">
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-lg border border-white/20 absolute left-0 top-0 z-10 transform -rotate-2 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="n_sukamade_jeep" alt="Sukamade jungle 4WD" class="w-full h-full object-cover" />
           </div>
-          <div class="w-24 h-[72px] rounded-[4px] overflow-hidden">
-            <Photo assetKey="fk_turtle" alt="Sukamade turtles" class="w-full h-full object-cover" />
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-2xl border border-white/35 absolute right-2 bottom-0 z-20 transform rotate-3 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="fk_turtle" alt="Sukamade sea turtles" class="w-full h-full object-cover" />
           </div>
         </div>
         <div class="flex justify-center">
-          <span class="w-[11px] h-[11px] rounded-full bg-[#e9e4dc] mt-2"></span>
+          <span class="w-3.5 h-3.5 rounded-full bg-[var(--color-accent)] border-2 border-black/80 shadow-md"></span>
         </div>
-        <div>
-          <div class="text-[13px] text-[#bdb6ab]">Turtles & off-road</div>
-          <div class="font-heading text-[24px] text-white leading-normal">Sukamade</div>
+        <div class="text-left pl-2">
+          <div class="text-[12px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Jungle off-road & turtles</div>
+          <div class="font-heading text-[26px] text-white leading-tight">Sukamade</div>
+          <div class="text-[13px] text-[var(--nt-muted)] mt-1">Meru Betiri National Park</div>
+        </div>
+
+        <!-- Stop 5: Borobudur & Prambanan (Right side photo collage, Left side label) -->
+        <div class="text-right pr-2">
+          <div class="text-[12px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Ancient temple sunrise</div>
+          <div class="font-heading text-[26px] text-white leading-tight">Borobudur & Prambanan</div>
+          <div class="text-[13px] text-[var(--nt-muted)] mt-1">Central Java & Yogyakarta</div>
+        </div>
+        <div class="flex justify-center">
+          <span class="w-3.5 h-3.5 rounded-full bg-[var(--color-accent)] border-2 border-black/80 shadow-md"></span>
+        </div>
+        <div class="relative w-52 h-32 flex items-center pl-2">
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-lg border border-white/20 absolute left-2 top-0 z-10 transform -rotate-2 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="n_borobudur_aerial" alt="Borobudur sunrise aerial" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-2xl border border-white/35 absolute right-0 bottom-0 z-20 transform rotate-3 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="n_borobudur_stupa" alt="Borobudur stupas" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Stop 6: Jomblang & Pindul (Left side photo collage, Right side label) -->
+        <div class="relative w-52 h-32 flex items-center justify-end pr-2 justify-self-end">
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-lg border border-white/20 absolute left-0 top-0 z-10 transform -rotate-3 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="fk_rope" alt="Jomblang vertical rappel" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-32 h-24 rounded-[8px] overflow-hidden shadow-2xl border border-white/35 absolute right-2 bottom-0 z-20 transform rotate-2 hover:rotate-0 hover:scale-105 transition duration-300">
+            <Photo assetKey="fk_light" alt="Jomblang light of heaven" class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <span class="w-3.5 h-3.5 rounded-full bg-[var(--color-accent)] border-2 border-black/80 shadow-md"></span>
+        </div>
+        <div class="text-left pl-2">
+          <div class="text-[12px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Light of heaven & river tubing</div>
+          <div class="font-heading text-[26px] text-white leading-tight">Jomblang & Pindul</div>
+          <div class="text-[13px] text-[var(--nt-muted)] mt-1">Gunungkidul, Yogyakarta</div>
         </div>
       </div>
 
-      <!-- Mobile Timeline Alternative -->
+      <!-- Mobile Timeline Alternative: 6 Clean Photo Cards -->
       <div class="md:hidden space-y-6">
-        <div class="glass p-4 rounded-[12px]">
-          <span class="text-[12px] text-[var(--nt-muted)] uppercase tracking-wider">Midnight hike</span>
-          <h3 class="font-heading text-2xl text-white mb-3">Ijen</h3>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="aspect-[4/3] w-full rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_0683" alt="Ijen" class="w-full h-full object-cover" />
+        <!-- Stop 1: Ijen -->
+        <div class="glass p-4 rounded-[14px] border border-white/15">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Midnight hike · 2,799 m</span>
+              <h3 class="font-heading text-2xl text-white">Ijen Crater</h3>
             </div>
-            <div class="aspect-[4/3] w-full rounded-[6px] overflow-hidden">
+            <span class="text-xs text-[var(--nt-muted)]">Banyuwangi</span>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
+              <Photo assetKey="IMG_0683" alt="Ijen blue fire" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
               <Photo assetKey="IMG_3523" alt="Ijen crater" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
-        <div class="glass p-4 rounded-[12px]">
-          <span class="text-[12px] text-[var(--nt-muted)] uppercase tracking-wider">4WD jeep at 03:30</span>
-          <h3 class="font-heading text-2xl text-white mb-3">Bromo</h3>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="aspect-[4/3] w-full rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_3054" alt="Bromo" class="w-full h-full object-cover" />
+
+        <!-- Stop 2: Bromo -->
+        <div class="glass p-4 rounded-[14px] border border-white/15">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">4WD jeep at 03:30</span>
+              <h3 class="font-heading text-2xl text-white">Mount Bromo</h3>
             </div>
-            <div class="aspect-[4/3] w-full rounded-[6px] overflow-hidden">
+            <span class="text-xs text-[var(--nt-muted)]">Probolinggo</span>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
+              <Photo assetKey="IMG_3054" alt="Bromo 4WD Jeep" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
               <Photo assetKey="IMG_2507" alt="Bromo sunrise" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
-        <div class="glass p-4 rounded-[12px]">
-          <span class="text-[12px] text-[var(--nt-muted)] uppercase tracking-wider">Waterfall trek</span>
-          <h3 class="font-heading text-2xl text-white mb-3">Tumpak Sewu</h3>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="aspect-[4/3] w-full rounded-[6px] overflow-hidden">
-              <Photo assetKey="IMG_2414" alt="Tumpak Sewu" class="w-full h-full object-cover" />
+
+        <!-- Stop 3: Tumpak Sewu -->
+        <div class="glass p-4 rounded-[14px] border border-white/15">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Canyon waterfall trek</span>
+              <h3 class="font-heading text-2xl text-white">Tumpak Sewu</h3>
             </div>
-            <div class="aspect-[4/3] w-full rounded-[6px] overflow-hidden">
+            <span class="text-xs text-[var(--nt-muted)]">Lumajang</span>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
+              <Photo assetKey="IMG_2414" alt="Tumpak Sewu vista" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
               <Photo assetKey="IMG_2866" alt="Tumpak Sewu stairs" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
-        <div class="glass p-4 rounded-[12px]">
-          <span class="text-[12px] text-[var(--nt-muted)] uppercase tracking-wider">Turtles & off-road</span>
-          <h3 class="font-heading text-2xl text-white mb-3">Sukamade</h3>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="aspect-[4/3] w-full rounded-[6px] overflow-hidden">
-              <Photo assetKey="n_sukamade_jeep" alt="Sukamade" class="w-full h-full object-cover" />
+
+        <!-- Stop 4: Sukamade -->
+        <div class="glass p-4 rounded-[14px] border border-white/15">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Jungle off-road & turtles</span>
+              <h3 class="font-heading text-2xl text-white">Sukamade</h3>
             </div>
-            <div class="aspect-[4/3] w-full rounded-[6px] overflow-hidden">
+            <span class="text-xs text-[var(--nt-muted)]">Meru Betiri</span>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
+              <Photo assetKey="n_sukamade_jeep" alt="Sukamade 4WD" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
               <Photo assetKey="fk_turtle" alt="Sukamade turtles" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
+
+        <!-- Stop 5: Borobudur & Prambanan -->
+        <div class="glass p-4 rounded-[14px] border border-white/15">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Ancient temple sunrise</span>
+              <h3 class="font-heading text-2xl text-white">Borobudur & Prambanan</h3>
+            </div>
+            <span class="text-xs text-[var(--nt-muted)]">Yogyakarta</span>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
+              <Photo assetKey="n_borobudur_aerial" alt="Borobudur sunrise" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
+              <Photo assetKey="n_borobudur_stupa" alt="Borobudur stupas" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Stop 6: Jomblang & Pindul -->
+        <div class="glass p-4 rounded-[14px] border border-white/15">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Light of heaven & river tubing</span>
+              <h3 class="font-heading text-2xl text-white">Jomblang & Pindul</h3>
+            </div>
+            <span class="text-xs text-[var(--nt-muted)]">Gunungkidul</span>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
+              <Photo assetKey="fk_rope" alt="Jomblang vertical rappel" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-[4/3] w-full rounded-[8px] overflow-hidden border border-white/15">
+              <Photo assetKey="fk_light" alt="Jomblang cave light" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WHAT'S INCLUDED (Bento Glass Cards - Japan Tours Reference) -->
+  <section class="container-nt py-12 md:py-20">
+    <div class="flex items-center justify-center gap-4 md:gap-8 mb-10 md:mb-14">
+      <div class="flex-1 h-px bg-white/20"></div>
+      <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl uppercase tracking-[0.08em] text-[var(--nt-body)] whitespace-nowrap text-center">
+        What's Included
+      </h2>
+      <div class="flex-1 h-px bg-white/20"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- Card 1: Guides -->
+      <div class="glass p-6 rounded-[14px] flex flex-col border border-white/15 hover:border-[var(--color-accent)]/50 transition">
+        <div class="w-11 h-11 rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="font-heading text-xl text-white mb-2">Dedicated Guides</h3>
+        <p class="text-[14px] text-[var(--nt-muted)] leading-relaxed m-0">
+          Licensed local mountain guides for Ijen & Bromo, plus a dedicated English-speaking private driver throughout your journey.
+        </p>
+      </div>
+
+      <!-- Card 2: Transport -->
+      <div class="glass p-6 rounded-[14px] flex flex-col border border-white/15 hover:border-[var(--color-accent)]/50 transition">
+        <div class="w-11 h-11 rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"/><circle cx="7" cy="15" r="2"/><circle cx="17" cy="15" r="2"/>
+          </svg>
+        </div>
+        <h3 class="font-heading text-xl text-white mb-2">Private 4WD & AC Car</h3>
+        <p class="text-[14px] text-[var(--nt-muted)] leading-relaxed m-0">
+          Comfortable air-conditioned private vehicle for road transfers, plus rugged 4WD Toyota Land Cruiser for Bromo & Sukamade.
+        </p>
+      </div>
+
+      <!-- Card 3: Hotels / Stays -->
+      <div class="glass p-6 rounded-[14px] flex flex-col border border-white/15 hover:border-[var(--color-accent)]/50 transition">
+        <div class="w-11 h-11 rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 21h18M3 7v14M21 7v14M6 7V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3M9 10h2M13 10h2M9 14h2M13 14h2M9 18h2M13 18h2"/>
+          </svg>
+        </div>
+        <h3 class="font-heading text-xl text-white mb-2">Handpicked Stays</h3>
+        <p class="text-[14px] text-[var(--nt-muted)] leading-relaxed m-0">
+          Comfortable lodges and boutique hotels situated close to trailheads, with breakfast included so you're ready for sunrise.
+        </p>
+      </div>
+
+      <!-- Card 4: Tickets & Gear -->
+      <div class="glass p-6 rounded-[14px] flex flex-col border border-white/15 hover:border-[var(--color-accent)]/50 transition">
+        <div class="w-11 h-11 rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/>
+          </svg>
+        </div>
+        <h3 class="font-heading text-xl text-white mb-2">Tickets & Safety Gear</h3>
+        <p class="text-[14px] text-[var(--nt-muted)] leading-relaxed m-0">
+          All national park entry permits, standard Ijen gas respirators, headlamps, and cave exploration safety gear included.
+        </p>
       </div>
     </div>
   </section>
@@ -382,9 +577,28 @@ const orgSchema = {
       </div>
     </div>
 
+    <!-- Central Java & Yogyakarta Route Callout -->
+    <div class="mt-8 p-5 md:p-6 rounded-[14px] glass border border-white/15 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="flex items-start md:items-center gap-4">
+        <div class="w-10 h-10 rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)] flex items-center justify-center shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="text-[12px] uppercase tracking-wider text-[var(--color-accent)] font-semibold">Central Java & Yogyakarta Hub</div>
+          <div class="text-[15px] font-medium text-white">Full-day private tours departing directly from Yogyakarta city hotels</div>
+          <div class="text-[13px] text-[var(--nt-muted)] mt-0.5">Hotel Pick-up 05:00 → Borobudur & Prambanan | Hotel Pick-up 07:00 → Jomblang & Pindul Cave</div>
+        </div>
+      </div>
+      <a href="/trips" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-accent)] hover:underline whitespace-nowrap self-start md:self-center">
+        Explore Day Trips →
+      </a>
+    </div>
+
     <!-- Footnote about route times -->
     <p class="mt-4 text-[13px] text-[var(--nt-muted)] leading-relaxed">
-      Surabaya ↔ Banyuwangi: 6–8 h (subject to traffic). Drive times are estimates and change with traffic. The Yogyakarta tours are full-day trips from Yogyakarta city.
+      Surabaya ↔ Banyuwangi: 6–8 h (subject to traffic). Drive times are estimates and change with traffic. All transfers include private AC vehicle, driver, fuel, and highway tolls.
     </p>
   </section>
 
